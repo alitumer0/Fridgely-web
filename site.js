@@ -89,6 +89,19 @@ function setMeta({ title, description, canonicalPath }) {
   if (twitterDescription) twitterDescription.setAttribute('content', description);
 }
 
+function button({ label, appHref, fallbackHref, href, variant = 'primary' }) {
+  if (href) {
+    return `<a class="button button-${variant}" href="${href}">${label}</a>`;
+  }
+  return `<button class="button button-${variant}" type="button" data-open-app="${appHref}" data-fallback="${fallbackHref}">${label}</button>`;
+}
+
+function renderItems(items, className = 'legal-list') {
+  return `<ul class="${className}">${(items || [])
+    .map((item) => `<li>${item}</li>`)
+    .join('')}</ul>`;
+}
+
 function topbar({ compact = false } = {}) {
   return `
     <header class="topbar">
@@ -96,17 +109,23 @@ function topbar({ compact = false } = {}) {
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">
           <strong>Fridgely</strong>
-          <span>Smart kitchen operating system</span>
+          <span>Mutfak operasyon sistemi</span>
         </span>
       </a>
       <nav class="nav-links" aria-label="Ana menü">
-        <a href="${pageHref('/#how-it-works')}">Nasıl çalışır</a>
-        <a href="${pageHref('/#kitchen-system')}">Mutfak sistemi</a>
+        <a href="${pageHref('/#system-map')}">Sistem</a>
+        <a href="${pageHref('/#flows')}">Akışlar</a>
         <a href="${pageHref('/#pricing')}">Premium</a>
-        <a href="${pageHref('/#faq')}">SSS</a>
+        <a href="${pageHref('/#support-hub')}">Destek</a>
       </nav>
       <div class="nav-actions">
-        ${compact ? '' : `<a class="secondary-link" href="${pageHref('/support')}">Destek</a>`}
+        ${compact ? `<a class="secondary-link secondary-link-quiet" href="${pageHref('/')}">Ana sayfa</a>` : ''}
+        ${button({
+          label: 'Uygulamayı Aç',
+          appHref: 'fridgely://inventory',
+          fallbackHref: pageHref('/support'),
+          variant: 'primary',
+        })}
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Temayı değiştir">Tema</button>
       </div>
     </header>
@@ -116,10 +135,14 @@ function topbar({ compact = false } = {}) {
 function footer() {
   return `
     <footer class="footer">
-      <small>
-        Fridgely, mutfak envanteri, yapay zeka tarif akışı ve paylaşılabilir davet/deep-link deneyimlerini tek yerde toplar.
-      </small>
+      <div class="footer-copy">
+        <strong>Fridgely</strong>
+        <small>
+          Tarayıcı, envanter, yapay zeka tarif akışı, alışveriş listesi ve paylaşılabilir link deneyimleri aynı sistemde buluşur.
+        </small>
+      </div>
       <div class="footer-links">
+        <a href="${pageHref('/#pricing')}">Premium</a>
         <a href="${pageHref('/privacy')}">Gizlilik</a>
         <a href="${pageHref('/terms')}">Koşullar</a>
         <a href="${pageHref('/support')}">Destek</a>
@@ -129,72 +152,127 @@ function footer() {
   `;
 }
 
-function button({ label, appHref, fallbackHref, href, variant = 'primary' }) {
-  if (href) {
-    return `<a class="button button-${variant}" href="${href}">${label}</a>`;
-  }
-  return `<button class="button button-${variant}" type="button" data-open-app="${appHref}" data-fallback="${fallbackHref}">${label}</button>`;
-}
-
 function homePage() {
   setMeta({
-    title: 'Fridgely | Akıllı mutfak akışını tek yerde topla',
+    title: 'Fridgely | Mutfak operasyonunu tek akışta topla',
     description:
-      'Mutfak envanterini tara, elindekilerle tarif üret, premium akışları aileyle paylaş ve Fridgely ile günlük yemek operasyonunu sadeleştir.',
+      'Fridgely ile stok görünürlüğünü kur, AI tarif kararını hızlandır, alışveriş akışını temizle ve paylaşılabilir linkleri profesyonel şekilde yönet.',
     canonicalPath: '/',
   });
 
   return `
     <div class="site-shell">
       ${topbar()}
-      <main>
+      <main id="main-content">
         <section class="hero">
           <article class="hero-copy">
-            <div class="eyebrow">Kitchen OS for real kitchens</div>
-            <h1 class="display">Mutfağın dağılmadan akmasını sağlar.</h1>
+            <div class="eyebrow">Fridgely Kitchen OS</div>
+            <div class="hero-kicker">Mutfak operasyonu</div>
+            <h1 class="display">Dağınık mutfak kararlarını tek akışta toplar.</h1>
             <p class="lead">
-              Fridgely; rafları tarar, envanteri toparlar, elindekilerle tarif üretir ve alışveriş, aile paylaşımı, beslenme ve tasarruf akışını tek sisteme bağlar.
+              Fridgely; tarama, stok görünürlüğü, AI tarif, alışveriş listesi ve aile paylaşımını aynı ritimde birleştirir. Kullanıcıyı özellikler arasında dolaştırmak yerine bir sonraki doğru kararı görünür kılar.
             </p>
             <div class="hero-actions">
               ${button({
                 label: 'Uygulamayı Aç',
                 appHref: 'fridgely://inventory',
-                fallbackHref: pageHref('/#download'),
+                fallbackHref: pageHref('/support'),
                 variant: 'primary',
               })}
-              <a class="secondary-link" href="#pricing">Premium planları gör</a>
+              <a class="secondary-link" href="#pricing">Premium farklarını gör</a>
             </div>
-            <div class="stat-rail">
-              <div class="stat-pill"><strong>Tarama</strong><span>Fiş, raf ve ürünlerden hızlı giriş</span></div>
-              <div class="stat-pill"><strong>AI Tarif</strong><span>Elindekilere göre üretim ve eksik kontrolü</span></div>
-              <div class="stat-pill"><strong>Aile Akışı</strong><span>Davet, paylaşım ve alışveriş senkronu</span></div>
+            <div class="hero-highlights">
+              <article>
+                <strong>Görünürlük</strong>
+                <span>Fiş, raf ve barkod kaynaklarını tek yüzeye toplar.</span>
+              </article>
+              <article>
+                <strong>Karar</strong>
+                <span>Elindekilerle ne pişeceğini ve neyin eksik kaldığını netleştirir.</span>
+              </article>
+              <article>
+                <strong>Senkron</strong>
+                <span>Aile, alışveriş ve paylaşılan linkleri aynı bağlamda tutar.</span>
+              </article>
             </div>
           </article>
           <aside class="hero-visual" aria-label="Fridgely ürün önizlemesi">
-            <div class="fridge-frame">
-              <div class="ticket-stack">
-                <div class="ticket ticket-a"><strong>Scanner ready</strong><small>Fiş, raf ve barkod girişi</small></div>
-                <div class="ticket ticket-b"><strong>Recipe engine</strong><small>Eksik malzeme ve hızlı tarif akışı</small></div>
-                <div class="ticket ticket-c"><strong>Family invite</strong><small>30 günlük paylaşılabilir premium deneyim</small></div>
+            <div class="kitchen-brief">
+              <div class="brief-header">
+                <div>
+                  <span class="brief-label">Canlı ürün katmanı</span>
+                  <strong>Bugünün mutfak özeti</strong>
+                </div>
+                <span class="brief-pill">Preview</span>
               </div>
-              <div class="shelf-line"></div>
-              <div class="shelf-line"></div>
-              <div class="visual-note">
-                <strong>Bu bir landing page değil yalnızca.</strong>
-                Tarif, alışveriş, envanter ve davet linkleri için branded fallback katmanı olarak da çalışır.
+              <div class="brief-metrics">
+                <article class="brief-metric">
+                  <strong>Tarama</strong>
+                  <span>Fiş, raf ve barkod girişleri tek ritimde.</span>
+                </article>
+                <article class="brief-metric">
+                  <strong>Tarif</strong>
+                  <span>Mevcut malzemeye göre üretim ve eksik kontrolü.</span>
+                </article>
+                <article class="brief-metric">
+                  <strong>Paylaşım</strong>
+                  <span>Liste, davet ve deep-link akışları aynı domain altında.</span>
+                </article>
+              </div>
+              <div class="brief-grid">
+                <article class="brief-card">
+                  <h3>Şimdi önemli olanlar</h3>
+                  ${renderItems([
+                    'Kritik ürünleri önce görünür kıl.',
+                    'Eksik malzemeyi alışveriş akışına taşı.',
+                    'Tariften listeye, listeden aile paylaşımına geç.',
+                  ], 'brief-list')}
+                </article>
+                <article class="brief-card brief-card-accent">
+                  <h3>Fridgely neyi bağlar?</h3>
+                  ${renderItems([
+                    'Scanner -> Inventory',
+                    'Inventory -> Recipe',
+                    'Recipe -> Shopping',
+                    'Invite -> Shared access',
+                  ], 'brief-list')}
+                </article>
+              </div>
+              <div class="brief-note">
+                <strong>Landing tek başına kalmaz.</strong>
+                Uygulama linki açılmazsa kullanıcı boş ekrana değil, markalı fallback akışına düşer.
               </div>
             </div>
           </aside>
         </section>
 
-        <section class="section" id="how-it-works">
+        <section class="proof-strip" aria-label="Ürün ilkeleri">
+          <article class="proof-intro">
+            <div class="eyebrow">Neden daha profesyonel hissettirir</div>
+            <p>Fridgely yalnızca özellikleri listelemez; kullanıcıyı bir sonraki adıma taşıyan düzenli bir ürün dili kurar.</p>
+          </article>
+          <article class="proof-chip">
+            <strong>Tek ürün anlatısı</strong>
+            <span>Landing, support, premium ve share yüzeyleri aynı dili konuşur.</span>
+          </article>
+          <article class="proof-chip">
+            <strong>Net karar anları</strong>
+            <span>Her sayfa kullanıcıyı ya uygulamaya ya da doğru destek akışına taşır.</span>
+          </article>
+          <article class="proof-chip">
+            <strong>Boşa düşmeyen linkler</strong>
+            <span>Tarif, davet ve liste linkleri markalı fallback katmanıyla tamamlanır.</span>
+          </article>
+        </section>
+
+        <section class="section" id="system-map">
           <div class="section-head">
             <div>
-              <div class="eyebrow">Nasıl çalışır</div>
-              <h2>Üç adımda mutfak operasyonu.</h2>
+              <div class="eyebrow">Sistem haritası</div>
+              <h2>Sistem, mutfaktaki üç temel işi netleştirir.</h2>
             </div>
             <p>
-              Fridgely uygulamayı sadece özellikler listesi gibi değil, akışın tamamı gibi ele alır. Tarama, karar ve paylaşım aynı sistemde buluşur.
+              Profesyonel his, daha fazla kart koymaktan değil; tarama, karar ve senkron anlarını kopmadan bağlamaktan gelir.
             </p>
           </div>
           <div class="journey-grid">
@@ -203,62 +281,65 @@ function homePage() {
                 <div class="step-no">01</div>
                 <div>
                   <h3>Girdiyi topla</h3>
-                  <p>Raf, fiş ve barkod kaynaklarını tek ekranda toplayıp manuel giriş yükünü azaltır.</p>
+                  <p>Raf, fiş ve barkod kaynaklarını tek akışta toplayarak stok görünürlüğünü elde eder.</p>
                 </div>
               </article>
               <article class="journey-step">
                 <div class="step-no">02</div>
                 <div>
                   <h3>Kararı hızlandır</h3>
-                  <p>AI tarif akışı, eksik malzemeleri gösterir; alışveriş ve beslenme kararını tek seferde netleştirir.</p>
+                  <p>AI tarif sistemi, elindekilerden üretim çıkarır ve eksikleri liste akışına taşır.</p>
                 </div>
               </article>
               <article class="journey-step">
                 <div class="step-no">03</div>
                 <div>
                   <h3>Paylaş ve sürdür</h3>
-                  <p>Aile daveti, premium deneme, deep-link ve paylaşım sayfaları akışın kopmadan devam etmesini sağlar.</p>
+                  <p>Aile daveti, premium geçişleri ve share linkleri kullanıcıyı koparmadan doğru yüzeye yönlendirir.</p>
                 </div>
               </article>
             </div>
             <aside class="aside-quote">
-              <blockquote>
-                “Fridgely, mutfakla ilgili dağınık küçük kararları tek bir ritme bağlar.”
-              </blockquote>
-              <ul class="pill-list">
-                <li>Tarif üretimi Free ve Pro sınırlarıyla çalışır.</li>
-                <li>Paylaşılan linkler uygulama yoksa bile boş sayfaya düşmez.</li>
-                <li>Gizlilik, destek ve premium içerikleri tek domain altında toplanır.</li>
-              </ul>
+              <blockquote>“Bu site yalnızca pazarlama katmanı değil, ürünün dış dünyadaki operasyon yüzeyi.”</blockquote>
+              ${renderItems([
+                'Premium farkları karar vermeyi kolaylaştıracak kadar net anlatılır.',
+                'Gizlilik, koşullar ve destek dağınık linkler yerine tek sistemde kalır.',
+                'Share linkleri uygulama yüklü değilse bile profesyonel bir giriş ekranı sunar.',
+              ], 'pill-list')}
             </aside>
           </div>
         </section>
 
-        <section class="section" id="kitchen-system">
+        <section class="section" id="flows">
           <div class="section-head">
             <div>
-              <div class="eyebrow">Kitchen system</div>
-              <h2>Yalnızca tarif üretmez.</h2>
+              <div class="eyebrow">Ürün yüzeyleri</div>
+              <h2>Yalnızca tarif üreten bir uygulama gibi davranmaz.</h2>
             </div>
             <p>
-              Fridgely’nin değeri, yapay zeka sonucu ile günlük mutfak operasyonu arasındaki kopukluğu kapatmasında.
+              Değer, tek bir özelliğin parlaklığından değil; farklı mutfak görevlerinin ortak bir dil ve akış altında toparlanmasından gelir.
             </p>
           </div>
-          <div class="feature-grid">
+          <div class="feature-grid feature-grid-wide">
             <article class="feature-card">
               <div class="feature-icon">01</div>
-              <h3>Akıllı tarayıcı</h3>
-              <p>Fiş, raf ve barkod girişleriyle envanteri daha hızlı kurar.</p>
+              <h3>Tarayıcı ve giriş</h3>
+              <p>Manuel giriş yükünü düşürür; stok görünürlüğünü baştan daha güvenilir kurar.</p>
             </article>
-            <article class="feature-card">
+            <article class="feature-card feature-card-spotlight">
               <div class="feature-icon">02</div>
-              <h3>Recipe engine</h3>
-              <p>Elindekilerle dünya mutfaklarına uzanan üretim, eksik kontrolü ve sonuç akışı sağlar.</p>
+              <h3>AI tarif motoru</h3>
+              <p>Elindekilerden üretim çıkarır, eksik malzemeyi görünür kılar ve alışveriş kararını aynı bağlamda bırakır.</p>
             </article>
             <article class="feature-card">
               <div class="feature-icon">03</div>
-              <h3>Aile ve paylaşım</h3>
-              <p>Davet linkleri, deep-link fallback’ları ve premium misafir akışıyla sosyal kullanımı güçlendirir.</p>
+              <h3>Liste ve planlama</h3>
+              <p>Eksik ürünlerin alışverişe taşınması ve tekrar bulunması daha kısa bir karar döngüsü yaratır.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">04</div>
+              <h3>Davet ve fallback</h3>
+              <p>Paylaşılan tarif, davet ve deep-link rotaları uygulama yüklü değilse bile markalı şekilde devam eder.</p>
             </article>
           </div>
         </section>
@@ -267,30 +348,30 @@ function homePage() {
           <div class="section-head">
             <div>
               <div class="eyebrow">Premium</div>
-              <h2>İhtiyacın kadar sade, gerektiğinde güçlü.</h2>
+              <h2>Free ile düzen kur, Pro ile ritmi büyüt.</h2>
             </div>
             <p>
-              App içi satın alma uygulamada kalır; ama plan farkları, kullanım senaryoları ve karar destek içeriği bu yüzeyde daha net anlatılır.
+              Satın alma uygulama içinde kalır; bu yüzey ise hangi kullanım anında neden yükseltme gerektiğini sakin ve anlaşılır biçimde açıklar.
             </p>
           </div>
           <div class="pricing-grid">
             <article class="pricing-card">
               <div class="pricing-tag">Free</div>
-              <div class="price">₺0 <span>/ başlangıç</span></div>
-              <ul class="pricing-list">
-                <li>Temel akıllı tarama ve günlük kullanım</li>
-                <li>Limitli AI tarif üretimi</li>
-                <li>Alışveriş ve envanter takibi</li>
-              </ul>
+              <div class="price">Düzen kur <span>/ tek kullanıcı başlangıcı</span></div>
+              ${renderItems([
+                'Temel tarama ve stok görünürlüğü',
+                'Günlük tarif kararları için limitli üretim',
+                'Alışveriş ve envanter akışına giriş',
+              ], 'pricing-list')}
             </article>
             <article class="pricing-card pricing-card--accent">
               <div class="pricing-tag">Pro</div>
-              <div class="price">Daha derin akış <span>/ aile ve ileri kullanım</span></div>
-              <ul class="pricing-list">
-                <li>Daha geniş tarif üretimi ve premium akışlar</li>
-                <li>30 günlük aile daveti ve paylaşılabilir deneyim</li>
-                <li>Beslenme, tasarruf ve ileri planlama yüzeyleri</li>
-              </ul>
+              <div class="price">Akışı büyüt <span>/ aile ve yoğun kullanım</span></div>
+              ${renderItems([
+                'Daha geniş tarif üretimi ve karar desteği',
+                '30 günlük aile daveti ve paylaşılabilir akışlar',
+                'Beslenme, tasarruf ve daha ileri planlama yüzeyleri',
+              ], 'pricing-list')}
               <div class="stack-actions">
                 ${button({
                   label: 'Premium ekranını aç',
@@ -302,49 +383,27 @@ function homePage() {
               </div>
             </article>
           </div>
+          <article class="comparison-note">
+            <div class="eyebrow">Satın alma notu</div>
+            <p>Plan yönetimi ve satın alma uygulama içinde kalır. Web yüzeyi ise karar öncesi açıklama, destek ve güven katmanı olarak çalışır.</p>
+          </article>
         </section>
 
-        <section class="section" id="faq">
+        <section class="section" id="support-hub">
           <div class="section-head">
             <div>
-              <div class="eyebrow">SSS</div>
-              <h2>Sık sorulan kritik noktalar.</h2>
+              <div class="eyebrow">Destek ve yönlendirme</div>
+              <h2>Bağlantı boşa düşmesin diye tasarlandı.</h2>
             </div>
+            <p>Share linkleri, premium karar anı ve destek ihtiyaçları için her sayfanın net bir sonraki adımı vardır.</p>
           </div>
-          <div class="support-grid">
-            <article class="faq-card">
-              <h3>Web site ne işe yarıyor?</h3>
-              <p>Landing anlatısını taşır, uygulama içi dış linkleri toplar ve paylaşılan invite/recipe URL’leri için markalı fallback görevi görür.</p>
-            </article>
-            <article class="faq-card">
-              <h3>Premium satın alma burada mı?</h3>
-              <p>Hayır. Satın alma uygulama içinde kalır. Bu site plan farklarını, akışı ve destek içeriklerini açıklar.</p>
-            </article>
-            <article class="faq-card">
-              <h3>Paylaşılan tarif linki ne olur?</h3>
-              <p>Uygulama yüklüyse Fridgely açılır; değilse kullanıcı branded bir açıklama sayfasına düşer ve doğru aksiyona yönlendirilir.</p>
-            </article>
-            <article class="faq-card">
-              <h3>Yardım veya iş birliği?</h3>
-              <p><a href="mailto:${EMAIL_HELLO}">${EMAIL_HELLO}</a> üzerinden ekiple iletişime geçilebilir.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="download">
-          <div class="section-head">
-            <div>
-              <div class="eyebrow">Açılış noktası</div>
-              <h2>Uygulamayı aç, destek al veya ekiple konuş.</h2>
-            </div>
-          </div>
-          <div class="support-grid">
+          <div class="support-grid support-grid-triage">
             <article class="support-card">
-              <h3>Fridgely’yi aç</h3>
-              <p>Telefonundaysan doğrudan uygulamaya dönmeyi dene. Yüklü değilse destek ve bilgi akışı burada devam eder.</p>
+              <h3>Uygulamayı geri aç</h3>
+              <p>Davet, tarif veya alışveriş rotasından geldiysen doğrudan uygulamaya dönmeyi dene.</p>
               <div class="stack-actions">
                 ${button({
-                  label: 'Uygulamayı şimdi aç',
+                  label: 'Fridgely’yi aç',
                   appHref: 'fridgely://inventory',
                   fallbackHref: pageHref('/support'),
                   variant: 'primary',
@@ -352,12 +411,32 @@ function homePage() {
               </div>
             </article>
             <article class="support-card">
-              <h3>Ekiple iletişime geç</h3>
-              <p>Roadmap, iş birlikleri veya ürün soruları için doğrudan yaz.</p>
+              <h3>Premium farklarını netleştir</h3>
+              <p>Satın alma ekranı uygulamada kalsa da hangi akışların neden Pro'ya geçtiğini burada görebilirsin.</p>
+              <div class="stack-actions">
+                <a class="button button-secondary" href="${pageHref('/premium')}">Premium sayfası</a>
+              </div>
+            </article>
+            <article class="support-card">
+              <h3>Ekiple konuş</h3>
+              <p>Ürün, roadmap, iş birlikleri veya teknik sorular için doğrudan yaz.</p>
               <div class="stack-actions">
                 <a class="button button-secondary" href="mailto:${EMAIL_HELLO}">E-posta gönder</a>
-                <a class="secondary-link" href="${pageHref('/support')}">Destek merkezine git</a>
               </div>
+            </article>
+          </div>
+          <div class="support-grid support-grid-faq">
+            <article class="faq-card">
+              <h3>Bu web yüzeyi ne yapar?</h3>
+              <p>Ürün anlatısını taşır, app dışı linkleri toplar ve paylaşılan rotalar için markalı fallback görevi görür.</p>
+            </article>
+            <article class="faq-card">
+              <h3>Satın alma burada mı?</h3>
+              <p>Hayır. Satın alma uygulamada kalır; bu site karar desteği, yönlendirme ve güven katmanı sağlar.</p>
+            </article>
+            <article class="faq-card">
+              <h3>Paylaşılan link açılmazsa ne olur?</h3>
+              <p>Kullanıcı boş bir ekrana düşmez; ilgili akışı açıklayan sayfaya ve doğru aksiyona yönlendirilir.</p>
             </article>
           </div>
         </section>
@@ -369,26 +448,26 @@ function homePage() {
 
 function supportPage() {
   setMeta({
-    title: 'Fridgely Support | Destek ve sık sorulan sorular',
-    description: 'Fridgely destek merkezi, iletişim yolları ve ürün akışıyla ilgili sık sorulan sorular.',
+    title: 'Fridgely Support | Destek ve yönlendirme merkezi',
+    description: 'Fridgely destek yüzeyi, uygulamayı açma, ürün akışını anlama ve doğru yardım kanalına geçme için tasarlandı.',
     canonicalPath: '/support',
   });
 
   return `
     <div class="site-shell">
       ${topbar({ compact: true })}
-      <main class="section">
+      <main id="main-content" class="section">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Support</div>
-            <h2>Destek, yönlendirme ve ürün akışı.</h2>
+            <div class="eyebrow">Support Hub</div>
+            <h2>Destek, yönlendirme ve sonraki adım aynı yerde.</h2>
           </div>
-          <p>Uygulama içinden gelen yardım bağlantıları burada toplanır. Amaç, kullanıcıyı boş bir sayfada bırakmak değil, bir sonraki doğru aksiyona taşımaktır.</p>
+          <p>Bu yüzeyin amacı kullanıcıyı durdurmak değil; doğru aksiyona taşımak. Uygulamaya dön, ilgili sayfayı aç veya ekiple doğrudan iletişime geç.</p>
         </div>
-        <div class="support-grid">
+        <div class="support-grid support-grid-triage">
           <article class="support-card">
             <h3>Uygulamayı tekrar aç</h3>
-            <p>Davet, tarif veya alışveriş linkinden geldiysen uygulamayı doğrudan geri açmayı deneyebilirsin.</p>
+            <p>Davet, tarif veya alışveriş bağlantısından geldiysen doğrudan ilgili akışa geri dönmeyi dene.</p>
             <div class="stack-actions">
               ${button({
                 label: 'Fridgely’yi aç',
@@ -399,12 +478,33 @@ function supportPage() {
             </div>
           </article>
           <article class="support-card">
+            <h3>Doğru sayfaya git</h3>
+            <p>Premium farkları, gizlilik veya kullanım koşulları için ilgili yüzeye temiz bir şekilde geçebilirsin.</p>
+            <div class="stack-actions">
+              <a class="button button-secondary" href="${pageHref('/premium')}">Premium</a>
+              <a class="secondary-link" href="${pageHref('/privacy')}">Gizlilik</a>
+            </div>
+          </article>
+          <article class="support-card">
             <h3>İletişim</h3>
             <p>Ürün, yol haritası, ortaklık veya teknik destek için doğrudan ekibe yaz.</p>
             <div class="stack-actions">
               <a class="button button-secondary" href="mailto:${EMAIL_HELLO}">${EMAIL_HELLO}</a>
-              <a class="secondary-link" href="${pageHref('/privacy')}">Gizlilik</a>
             </div>
+          </article>
+        </div>
+        <article class="comparison-note">
+          <div class="eyebrow">Destek ilkesi</div>
+          <p>Fridgely paylaşılan linkleri ve app dışı yönlendirmeleri yardım almadan anlaşılır hale getirmeyi hedefler; bu yüzden her destek sayfası açık bir sonraki adım içerir.</p>
+        </article>
+        <div class="support-grid support-grid-faq">
+          <article class="faq-card">
+            <h3>Web site neden gerekli?</h3>
+            <p>Yalnızca tanıtım için değil; share linkleri, legal içerik ve app dışı yönlendirmeler için güvenilir bir ürün yüzeyi olduğu için.</p>
+          </article>
+          <article class="faq-card">
+            <h3>Satın alma burada mı?</h3>
+            <p>Hayır. Bu sayfalar bilgi ve yönlendirme katmanıdır; satın alma uygulama içinde kalır.</p>
           </article>
         </div>
       </main>
@@ -415,38 +515,40 @@ function supportPage() {
 
 function premiumPage() {
   setMeta({
-    title: 'Fridgely Premium | Plan farkları ve kullanım senaryoları',
-    description: 'Fridgely Premium planı, aile daveti, gelişmiş tarif akışı ve ek mutfak yönetim yüzeyleriyle neler kazandırır görün.',
+    title: 'Fridgely Premium | Plan farkları ve kullanım ritmi',
+    description: 'Fridgely Premium farklarını, hangi kullanım anında anlamlı hale geldiğini ve satın alma öncesi karar çerçevesini görün.',
     canonicalPath: '/premium',
   });
 
   return `
     <div class="site-shell">
       ${topbar({ compact: true })}
-      <main class="section">
+      <main id="main-content" class="section">
         <div class="section-head">
           <div>
             <div class="eyebrow">Premium</div>
-            <h2>Daha fazla üretim, daha temiz akış.</h2>
+            <h2>Daha fazla üretim, daha temiz bir kullanım ritmi.</h2>
           </div>
-          <p>Bu sayfa app içi satın alma yerine, karar vermeyi kolaylaştıran farkları ve kullanım senaryolarını özetler.</p>
+          <p>Bu sayfa satın alma ekranı değildir; karar öncesi farkları, kim için anlamlı olduğunu ve premium akışların neden var olduğunu netleştirir.</p>
         </div>
         <div class="pricing-grid">
           <article class="pricing-card">
-            <h3>Free ile başla</h3>
-            <ul class="pricing-list">
-              <li>Temel tarama ve stok görünürlüğü</li>
-              <li>Limitli AI tarif üretimi</li>
-              <li>Alışveriş ve envanter akışı</li>
-            </ul>
+            <div class="pricing-tag">Free</div>
+            <h3>Önce düzen kur</h3>
+            ${renderItems([
+              'Temel tarama ve stok görünürlüğü',
+              'Günlük kullanım için limitli tarif üretimi',
+              'Alışveriş ve envanter akışına giriş',
+            ], 'pricing-list')}
           </article>
           <article class="pricing-card pricing-card--accent">
-            <h3>Pro ile derine in</h3>
-            <ul class="pricing-list">
-              <li>Daha geniş üretim limitleri</li>
-              <li>Family guest invite ve paylaşılabilir akışlar</li>
-              <li>Beslenme, tasarruf ve ileri akış kartları</li>
-            </ul>
+            <div class="pricing-tag">Pro</div>
+            <h3>Sonra ritmi büyüt</h3>
+            ${renderItems([
+              'Daha geniş üretim limitleri ve daha sık kullanım',
+              'Family guest invite ve paylaşılabilir ürün akışları',
+              'Beslenme, tasarruf ve daha ileri planlama kartları',
+            ], 'pricing-list')}
             <div class="stack-actions">
               ${button({
                 label: 'Uygulamada premium ekranını aç',
@@ -456,6 +558,20 @@ function premiumPage() {
               })}
               <a class="secondary-link" href="${pageHref('/support')}">Destek sorularını gör</a>
             </div>
+          </article>
+        </div>
+        <div class="support-grid support-grid-triage">
+          <article class="support-card">
+            <h3>Kim için doğru an?</h3>
+            <p>Aynı mutfakta birden fazla kişi varsa, share linkleri aktif kullanılıyorsa veya tarif akışı günlük bir karar aracıysa Pro daha anlamlı hale gelir.</p>
+          </article>
+          <article class="support-card">
+            <h3>Satın alma nerede?</h3>
+            <p>Satın alma ve plan yönetimi uygulama içinde kalır. Web tarafı yalnızca açıklama, güven ve yönlendirme görevini üstlenir.</p>
+          </article>
+          <article class="support-card">
+            <h3>Karar vermeden önce</h3>
+            <p>Önce destek ve gizlilik sayfalarını, sonra premium akışını inceleyerek ürünün nasıl konumlandığını daha net görebilirsin.</p>
           </article>
         </div>
       </main>
@@ -475,24 +591,24 @@ function legalPage(kind) {
     return `
       <div class="site-shell">
         ${topbar({ compact: true })}
-        <main class="section legal-layout">
+        <main id="main-content" class="section legal-layout">
           <article class="legal-card">
             <div class="eyebrow">Privacy</div>
             <h1>Gizlilik yaklaşımı açık ve izlenebilir kalmalı.</h1>
             <div class="legal-meta">Son güncelleme: 8 Mart 2026</div>
             <p>Fridgely; mutfak envanteri, tarif akışı ve kullanıcı tercihleri için minimum gerekli veriyi işlemeyi hedefler. Paylaşım akışlarında kullanıcıyı karanlık desene iten belirsiz yönlendirmeler yerine açık kontrol sunar.</p>
             <h2>Toplanan başlıca veri tipleri</h2>
-            <ul class="legal-list">
-              <li>Envanter, favori ve alışveriş listesi içerikleri</li>
-              <li>Tarama ve kullanım geçmişine ait uygulama içi tercihler</li>
-              <li>Paylaşım ve davet akışları için gerekli bağlantı metadatası</li>
-            </ul>
+            ${renderItems([
+              'Envanter, favori ve alışveriş listesi içerikleri',
+              'Tarama ve kullanım geçmişine ait uygulama içi tercihler',
+              'Paylaşım ve davet akışları için gerekli bağlantı metadatası',
+            ], 'legal-list')}
             <h2>Kullanıcı kontrolleri</h2>
-            <ul class="legal-list">
-              <li>Uygulama içinden veri özeti ve dışa aktarma</li>
-              <li>Anonim analiz ve kişiselleştirme tercihlerinin yönetimi</li>
-              <li>Veri silme ve iletişim kanalları</li>
-            </ul>
+            ${renderItems([
+              'Uygulama içinden veri özeti ve dışa aktarma',
+              'Anonim analiz ve kişiselleştirme tercihlerinin yönetimi',
+              'Veri silme ve iletişim kanalları',
+            ], 'legal-list')}
           </article>
           <aside class="support-card">
             <h3>İletişim</h3>
@@ -501,10 +617,10 @@ function legalPage(kind) {
               <a class="button button-secondary" href="mailto:${EMAIL_PRIVACY}">${EMAIL_PRIVACY}</a>
               <a class="secondary-link" href="${pageHref('/terms')}">Kullanım koşulları</a>
             </div>
-            <ul class="pill-list">
-              <li>KVKK / GDPR farkındalığı uygulama ekranlarına da taşınır.</li>
-              <li>Harici linkler mümkün olduğunca tek domain altında toplanır.</li>
-            </ul>
+            ${renderItems([
+              'KVKK / GDPR farkındalığı uygulama ekranlarına da taşınır.',
+              'Harici linkler mümkün olduğunca tek domain altında toplanır.',
+            ], 'pill-list')}
           </aside>
         </main>
         ${footer()}
@@ -521,24 +637,24 @@ function legalPage(kind) {
   return `
     <div class="site-shell">
       ${topbar({ compact: true })}
-      <main class="section legal-layout">
+      <main id="main-content" class="section legal-layout">
         <article class="legal-card">
           <div class="eyebrow">Terms</div>
           <h1>Kullanım koşulları sade olmalı.</h1>
           <div class="legal-meta">Son güncelleme: 8 Mart 2026</div>
           <p>Fridgely, mutfak organizasyonu ve tarif üretimi için sunulan bir yardımcı uygulamadır. Kullanıcı, uygulama içinde paylaştığı içeriklerden ve oluşturduğu davet linklerinden sorumludur.</p>
           <h2>Beklentiler</h2>
-          <ul class="legal-list">
-            <li>Paylaşım özellikleri kötüye kullanılmamalıdır.</li>
-            <li>Premium hakları yalnızca izin verilen hesap akışlarıyla kullanılmalıdır.</li>
-            <li>Ürün içeriği bilgilendirme amaçlıdır; tıbbi veya yasal tavsiye yerine geçmez.</li>
-          </ul>
+          ${renderItems([
+            'Paylaşım özellikleri kötüye kullanılmamalıdır.',
+            'Premium hakları yalnızca izin verilen hesap akışlarıyla kullanılmalıdır.',
+            'Ürün içeriği bilgilendirme amaçlıdır; tıbbi veya yasal tavsiye yerine geçmez.',
+          ], 'legal-list')}
           <h2>Değişiklikler</h2>
           <p>Ürün akışı değiştikçe, koşullar ve destek sayfaları aynı domain altında güncellenebilir.</p>
         </article>
-          <aside class="support-card">
-            <h3>Devam et</h3>
-            <div class="stack-actions">
+        <aside class="support-card">
+          <h3>Devam et</h3>
+          <div class="stack-actions">
             <a class="button button-secondary" href="${pageHref('/support')}">Destek merkezi</a>
             <a class="secondary-link" href="${pageHref('/privacy')}">Gizlilik</a>
           </div>
@@ -549,7 +665,21 @@ function legalPage(kind) {
   `;
 }
 
-function deepLinkPage({ eyebrow, title, description, chips, appHref, fallbackHref, secondaryHref, secondaryLabel, canonicalPath }) {
+function deepLinkPage({
+  eyebrow,
+  title,
+  description,
+  chips,
+  appHref,
+  fallbackHref,
+  secondaryHref,
+  secondaryLabel,
+  canonicalPath,
+  guideTitle = 'Bu bağlantı ne yapar?',
+  guideItems = [],
+  nextTitle = 'Sonraki adım',
+  nextItems = [],
+}) {
   setMeta({
     title,
     description,
@@ -563,20 +693,34 @@ function deepLinkPage({ eyebrow, title, description, chips, appHref, fallbackHre
   return `
     <div class="site-shell deep-link-shell">
       ${topbar({ compact: true })}
-      <main class="deep-link-panel">
-        <div class="eyebrow">${eyebrow}</div>
-        <div class="deep-link-meta">${chipHtml}</div>
-        <h1 class="deep-link-title">${title}</h1>
-        <p>${description}</p>
-        <div class="legal-actions">
-          ${button({
-            label: 'Fridgely uygulamasını aç',
-            appHref,
-            fallbackHref,
-            variant: 'primary',
-          })}
-          <a class="secondary-link" href="${secondaryHref}">${secondaryLabel}</a>
-        </div>
+      <main id="main-content" class="route-layout">
+        <section class="deep-link-panel">
+          <div class="eyebrow">${eyebrow}</div>
+          <div class="deep-link-meta">${chipHtml}</div>
+          <h1 class="deep-link-title">${title}</h1>
+          <p>${description}</p>
+          <div class="legal-actions">
+            ${button({
+              label: 'Fridgely uygulamasını aç',
+              appHref,
+              fallbackHref,
+              variant: 'primary',
+            })}
+            <a class="secondary-link" href="${secondaryHref}">${secondaryLabel}</a>
+          </div>
+        </section>
+        <aside class="route-side-stack">
+          <article class="route-sidecard">
+            <div class="eyebrow">Bağlantı rehberi</div>
+            <h2>${guideTitle}</h2>
+            ${renderItems(guideItems, 'legal-list')}
+          </article>
+          <article class="route-sidecard route-sidecard-muted">
+            <div class="eyebrow">Sonraki adım</div>
+            <h2>${nextTitle}</h2>
+            ${renderItems(nextItems, 'legal-list')}
+          </article>
+        </aside>
       </main>
       ${footer()}
     </div>
@@ -606,27 +750,48 @@ function routeDeepLink(path, query) {
       secondaryHref: pageHref('/premium'),
       secondaryLabel: 'Premium avantajlarını gör',
       canonicalPath: '/invite/family',
+      guideTitle: 'Bu davet ne sağlar?',
+      guideItems: [
+        '30 günlük aile daveti akışına giriş sağlar.',
+        'Uygulama yüklüyse ilgili iç akışı açmayı dener.',
+        'Yüklü değilse premium ve destek yüzeylerine yönlendirir.',
+      ],
+      nextTitle: 'Sorunsuz devam için',
+      nextItems: [
+        'Önce uygulamayı açmayı dene.',
+        'Daveti neden aldığını premium yüzeyinde görebilirsin.',
+        'Sorun yaşarsan destek merkezine geç.',
+      ],
     });
   }
 
   if (path === '/recipe' || path.startsWith('/recipe/')) {
     const recipeId =
-      path === '/recipe' ? (query.get('id') || '') : (path.split('/')[2] || '');
+      path === '/recipe' ? query.get('id') || '' : path.split('/')[2] || '';
     const recipeName = query.get('name') || 'Paylaşılan tarif';
     return deepLinkPage({
       eyebrow: 'Recipe Share',
       title: recipeName,
       description:
         'Bu bağlantı Fridgely içindeki tarif paylaşımı için oluşturuldu. Uygulamayı açarak ilgili akışa devam edebilir veya tarif üretim sistemini inceleyebilirsin.',
-      chips: [
-        `Tarif ID: ${recipeId || 'hazır'}`,
-        'Paylaşım linki',
-      ],
+      chips: [`Tarif ID: ${recipeId || 'hazır'}`, 'Paylaşım linki'],
       appHref: `fridgely://recipe/${recipeId}`,
       fallbackHref: pageHref('/recipes'),
-      secondaryHref: pageHref('/#how-it-works'),
+      secondaryHref: pageHref('/#system-map'),
       secondaryLabel: 'Sistemin nasıl çalıştığını gör',
       canonicalPath: recipeId ? `/recipe/${recipeId}` : '/recipe',
+      guideTitle: 'Bu tarif linki ne yapar?',
+      guideItems: [
+        'Paylaşılan tarif kaydını uygulama içinde açmayı dener.',
+        'Uygulama yoksa tarif akışını ve ilgili sistemi açıklar.',
+        'Tariften alışveriş veya premium kararına geçişi destekler.',
+      ],
+      nextTitle: 'Devam seçenekleri',
+      nextItems: [
+        'Uygulamayı açarak tarif detayına dön.',
+        'Tarif sistemini ana sayfadan incele.',
+        'Daha geniş akış için premium farklarına bak.',
+      ],
     });
   }
 
@@ -642,6 +807,18 @@ function routeDeepLink(path, query) {
       secondaryHref: pageHref('/premium'),
       secondaryLabel: 'Premium farklarını incele',
       canonicalPath: '/recipes',
+      guideTitle: 'Tarif akışı nasıl devam eder?',
+      guideItems: [
+        'Üretim ve sonuç ekranı uygulama içinde açılır.',
+        'Limitler ve premium farkları bu web yüzeyinde açıklanır.',
+        'Eksik malzeme kontrolü alışveriş akışına bağlanır.',
+      ],
+      nextTitle: 'Buradan nereye gidilir?',
+      nextItems: [
+        'Uygulamada tarif akışını aç.',
+        'Premium plan farklarını incele.',
+        'Destek sayfasından doğru yönlendirmeyi al.',
+      ],
     });
   }
 
@@ -654,9 +831,21 @@ function routeDeepLink(path, query) {
       chips: ['Scanner', 'Inventory'],
       appHref: 'fridgely://inventory',
       fallbackHref: pageHref('/support'),
-      secondaryHref: pageHref('/#kitchen-system'),
+      secondaryHref: pageHref('/#flows'),
       secondaryLabel: 'Ürün sistemini gör',
       canonicalPath: '/inventory',
+      guideTitle: 'Envanter linki ne için?',
+      guideItems: [
+        'Buzdolabı ve stok görünürlüğü akışına geri taşır.',
+        'Tarama, giriş ve stok kontrolü bu yüzeyle ilişkilidir.',
+        'Uygulama açılamazsa destek sayfası devreye girer.',
+      ],
+      nextTitle: 'İlerleme yolu',
+      nextItems: [
+        'Envanter ekranını aç.',
+        'Sistem haritasını ana sayfadan incele.',
+        'Sorun varsa destek merkezine git.',
+      ],
     });
   }
 
@@ -672,6 +861,18 @@ function routeDeepLink(path, query) {
       secondaryHref: pageHref('/premium'),
       secondaryLabel: 'Premium akışını incele',
       canonicalPath: '/shopping',
+      guideTitle: 'Alışveriş akışı nasıl çalışır?',
+      guideItems: [
+        'Eksik malzemeleri listeye taşımayı hedefler.',
+        'Tarif akışından alışveriş kararına geçişi bağlar.',
+        'Uygulama açılamazsa destek ve premium yüzeylerine yönlendirir.',
+      ],
+      nextTitle: 'Sonraki adımlar',
+      nextItems: [
+        'Uygulamada alışveriş listesini aç.',
+        'Premium farklarının liste akışına etkisini incele.',
+        'Sorun yaşarsan destek merkezini kullan.',
+      ],
     });
   }
 
@@ -688,7 +889,7 @@ function notFoundPage() {
   return `
     <div class="site-shell deep-link-shell">
       ${topbar({ compact: true })}
-      <main class="deep-link-panel">
+      <main id="main-content" class="deep-link-panel">
         <div class="eyebrow">404</div>
         <h1 class="deep-link-title">Bu rota Fridgely’de boş kalmamalı.</h1>
         <p>Aradığın bağlantı taşınmış olabilir. Ana sayfaya dönerek doğru akışa geçebilirsin.</p>
