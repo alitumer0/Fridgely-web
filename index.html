@@ -1,62 +1,156 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <script>
-    (function () {
-      var parts = location.pathname.split('/').filter(Boolean);
-      var isGithubPages = location.hostname.endsWith('github.io') && parts.length;
-      var baseHref = isGithubPages ? '/' + parts[0] + '/' : '/';
-      var base = document.createElement('base');
-      base.href = baseHref;
-      document.head.appendChild(base);
-      window.__FRIDGELY_SITE_BASE__ = baseHref;
-      window.__FRIDGELY_SITE_ORIGIN__ = isGithubPages
-        ? location.origin + baseHref.replace(/\/$/, '')
-        : 'https://fridgely.app';
-    })();
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fridgely</title>
-  <meta id="meta-description" name="description" content="Fridgely ile mutfak envanterini tara, elindekilerle tarif üret ve aile akışını tek yerde yönet." />
-  <link id="canonical-link" rel="canonical" href="https://fridgely.app/" />
-  <meta property="og:type" content="website" />
-  <meta id="og-title" property="og:title" content="Fridgely" />
-  <meta id="og-description" property="og:description" content="Akıllı mutfak yönetimi, tarif üretimi ve paylaşılabilir deep-link akışları." />
-  <meta id="og-url" property="og:url" content="https://fridgely.app/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta id="twitter-title" name="twitter:title" content="Fridgely" />
-  <meta id="twitter-description" name="twitter:description" content="Akıllı mutfak yönetimi, tarif üretimi ve paylaşılabilir deep-link akışları." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="site.css" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Fridgely",
-      "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "iOS, Android",
-      "description": "Fridgely mutfak envanterini tarar, tarif üretir ve aileyle paylaşılabilir akıllı mutfak akışları sunar.",
-      "url": "https://fridgely.app",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "TRY"
-      }
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fridgely, gıda israfını önlemenize yardımcı olan akıllı bir mutfak ve envanter yönetimi uygulamasıdır. Son kullanma tarihlerini takip edin ve eldeki malzemelerle tarifler bulun.">
+    <meta name="keywords" content="gıda israfı, mutfak yönetimi, envanter takibi, son kullanma tarihi, yemek tarifleri, alışveriş listesi, fridgely">
+    <title>Fridgely: Akıllı Mutfak Asistanınız | Gıda İsrafına Son Verin</title>
+    <link rel="stylesheet" href="site.css">
 </head>
 <body>
-  <div class="site-noise" aria-hidden="true"></div>
-  <div id="app"></div>
-  <noscript>
-    <main class="no-script">
-      <h1>Fridgely</h1>
-      <p>Bu site JavaScript ile çalışır. Tarayıcınızda JavaScript kapalı görünüyor.</p>
+
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">Fridgely.</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
+                    <li><a href="#features">Özellikler</a></li>
+                    <li><a href="#faq">SSS</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn btn-primary">İndir</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container">
+            <h1 class="display-title animate-on-scroll">Gıda İsrafına<br>Son Verin.</h1>
+            <p class="lead-text animate-on-scroll">Fridgely ile mutfağınızdaki her şeyi takip edin, son kullanma tarihlerini kaçırmayın ve elinizdeki malzemelerle harikalar yaratın.</p>
+            <div class="hero-actions animate-on-scroll">
+                <a href="#" class="btn btn-primary">App Store'dan İndir</a>
+                <a href="#" class="btn btn-secondary">Google Play'den Alın</a>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="container">
+            <h2 class="section-title animate-on-scroll">Akıllı. Basit.<br>Lezzetli.</h2>
+            
+            <div class="steps-grid">
+                <div class="step-card animate-on-scroll">
+                    <span class="step-number">1</span>
+                    <h3>Ürünleri Ekle</h3>
+                    <p>Buzdolabınızdaki ve kilerinizdeki ürünleri kolayca tarayarak veya manuel olarak envanterinize ekleyin.</p>
+                </div>
+                
+                <div class="step-card animate-on-scroll">
+                    <span class="step-number">2</span>
+                    <h3>Takip Et</h3>
+                    <p>Son kullanma tarihleri yaklaşan ürünler için akıllı bildirimler alın. Hiçbir yiyecek ziyan olmasın.</p>
+                </div>
+                
+                <div class="step-card animate-on-scroll">
+                    <span class="step-number">3</span>
+                    <h3>Pişir</h3>
+                    <p>Sadece elinizdeki malzemelere göre size özel sunulan binlerce tarif arasından seçiminizi yapın.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="container features">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Mutfağınızın<br>Süper Güçleri</h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-item animate-on-scroll">
+                        <div class="feature-text">
+                            <h3>Akıllı Envanter Takibi</h3>
+                            <p>Neyiniz var, neyiniz bitmek üzere, son kullanma tarihi ne zaman? Fridgely ile mutfağınız parmaklarınızın ucunda. İsrafı önleyin, bütçenizi koruyun.</p>
+                        </div>
+                        <div class="feature-visual">
+                            Envanter Görseli
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item animate-on-scroll">
+                        <div class="feature-text">
+                            <h3>Size Özel Tarifler</h3>
+                            <p>Bugün ne pişirsem derdine son. Evinizdeki malzemeleri belirtin, Fridgely size en uygun ve en lezzetli yemek tarifi önerilerini anında sunsun.</p>
+                        </div>
+                        <div class="feature-visual">
+                            Tarifler Görseli
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item animate-on-scroll">
+                        <div class="feature-text">
+                            <h3>Otomatik Alışveriş Listesi</h3>
+                            <p>Eksilen ürünleriniz veya yapmak istediğiniz tarifler için gereken malzemeler tek bir dokunuşla alışveriş listenize eklensin.</p>
+                        </div>
+                        <div class="feature-visual">
+                            Liste Görseli
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Teaser Section -->
+        <section id="faq" class="container faq-section">
+            <h2 class="section-title animate-on-scroll">Merak Edilenler</h2>
+            
+            <div class="faq-item animate-on-scroll">
+                <h4>Fridgely ücretsiz mi?</h4>
+                <p>Fridgely'nin temel özellikleri tamamen ücretsizdir. Aile paylaşımı gibi ekstra özellikler için premium seçeneklerimiz mevcut.</p>
+            </div>
+            
+            <div class="faq-item animate-on-scroll">
+                <h4>Aile üyelerimle ortak liste kullanabilir miyim?</h4>
+                <p>Evet! Premium özelliklerimizle aile üyelerinizi davet edebilir ve evinizin envanterini ortak yönetebilirsiniz.</p>
+            </div>
+            
+            <div style="text-align: center;" class="animate-on-scroll">
+                <a href="faq.html" class="faq-link">Tüm soruları gör &rarr;</a>
+            </div>
+        </section>
     </main>
-  </noscript>
-  <script defer src="site.js"></script>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="index.html" class="logo">Fridgely.</a>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Gizlilik Politikası</a>
+                <a href="terms.html">Kullanım Şartları</a>
+                <a href="support.html">Destek</a>
+            </div>
+            <p class="copyright">&copy; 2026 Fridgely. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Intersection Observer for Scroll Animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Animasyon sadece bir kere çalışsın
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>
