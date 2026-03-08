@@ -19,5 +19,5 @@ Static marketing and deep-link fallback site for Fridgely.
 
 - Source repo: `https://github.com/alitumer0/Fridgely-web`
 - Live site: `https://fridgely.pages.dev`
-- Production deployment snapshot: `https://283ebd76.fridgely.pages.dev`
+- Production deployment snapshot: `https://bd7fcbdd.fridgely.pages.dev`
 - `fridgely.app` custom domain is not active yet, so app-side hardcoded production links will not resolve to the deployed site until DNS is configured.
