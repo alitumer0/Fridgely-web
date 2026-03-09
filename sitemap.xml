@@ -4,15 +4,27 @@
     <loc>https://fridgely.app/</loc>
   </url>
   <url>
-    <loc>https://fridgely.app/privacy</loc>
+    <loc>https://fridgely.app/blog.html</loc>
   </url>
   <url>
-    <loc>https://fridgely.app/terms</loc>
+    <loc>https://fridgely.app/faq.html</loc>
   </url>
   <url>
-    <loc>https://fridgely.app/premium</loc>
+    <loc>https://fridgely.app/support.html</loc>
   </url>
   <url>
-    <loc>https://fridgely.app/support</loc>
+    <loc>https://fridgely.app/privacy-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://fridgely.app/terms.html</loc>
+  </url>
+  <url>
+    <loc>https://fridgely.app/blog/ilk-yazi.html</loc>
+  </url>
+  <url>
+    <loc>https://fridgely.app/blog/son-kullanma-tarihini-kacirmamak-icin-7-rutin.html</loc>
+  </url>
+  <url>
+    <loc>https://fridgely.app/blog/haftalik-mutfak-reseti-nasil-yapilir.html</loc>
   </url>
 </urlset>

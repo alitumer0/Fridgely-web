@@ -1,33 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <script>
-    (function () {
-      var parts = location.pathname.split('/').filter(Boolean);
-      var isGithubPages = location.hostname.endsWith('github.io') && parts.length;
-      var baseHref = isGithubPages ? '/' + parts[0] + '/' : '/';
-      var base = document.createElement('base');
-      base.href = baseHref;
-      document.head.appendChild(base);
-      window.__FRIDGELY_SITE_BASE__ = baseHref;
-      window.__FRIDGELY_SITE_ORIGIN__ = isGithubPages
-        ? location.origin + baseHref.replace(/\/$/, '')
-        : 'https://fridgely.app';
-    })();
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fridgely Terms</title>
-  <meta id="meta-description" name="description" content="Fridgely kullanım koşulları." />
-  <link id="canonical-link" rel="canonical" href="https://fridgely.app/terms" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="site.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanım Şartları | Fridgely</title>
+    <meta name="description" content="Fridgely kullanım şartları: site, waitlist akışı ve yayın öncesi ürün kullanımı için güncel taslak çerçeve.">
+    <link rel="canonical" href="https://fridgely.app/terms.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kullanım Şartları | Fridgely">
+    <meta property="og:description" content="Fridgely site, waitlist ve yayın öncesi ürün kullanımı için güncel şartlar taslağı.">
+    <meta property="og:url" content="https://fridgely.app/terms.html">
+    <meta property="og:image" content="https://fridgely.app/og-legal.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kullanım Şartları | Fridgely">
+    <meta name="twitter:description" content="Fridgely site, waitlist ve yayın öncesi ürün kullanımı için güncel şartlar taslağı.">
+    <meta name="twitter:image" content="https://fridgely.app/og-legal.svg">
+    <link rel="stylesheet" href="site.css">
 </head>
 <body>
-  <div class="site-noise" aria-hidden="true"></div>
-  <div id="app"></div>
-  <script defer src="site.js"></script>
+
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">Fridgely.</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#how-it-works">Nasıl Çalışır?</a></li>
+                    <li><a href="index.html#features">Özellikler</a></li>
+                    <li><a href="faq.html">SSS</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#launch-cta" class="btn btn-primary">Lansmanı Takip Et</a>
+        </div>
+    </header>
+
+    <main class="container article-shell">
+        <div class="page-hero article-hero">
+            <h1 class="display-title">Kullanım Şartları</h1>
+            <p class="lead-text">Bu sayfa Fridgely web sitesi, erken erişim akışı ve ileride yayına alınacak uygulama için hazırlanmış yayın öncesi kullanım şartları taslağıdır. Nihai sürüm, ürün kapsamı ve ticari model netleştikten sonra hukuki incelemeyle tamamlanmalıdır.</p>
+            <p class="article-meta">Son güncelleme: 9 Mart 2026 · Durum: Taslak / legal review gerekli</p>
+        </div>
+
+        <article class="article-content">
+            <div class="draft-notice">
+                <strong>Önemli not:</strong> Bu metin yayın öncesi çalışma taslağıdır; hukuki tavsiye yerine geçmez ve canlı yayından önce son kontrol gerektirir.
+            </div>
+
+            <h2>1. Bu metni kabul etmeniz ne anlama gelir?</h2>
+            <p>Fridgely web sitesini kullanarak, erken erişim talebinde bulunarak veya ileride yayınlanacak ürüne katılarak bu şartların güncel sürümüne tabi olmayı kabul etmiş sayılırsınız. Canlı sürüm yayımlandığında bu metin ayrıca güncellenebilir.</p>
+
+            <h2>2. Hizmetin bugunku kapsamı</h2>
+            <p>Fridgely şu anda pazarlama sitesi, blog, destek sayfaları ve erken erişim akışından oluşan yayın öncesi bir yüzeye sahiptir. Mobil uygulama ve ücretli planlar herkese açık olarak sunulduğunda, kapsam ve şartlar buna göre genişletilecektir.</p>
+
+            <h2>3. Waitlist veya erken erisim garantili degildir</h2>
+            <p>Waitlist formu veya erken erişim talebi bırakmanız, size mutlaka davet gönderileceği, belirli bir tarihte erişim açılacağı veya ürünün aynı özelliklerle yayına çıkacağı anlamına gelmez. Erken erişim kapasitesi, platform önceliği ve ürün kapsamı değişebilir.</p>
+
+            <h2>4. Hesaplar ve uygunluk</h2>
+            <p>Fridgely herkese açık hesap sistemine geçtiğinde, doğru bilgi verme, hesap güvenliğini koruma ve hesabınızı yetkisiz kullanıma karşı koruma yükümlülüğü size ait olacaktır. Ürün yaş sınırı, hesap paylaşımı ve aile kullanımı koşulları canlı sürümde ayrıca netleştirilecektir.</p>
+
+            <h2>5. Kabul edilebilir kullanim</h2>
+            <p>Siteyi veya ileride sunulacak uygulamayı şu amaçlarla kullanamazsınız: hizmeti bozmak, yetkisiz erişim denemek, güvenlik önlemlerini aşmaya çalışmak, otomasyonla kötüye kullanım yapmak, hukuka aykırı içerik yüklemek veya Fridgely altyapısına zarar vermek.</p>
+
+            <h2>6. Icerik, tarif ve son kullanma bilgilerinin sinirlari</h2>
+            <p>Fridgely, mutfak organizasyonu ve karar desteği sunmayı hedefler; profesyonel beslenme, tıbbi tavsiye veya kesin gıda güvenliği garantisi vermez. Son kullanma tarihleri, saklama koşulları ve tüketim güvenliği konusunda nihai karar her zaman kullanıcıya aittir.</p>
+
+            <h2>7. Fikri mulkiyet</h2>
+            <p>Fridgely markası, site tasarımı, yazılım bileşenleri, metinler ve görsel sistem Fridgely'ye veya lisans veren taraflara aittir. Kullanıcıya yalnızca hizmeti bu şartlara uygun biçimde kullanmak için sınırlı, geri alınabilir bir kullanım hakkı tanınır.</p>
+
+            <h2>8. Hizmet degisiklikleri ve kesintiler</h2>
+            <p>Ürün pre-launch aşamasında olduğu için özellikler, fiyatlandırma, erişim modeli ve teknik yapı önceden haber verilmeksizin değişebilir. Geçici kesinti, bakım veya bazı özelliklerin kaldırılması Fridgely'nin yayın öncesi çalışma biçiminin parçası olabilir.</p>
+
+            <h2>9. Ucuncu taraf baglantilar</h2>
+            <p>Site içinde blog, destek, dış form, otomasyon servisi veya gelecekte TestFlight benzeri üçüncü taraf bağlantılar yer alabilir. Bu servislerin kendi koşul ve politikaları ayrıca geçerli olabilir.</p>
+
+            <h2>10. Sorumluluk ve garanti siniri</h2>
+            <p>Yururlukteki hukuk izin verdigi olcude, Fridgely siteyi ve yayin oncesi urun akislarini "oldugu gibi" sunabilir. Canlı sürüm öncesinde performans, süreklilik, belirli amaca uygunluk veya hatasız çalışma yönünde sınırsız garanti verildiği şeklinde yorum yapılmamalıdır.</p>
+
+            <h2>11. Hesap veya erisimin sonlandirilmasi</h2>
+            <p>Hizmeti kötüye kullanan, güvenliği tehdit eden veya bu şartları ihlal eden kullanıcıların erişimi askıya alınabilir veya sonlandırılabilir. Canlı ürün aşamasında hesap silme ve veri saklama süreçleri ayrıca daha detaylı yazılacaktır.</p>
+
+            <h2>12. Son hukumler</h2>
+            <p>Bu belge halen yayın öncesi taslak olduğundan, uygulanacak hukuk, yetkili mahkeme, ticari şartlar ve premium plan hükümleri canlıya çıkmadan önce hukuk danışmanlığı ile tamamlanmalıdır. Bu sürüm, o tarihe kadar ürünün nasıl konumlandığını ve hangi sınırlar içinde kullanılması gerektiğini açıklayan çalışma metnidir.</p>
+
+            <p>Şimdilik ürün durumunu takip etmek için <a class="inline-link" href="index.html#launch-cta">lansman alanını</a>, genel sorular için ise <a class="inline-link" href="faq.html">SSS sayfasını</a> kullanabilirsiniz.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="index.html" class="logo">Fridgely.</a>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Gizlilik Politikası</a>
+                <a href="terms.html">Kullanım Şartları</a>
+                <a href="support.html">Destek</a>
+            </div>
+            <p class="copyright">&copy; 2026 Fridgely. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

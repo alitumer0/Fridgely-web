@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fridgely, gıda israfını önlemenize yardımcı olan akıllı bir mutfak ve envanter yönetimi uygulamasıdır. Son kullanma tarihlerini takip edin ve eldeki malzemelerle tarifler bulun.">
-    <meta name="keywords" content="gıda israfı, mutfak yönetimi, envanter takibi, son kullanma tarihi, yemek tarifleri, alışveriş listesi, fridgely">
-    <title>Fridgely: Akıllı Mutfak Asistanınız | Gıda İsrafına Son Verin</title>
+    <title>Fridgely | Evdeki Gıdaları Takip Et, İsrafı Azalt</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Fridgely | Evdeki Gıdaları Takip Et, İsrafı Azalt">
+    <meta name="description" content="Fridgely, evdeki gıdaları takip etmenize, neyin biteceğini görmenize ve elinizdekilerle ne pişireceğinizi daha hızlı bulmanıza yardımcı olur.">
+    <meta name="keywords" content="gıda israfı, mutfak yönetimi, envanter takibi, son kullanma tarihi, yemek tarifleri, alışveriş listesi, fridgely, akıllı mutfak">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://fridgely.app/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fridgely.app/">
+    <meta property="og:title" content="Fridgely | Evdeki Gıdaları Takip Et, İsrafı Azalt">
+    <meta property="og:description" content="Fridgely, neyin kaldığını, neyin biteceğini ve elinizdekilerle ne pişirebileceğinizi tek yerde gösteren akıllı mutfak asistanıdır.">
+    <meta property="og:image" content="https://fridgely.app/og-home.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fridgely.app/">
+    <meta property="twitter:title" content="Fridgely | Evdeki Gıdaları Takip Et, İsrafı Azalt">
+    <meta property="twitter:description" content="Fridgely, neyin kaldığını, neyin biteceğini ve elinizdekilerle ne pişirebileceğinizi tek yerde gösteren akıllı mutfak asistanıdır.">
+    <meta property="twitter:image" content="https://fridgely.app/og-home.svg">
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fridgely",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS, Android",
+      "description": "Fridgely, evdeki gıdaları takip etmenize, israfı azaltmanıza ve elinizdekilerle ne pişirebileceğinizi daha hızlı bulmanıza yardımcı olur.",
+      "url": "https://fridgely.app",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TRY"
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -13,50 +53,212 @@
     <header class="site-header">
         <div class="container nav-inner">
             <a href="index.html" class="logo">Fridgely.</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
-                    <li><a href="#features">Özellikler</a></li>
-                    <li><a href="#faq">SSS</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
+            <nav class="site-nav">
+                <div class="nav-container">
+                    <ul class="nav-links">
+                        <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
+                        <li><a href="#features">Özellikler</a></li>
+                        <li><a href="#faq">SSS</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
             </nav>
-            <a href="#" class="btn btn-primary">İndir</a>
+            <div class="nav-actions">
+                <a href="#launch-cta" class="btn btn-primary btn-desktop-only">Lansmanı Takip Et</a>
+                <button type="button" class="btn-mobile-nav" id="mobile-nav-toggle" aria-label="Menüyü aç">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero container">
-            <h1 class="display-title animate-on-scroll">Gıda İsrafına<br>Son Verin.</h1>
-            <p class="lead-text animate-on-scroll">Fridgely ile mutfağınızdaki her şeyi takip edin, son kullanma tarihlerini kaçırmayın ve elinizdeki malzemelerle harikalar yaratın.</p>
-            <div class="hero-actions animate-on-scroll">
-                <a href="#" class="btn btn-primary">App Store'dan İndir</a>
-                <a href="#" class="btn btn-secondary">Google Play'den Alın</a>
+        <section class="hero container hero-split">
+            <div class="hero-atmosphere" aria-hidden="true">
+                <span class="hero-orb hero-orb-1"></span>
+                <span class="hero-orb hero-orb-2"></span>
+                <span class="hero-orb hero-orb-3"></span>
+            </div>
+            <div class="hero-content">
+                <span class="badge animate-on-scroll" style="--reveal-delay: 80ms">Yakında App Store'da</span>
+                <h1 class="display-title animate-on-scroll" style="--reveal-delay: 180ms" data-reveal="left">Evdeki gıdaları<br>takip et, israfı azalt.</h1>
+                <p class="lead-text animate-on-scroll" style="--reveal-delay: 280ms" data-reveal="left">Fridgely, neyin kaldığını, neyin biteceğini ve elinizdekilerle ne pişirebileceğinizi tek yerde gösteren akıllı mutfak asistanıdır.</p>
+                <div class="hero-actions animate-on-scroll" style="--reveal-delay: 380ms" data-reveal="left">
+                    <a href="#how-it-works" class="btn btn-primary">Nasıl Çalışır</a>
+                    <a href="#launch-cta" class="btn btn-secondary">Lansmanı Takip Et</a>
+                </div>
+                <p class="hero-note animate-on-scroll" style="--reveal-delay: 460ms" data-reveal="left">Lansman yaklaşırken ürün notlarını, mutfak ipuçlarını ve güncellemeleri blog'da paylaşıyoruz.</p>
+                <div class="hero-signals animate-on-scroll" style="--reveal-delay: 520ms" data-reveal="left">
+                    <span class="hero-signal">Neyin kaldığını gör</span>
+                    <span class="hero-signal">Önce neyi tüketmen gerektiğini fark et</span>
+                    <span class="hero-signal">Elindekilerle ne pişeceğini daha hızlı bul</span>
+                </div>
+            </div>
+            <div class="hero-phone animate-on-scroll" style="--reveal-delay: 240ms" data-reveal="scale">
+                <div class="app-surface app-surface-hero" id="hero-surface" data-surface-state="priority">
+                    <div class="surface-window">
+                        <div class="surface-bar">
+                            <span class="surface-dot"></span>
+                            <span class="surface-dot"></span>
+                            <span class="surface-dot"></span>
+                        </div>
+                        <div class="surface-toolbar">
+                            <div class="surface-chip-row">
+                                <button type="button" class="surface-chip surface-tab-button" data-surface-tab="priority">Öncelik</button>
+                                <button type="button" class="surface-chip surface-tab-button" data-surface-tab="dinner">Akşam</button>
+                                <button type="button" class="surface-chip surface-tab-button" data-surface-tab="shopping">Liste</button>
+                            </div>
+                            <span class="surface-chip surface-chip-muted">Senkron açık</span>
+                        </div>
+                        <div class="surface-header">
+                            <div>
+                                <span class="surface-eyebrow" id="surface-eyebrow-text">Mutfak görünümü</span>
+                                <h3 class="surface-title" id="surface-title-text">Bu hafta ne öncelikli?</h3>
+                            </div>
+                            <span class="surface-badge" id="surface-badge-text">5 ürün riskte</span>
+                        </div>
+                        <div class="surface-summary">
+                            <div class="surface-metric" data-surface-focus="priority">
+                                <strong>2</strong>
+                                <span>hemen kullan</span>
+                            </div>
+                            <div class="surface-metric" data-surface-focus="dinner">
+                                <strong>4/5</strong>
+                                <span>akşam yemeği hazır</span>
+                            </div>
+                            <div class="surface-metric" data-surface-focus="shopping">
+                                <strong>3</strong>
+                                <span>eksik ürün</span>
+                            </div>
+                        </div>
+                        <div class="surface-columns">
+                            <div class="surface-panel" data-surface-focus="priority">
+                                <div class="screen-header">
+                                    <span class="screen-title">Öncelik listesi</span>
+                                    <span class="screen-count">yaklaşan tarih</span>
+                                </div>
+                                <div class="surface-status-list">
+                                    <div class="surface-status-row">
+                                        <div class="surface-status-copy">
+                                            <span class="surface-status-title">Domates</span>
+                                            <span class="surface-status-meta">Bugün tüket</span>
+                                        </div>
+                                        <span class="inv-badge inv-danger">Yüksek</span>
+                                    </div>
+                                    <div class="surface-status-track"><span class="surface-status-fill surface-status-fill-danger" style="width:92%"></span></div>
+                                </div>
+                                <div class="surface-status-list">
+                                    <div class="surface-status-row">
+                                        <div class="surface-status-copy">
+                                            <span class="surface-status-title">Yumurta</span>
+                                            <span class="surface-status-meta">Yarın kontrol et</span>
+                                        </div>
+                                        <span class="inv-badge inv-warn">Orta</span>
+                                    </div>
+                                    <div class="surface-status-track"><span class="surface-status-fill surface-status-fill-warn" style="width:71%"></span></div>
+                                </div>
+                                <div class="surface-status-list">
+                                    <div class="surface-status-row">
+                                        <div class="surface-status-copy">
+                                            <span class="surface-status-title">Süt</span>
+                                            <span class="surface-status-meta">3 gün kaldı</span>
+                                        </div>
+                                        <span class="inv-badge inv-ok">Rahat</span>
+                                    </div>
+                                    <div class="surface-status-track"><span class="surface-status-fill surface-status-fill-ok" style="width:42%"></span></div>
+                                </div>
+                            </div>
+                            <div class="surface-stack">
+                                <div class="surface-panel surface-panel-soft" data-surface-focus="dinner">
+                                    <div class="screen-header">
+                                        <span class="screen-title">Bu akşam</span>
+                                        <span class="screen-count">önerilen tarif</span>
+                                    </div>
+                                    <div class="recipe-card">
+                                        <strong>Menemen</strong>
+                                        <small>4/5 malzeme hazır, 15 dk</small>
+                                        <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+                                    </div>
+                                    <div class="surface-note">
+                                        <span class="surface-note-label">Eksik</span>
+                                        <p>Biber ve ekmek eklenirse alışveriş listesi tamamlanır.</p>
+                                    </div>
+                                </div>
+                                <div class="surface-panel surface-panel-muted" data-surface-focus="shopping">
+                                    <div class="screen-header">
+                                        <span class="screen-title">Kısa not</span>
+                                        <span class="screen-count">bugün</span>
+                                    </div>
+                                    <p class="surface-caption">Haftalık reset için önce sebzeliği temizle, sonra eksikleri tek listede topla.</p>
+                                    <div class="surface-footer">
+                                        <span class="surface-inline-stat">1 liste hazır</span>
+                                        <span class="surface-inline-stat">2 tarif uygun</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- How It Works Section -->
         <section id="how-it-works" class="container">
-            <h2 class="section-title animate-on-scroll">Akıllı. Basit.<br>Lezzetli.</h2>
+            <div class="section-intro animate-on-scroll" data-reveal="left">
+                <div>
+                    <span class="section-kicker">Nasıl çalışır</span>
+                    <h2 class="section-title">Akıllı. Basit.<br>Lezzetli.</h2>
+                </div>
+                <p class="section-copy">Fridgely'nin değeri karmaşık bir kurulumdan değil, mutfaktaki belirsizliği azaltan net bir akıştan gelir. Ürünleri ekler, önceliği görür, kararı hızlandırırsınız.</p>
+            </div>
             
             <div class="steps-grid">
-                <div class="step-card animate-on-scroll">
+                <div class="step-card animate-on-scroll" style="--reveal-delay: 40ms">
                     <span class="step-number">1</span>
                     <h3>Ürünleri Ekle</h3>
                     <p>Buzdolabınızdaki ve kilerinizdeki ürünleri kolayca tarayarak veya manuel olarak envanterinize ekleyin.</p>
                 </div>
                 
-                <div class="step-card animate-on-scroll">
+                <div class="step-card animate-on-scroll" style="--reveal-delay: 180ms">
                     <span class="step-number">2</span>
-                    <h3>Takip Et</h3>
-                    <p>Son kullanma tarihleri yaklaşan ürünler için akıllı bildirimler alın. Hiçbir yiyecek ziyan olmasın.</p>
+                    <h3>Ne Biteceğini Gör</h3>
+                    <p>Son kullanma tarihleri yaklaşan ürünleri görün ve önce hangi malzemeleri değerlendirmeniz gerektiğini kaçırmayın.</p>
                 </div>
                 
-                <div class="step-card animate-on-scroll">
+                <div class="step-card animate-on-scroll" style="--reveal-delay: 320ms">
                     <span class="step-number">3</span>
-                    <h3>Pişir</h3>
-                    <p>Sadece elinizdeki malzemelere göre size özel sunulan binlerce tarif arasından seçiminizi yapın.</p>
+                    <h3>Ne Pişireceğini Bul</h3>
+                    <p>Elinizdeki malzemelere göre pratik tarif önerilerini görün ve akşam yemeği kararını daha hızlı verin.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container results-section">
+            <div class="results-layout">
+                <div class="results-copy animate-on-scroll" data-reveal="left">
+                    <span class="section-kicker">Neden önemli</span>
+                    <h2 class="section-title">Fridgely tarif göstermeden önce mutfaktaki stresi azaltır.</h2>
+                    <p class="section-copy">Asıl değer, dolabın içinde ne olduğunu hatırlamaya çalışmamak. Fridgely önce görünürlük sağlar; tarif, liste ve planlama bunun üzerine gelir.</p>
+                </div>
+                <div class="results-stack">
+                    <article class="result-card animate-on-scroll" style="--reveal-delay: 60ms" data-reveal="right">
+                        <span class="result-index">01</span>
+                        <h3>Daha az unutulan ürün</h3>
+                        <p>Evde ne olduğunu tek bakışta görmek, aynı ürünü tekrar alma ve elindekini unutma problemini azaltır.</p>
+                    </article>
+                    <article class="result-card animate-on-scroll" style="--reveal-delay: 150ms" data-reveal="right">
+                        <span class="result-index">02</span>
+                        <h3>Daha az israf</h3>
+                        <p>Son kullanma yaklaşan ürünler görünür olduğunda karar daha erken verilir ve tüketim önceliği netleşir.</p>
+                    </article>
+                    <article class="result-card animate-on-scroll" style="--reveal-delay: 240ms" data-reveal="right">
+                        <span class="result-index">03</span>
+                        <h3>Daha hızlı akşam yemeği kararı</h3>
+                        <p>Elindekilerle ne yapabileceğini görmek, “bugün ne pişirsem?” yükünü azaltır.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -64,58 +266,262 @@
         <!-- Features Section -->
         <section id="features" class="container features">
             <div class="container">
-                <h2 class="section-title animate-on-scroll">Mutfağınızın<br>Süper Güçleri</h2>
+                <div class="section-intro section-intro-light animate-on-scroll" data-reveal="scale">
+                    <div>
+                        <span class="section-kicker section-kicker-light">Temel yüzeyler</span>
+                        <h2 class="section-title">Mutfağı yönetmek için gereken ana yüzeyler.</h2>
+                    </div>
+                    <p class="section-copy">Her ekran ayrı bir “feature” gibi davranmıyor. Hepsi aynı probleme hizmet ediyor: evde ne var, önce neyi kullanmalı ve buna göre ne pişirilebilir.</p>
+                </div>
                 
                 <div class="feature-grid">
-                    <div class="feature-item animate-on-scroll">
+                    <div class="feature-item animate-on-scroll" data-reveal="right">
                         <div class="feature-text">
+                            <span class="feature-kicker">Görünürlük</span>
                             <h3>Akıllı Envanter Takibi</h3>
-                            <p>Neyiniz var, neyiniz bitmek üzere, son kullanma tarihi ne zaman? Fridgely ile mutfağınız parmaklarınızın ucunda. İsrafı önleyin, bütçenizi koruyun.</p>
+                            <p>Evde ne olduğunu, neyin azaldığını ve önce hangi ürünü değerlendirmeniz gerektiğini tek bakışta görün.</p>
                         </div>
                         <div class="feature-visual">
-                            Envanter Görseli
+                            <div class="app-surface app-surface-mini">
+                                <div class="surface-window">
+                                    <div class="surface-toolbar surface-toolbar-compact">
+                                        <div class="surface-chip-row">
+                                            <span class="surface-chip surface-chip-active">Buzdolabı</span>
+                                            <span class="surface-chip">Kiler</span>
+                                        </div>
+                                    </div>
+                                    <div class="screen-header"><span class="screen-title">Envanter</span><span class="screen-count">5 ürün</span></div>
+                                    <div class="surface-status-list">
+                                        <div class="surface-status-row">
+                                            <div class="surface-status-copy">
+                                                <span class="surface-status-title">Süt</span>
+                                                <span class="surface-status-meta">Kahvaltı için yeterli</span>
+                                            </div>
+                                            <span class="inv-badge inv-ok">3 gün</span>
+                                        </div>
+                                        <div class="surface-status-track"><span class="surface-status-fill surface-status-fill-ok" style="width:48%"></span></div>
+                                    </div>
+                                    <div class="surface-status-list">
+                                        <div class="surface-status-row">
+                                            <div class="surface-status-copy">
+                                                <span class="surface-status-title">Yumurta</span>
+                                                <span class="surface-status-meta">Yarın öncelikli</span>
+                                            </div>
+                                            <span class="inv-badge inv-warn">Yarın</span>
+                                        </div>
+                                        <div class="surface-status-track"><span class="surface-status-fill surface-status-fill-warn" style="width:74%"></span></div>
+                                    </div>
+                                    <div class="surface-status-list">
+                                        <div class="surface-status-row">
+                                            <div class="surface-status-copy">
+                                                <span class="surface-status-title">Domates</span>
+                                                <span class="surface-status-meta">Bugün kullan</span>
+                                            </div>
+                                            <span class="inv-badge inv-danger">Bugün</span>
+                                        </div>
+                                        <div class="surface-status-track"><span class="surface-status-fill surface-status-fill-danger" style="width:91%"></span></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="feature-item animate-on-scroll">
+
+                    <div class="feature-item animate-on-scroll" data-reveal="left" style="--reveal-delay: 120ms">
                         <div class="feature-text">
+                            <span class="feature-kicker">Karar desteği</span>
                             <h3>Size Özel Tarifler</h3>
-                            <p>Bugün ne pişirsem derdine son. Evinizdeki malzemeleri belirtin, Fridgely size en uygun ve en lezzetli yemek tarifi önerilerini anında sunsun.</p>
+                            <p>Elinizdeki malzemelere göre pratik önerileri görün ve akşam yemeği kararını daha az eforla verin.</p>
                         </div>
                         <div class="feature-visual">
-                            Tarifler Görseli
+                            <div class="app-surface app-surface-mini">
+                                <div class="surface-window">
+                                    <div class="surface-toolbar surface-toolbar-compact">
+                                        <div class="surface-chip-row">
+                                            <span class="surface-chip surface-chip-active">Hızlı</span>
+                                            <span class="surface-chip">Sağlıklı</span>
+                                        </div>
+                                        <span class="surface-chip surface-chip-muted">Akşam</span>
+                                    </div>
+                                    <div class="screen-header"><span class="screen-title">Tarifler</span><span class="screen-count">2 uygun</span></div>
+                                    <div class="recipe-card">
+                                        <strong>Menemen</strong>
+                                        <small>4/5 malzeme, 15 dk</small>
+                                        <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+                                    </div>
+                                    <div class="recipe-card">
+                                        <strong>Omlet</strong>
+                                        <small>3/3 malzeme, 10 dk</small>
+                                        <div class="progress-bar"><div class="progress-fill progress-full" style="width:100%"></div></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="feature-item animate-on-scroll">
+
+                    <div class="feature-item animate-on-scroll" data-reveal="right" style="--reveal-delay: 240ms">
                         <div class="feature-text">
+                            <span class="feature-kicker">Tek akış</span>
                             <h3>Otomatik Alışveriş Listesi</h3>
-                            <p>Eksilen ürünleriniz veya yapmak istediğiniz tarifler için gereken malzemeler tek bir dokunuşla alışveriş listenize eklensin.</p>
+                            <p>Eksilen ürünleri ve tarif için gereken malzemeleri tek akışta toplayarak alışverişi sadeleştirin.</p>
                         </div>
                         <div class="feature-visual">
-                            Liste Görseli
+                            <div class="app-surface app-surface-mini">
+                                <div class="surface-window">
+                                    <div class="surface-toolbar surface-toolbar-compact">
+                                        <div class="surface-chip-row">
+                                            <span class="surface-chip surface-chip-active">Bu hafta</span>
+                                            <span class="surface-chip">Tariften</span>
+                                        </div>
+                                    </div>
+                                    <div class="screen-header"><span class="screen-title">Alışveriş</span><span class="screen-count">3 kritik</span></div>
+                                    <div class="shop-item">
+                                        <span class="shop-check"></span>
+                                        <span>Domates</span>
+                                        <span class="shop-meta">1 kg</span>
+                                    </div>
+                                    <div class="shop-item">
+                                        <span class="shop-check"></span>
+                                        <span>Biber</span>
+                                        <span class="shop-meta">500 g</span>
+                                    </div>
+                                    <div class="shop-item shop-done">
+                                        <span class="shop-check shop-checked"></span>
+                                        <span>Makarna</span>
+                                        <span class="shop-meta">Tamam</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="container story-section">
+            <div class="section-intro animate-on-scroll" data-reveal="left">
+                <div>
+                    <span class="section-kicker">Daha fazlası</span>
+                    <h2 class="section-title">Landing'den sonra nereye gitmeli?</h2>
+                </div>
+                <p class="section-copy">Blog, SSS ve destek sayfaları aynı hikayenin devamı olmalı. Kullanıcıyı belirsizliğe bırakmak yerine, bir sonraki doğru cevaba taşımalı.</p>
+            </div>
+            <div class="story-grid">
+                <a class="story-card animate-on-scroll" style="--reveal-delay: 40ms" data-reveal="left" href="blog.html">
+                    <span class="story-label">Blog</span>
+                    <h3>Ürün notları ve mutfak ipuçları</h3>
+                    <p>Lansman yolculuğunu ve gıda israfını azaltmaya yönelik yazıları takip edin.</p>
+                    <span class="story-cta">Yazıları aç <span aria-hidden="true">→</span></span>
+                </a>
+                <a class="story-card animate-on-scroll" style="--reveal-delay: 140ms" data-reveal="scale" href="faq.html">
+                    <span class="story-label">SSS</span>
+                    <h3>Platform, fiyat ve ürün durumu</h3>
+                    <p>En sık gelen sorulara kısa ve net cevapları tek sayfada görün.</p>
+                    <span class="story-cta">Cevapları gör <span aria-hidden="true">→</span></span>
+                </a>
+                <a class="story-card animate-on-scroll" style="--reveal-delay: 240ms" data-reveal="right" href="support.html">
+                    <span class="story-label">Destek</span>
+                    <h3>Yardım ve ürün durumu</h3>
+                    <p>Waitlist, yayın hazırlığı ve yardımcı bağlantılar için destek yüzeyine gidin.</p>
+                    <span class="story-cta">Destek sayfası <span aria-hidden="true">→</span></span>
+                </a>
+            </div>
+        </section>
+
         <!-- FAQ Teaser Section -->
         <section id="faq" class="container faq-section">
-            <h2 class="section-title animate-on-scroll">Merak Edilenler</h2>
+            <div class="section-intro faq-intro animate-on-scroll" data-reveal="left">
+                <div>
+                    <span class="section-kicker">Merak edilenler</span>
+                    <h2 class="section-title">Karar vermeden önce en çok sorulanlar.</h2>
+                </div>
+                <p class="section-copy">Pre-launch bir ürün için güven, çoğu zaman tasarımdan değil açıklıktan gelir. Fiyat, platform ve aile kullanımı gibi soruları kısa ve dürüst cevaplarla önden temizliyoruz.</p>
+            </div>
             
-            <div class="faq-item animate-on-scroll">
+            <div class="faq-item animate-on-scroll" style="--reveal-delay: 40ms">
                 <h4>Fridgely ücretsiz mi?</h4>
-                <p>Fridgely'nin temel özellikleri tamamen ücretsizdir. Aile paylaşımı gibi ekstra özellikler için premium seçeneklerimiz mevcut.</p>
+                <p>Fridgely'nin temel deneyiminin ücretsiz olması planlanıyor. Aile paylaşımı gibi gelişmiş özellikler için ayrı planlar sunulabilir.</p>
             </div>
             
-            <div class="faq-item animate-on-scroll">
+            <div class="faq-item animate-on-scroll" style="--reveal-delay: 140ms">
                 <h4>Aile üyelerimle ortak liste kullanabilir miyim?</h4>
-                <p>Evet! Premium özelliklerimizle aile üyelerinizi davet edebilir ve evinizin envanterini ortak yönetebilirsiniz.</p>
+                <p>Aile üyeleriyle ortak kullanım ve paylaşım özellikleri yol haritasında yer alıyor. Lansman ve yeni özellik duyurularını blog üzerinden paylaşacağız.</p>
+            </div>
+
+            <div class="faq-item animate-on-scroll" style="--reveal-delay: 220ms">
+                <h4>Waitlist veya TestFlight açılınca nasıl haberim olacak?</h4>
+                    <p>Lansman alanındaki form artık <code>/api/waitlist</code> endpoint'ine gider. Kayıt depolama Cloudflare tarafında webhook veya KV ile bağlandığında ilk duyuruları blog ve destek yüzeyinde netleştireceğiz.</p>
             </div>
             
-            <div style="text-align: center;" class="animate-on-scroll">
+            <div style="text-align: center; --reveal-delay: 300ms" class="animate-on-scroll" data-reveal="scale">
                 <a href="faq.html" class="faq-link">Tüm soruları gör &rarr;</a>
+            </div>
+        </section>
+
+        <section id="launch-cta" class="container launch-section">
+            <div class="launch-band animate-on-scroll" data-reveal="scale">
+                <div class="launch-intro">
+                    <span class="badge">Lansman Takibi</span>
+                    <h2 class="section-title">Fridgely yayına yaklaştıkça ilk burada paylaşacağız.</h2>
+                    <p class="lead-text">Erken erişim talebini şimdi bırakabilir, resmi waitlist ya da TestFlight açıldığında aynı akışı gerçek gönderime çevirebiliriz.</p>
+                </div>
+                <div class="launch-panel">
+                    <form class="waitlist-form" id="waitlist-form">
+                        <div class="waitlist-grid">
+                            <label class="waitlist-field">
+                                <span>E-posta</span>
+                                <input id="waitlist-email" name="email" type="email" autocomplete="email" placeholder="ornek@mail.com" required />
+                            </label>
+                            <label class="waitlist-field">
+                                <span>Platform</span>
+                                <select id="waitlist-platform" name="platform" required>
+                                    <option value="">Seçin</option>
+                                    <option value="ios">iPhone / iOS</option>
+                                    <option value="android">Android</option>
+                                    <option value="both">Her ikisi</option>
+                                </select>
+                            </label>
+                            <label class="waitlist-field waitlist-field-wide">
+                                <span>En çok ne ilgini çekiyor?</span>
+                                <select id="waitlist-interest" name="interest" required>
+                                    <option value="">Seçin</option>
+                                    <option value="inventory">Envanter takibi</option>
+                                    <option value="expiry">Son kullanma takibi</option>
+                                    <option value="recipes">Tarif önerileri</option>
+                                    <option value="family">Aile paylaşımı</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="launch-actions">
+                            <button type="submit" class="btn btn-primary">Erken Erişim İste</button>
+                            <a href="blog.html" class="btn btn-outline">Blog'u Keşfet</a>
+                        </div>
+                        <p class="waitlist-note" id="waitlist-note">Bu form <code>/api/waitlist</code> endpoint'ine gönderim yapar. Cloudflare tarafında depolama bağlandığında kayıtlar kalıcı olarak saklanır.</p>
+                    </form>
+                    <div class="waitlist-success" id="waitlist-success" hidden>
+                        <p class="waitlist-success-kicker">Kaydın hazır görünüyor.</p>
+                        <h3>Erken erişim talebini kaydettik.</h3>
+                        <p id="waitlist-success-copy">Kaydınız alındı. Bir sonraki adım açıldığında blog ve SSS en güncel kaynaklar olacak.</p>
+                        <div class="launch-actions">
+                            <a href="#" class="btn btn-outline" id="waitlist-next-link" hidden>Sonraki adıma git</a>
+                            <a href="faq.html" class="btn btn-outline">SSS'yi Oku</a>
+                            <button type="button" class="btn btn-primary" id="waitlist-reset">Formu Düzenle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="launch-status" aria-label="Ürün durumu">
+                    <article class="launch-chip">
+                        <strong>Landing hazır</strong>
+                        <span>Mesaj ve yön netleşti.</span>
+                    </article>
+                    <article class="launch-chip">
+                        <strong>Blog aktif</strong>
+                        <span>İlk içerik katmanı yayında.</span>
+                    </article>
+                    <article class="launch-chip">
+                        <strong>İlk sürüm hazırlanıyor</strong>
+                        <span>Waitlist ve uygulama akışı sırada.</span>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
@@ -150,7 +556,211 @@
             document.querySelectorAll('.animate-on-scroll').forEach(el => {
                 observer.observe(el);
             });
+
+            const heroSurface = document.getElementById("hero-surface");
+            const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+            const surfaceEyebrow = document.getElementById("surface-eyebrow-text");
+            const surfaceTitle = document.getElementById("surface-title-text");
+            const surfaceBadge = document.getElementById("surface-badge-text");
+
+            function bindHeroSurfaceCycle() {
+                if (!heroSurface) {
+                    return;
+                }
+
+                const states = ["priority", "dinner", "shopping"];
+                const tabs = heroSurface.querySelectorAll("[data-surface-tab]");
+                let currentIndex = states.indexOf(heroSurface.dataset.surfaceState || "priority");
+                const stateCopy = {
+                    priority: {
+                        eyebrow: "Mutfak görünümü",
+                        title: "Bu hafta ne öncelikli?",
+                        badge: "5 ürün riskte"
+                    },
+                    dinner: {
+                        eyebrow: "Akşam planı",
+                        title: "Bugün ne pişirilebilir?",
+                        badge: "2 tarif uygun"
+                    },
+                    shopping: {
+                        eyebrow: "Alışveriş özeti",
+                        title: "Neler eksik kaldı?",
+                        badge: "3 ürün listede"
+                    }
+                };
+
+                function applyState(nextState) {
+                    heroSurface.dataset.surfaceState = nextState;
+                    currentIndex = states.indexOf(nextState);
+                    const copy = stateCopy[nextState] || stateCopy.priority;
+
+                    if (surfaceEyebrow) {
+                        surfaceEyebrow.textContent = copy.eyebrow;
+                    }
+
+                    if (surfaceTitle) {
+                        surfaceTitle.textContent = copy.title;
+                    }
+
+                    if (surfaceBadge) {
+                        surfaceBadge.textContent = copy.badge;
+                    }
+
+                    tabs.forEach((tab) => {
+                        tab.setAttribute("aria-pressed", String(tab.getAttribute("data-surface-tab") === nextState));
+                    });
+                }
+
+                tabs.forEach((tab) => {
+                    tab.addEventListener("click", () => {
+                        const nextState = tab.getAttribute("data-surface-tab");
+                        if (nextState) {
+                            applyState(nextState);
+                        }
+                    });
+                });
+
+                applyState(states[Math.max(currentIndex, 0)]);
+
+                if (prefersReducedMotion.matches) {
+                    return;
+                }
+
+                window.setInterval(() => {
+                    currentIndex = (currentIndex + 1) % states.length;
+                    applyState(states[currentIndex]);
+                }, 4200);
+            }
+
+            bindHeroSurfaceCycle();
+
+            const waitlistKey = "fridgely_waitlist_submission";
+            const waitlistEndpoint = window.FRIDGELY_WAITLIST_ENDPOINT || (window.location.origin + "/api/waitlist");
+            const waitlistForm = document.getElementById("waitlist-form");
+            const waitlistSuccess = document.getElementById("waitlist-success");
+            const waitlistReset = document.getElementById("waitlist-reset");
+            const waitlistSuccessCopy = document.getElementById("waitlist-success-copy");
+            const waitlistNote = document.getElementById("waitlist-note");
+            const waitlistNextLink = document.getElementById("waitlist-next-link");
+            const waitlistSubmitButton = waitlistForm?.querySelector("button[type='submit']");
+
+            function renderWaitlistState() {
+                const saved = localStorage.getItem(waitlistKey);
+
+                if (!saved) {
+                    waitlistForm.hidden = false;
+                    waitlistSuccess.hidden = true;
+                    if (waitlistNextLink) {
+                        waitlistNextLink.hidden = true;
+                        waitlistNextLink.removeAttribute("href");
+                    }
+                    if (waitlistNote) {
+                        waitlistNote.classList.remove("is-error", "is-success");
+                        waitlistNote.textContent = "Bu form /api/waitlist endpoint'ine gönderim yapar. Cloudflare Pages tarafında webhook veya KV konfigüre edildiğinde kayıtlar kalıcı olarak saklanır.";
+                    }
+                    return;
+                }
+
+                try {
+                    const data = JSON.parse(saved);
+                    const platformLabelMap = {
+                        ios: "iPhone / iOS",
+                        android: "Android",
+                        both: "her iki platform"
+                    };
+                    const platformLabel = platformLabelMap[data.platform] || "seçili platform";
+                    const modeLabelMap = {
+                        webhook: "waitlist akışına gönderildi",
+                        kv: "waitlist deposuna kaydedildi"
+                    };
+                    const modeLabel = modeLabelMap[data.mode] || "kaydedildi";
+                    waitlistSuccessCopy.textContent = data.email + " adresi ve " + platformLabel + " tercihi " + modeLabel + ".";
+
+                    if (waitlistNextLink && data.nextUrl) {
+                        waitlistNextLink.hidden = false;
+                        waitlistNextLink.href = data.nextUrl;
+                        waitlistNextLink.textContent = data.nextLabel || "Sonraki adıma git";
+                    }
+                } catch (error) {
+                    localStorage.removeItem(waitlistKey);
+                    waitlistForm.hidden = false;
+                    waitlistSuccess.hidden = true;
+                    return;
+                }
+
+                waitlistForm.hidden = true;
+                waitlistSuccess.hidden = false;
+            }
+
+            waitlistForm?.addEventListener("submit", async (event) => {
+                event.preventDefault();
+                const formData = new FormData(waitlistForm);
+                const payload = {
+                    email: String(formData.get("email") || "").trim(),
+                    platform: String(formData.get("platform") || "").trim(),
+                    interest: String(formData.get("interest") || "").trim(),
+                    createdAt: new Date().toISOString()
+                };
+
+                if (waitlistSubmitButton) {
+                    waitlistSubmitButton.disabled = true;
+                    waitlistSubmitButton.textContent = "Gönderiliyor...";
+                }
+
+                try {
+                    const response = await fetch(waitlistEndpoint, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                    const result = await response.json().catch(() => ({}));
+
+                    if (!response.ok) {
+                        throw new Error(result.message || "waitlist-submit-failed");
+                    }
+
+                    localStorage.setItem(waitlistKey, JSON.stringify({
+                        ...payload,
+                        mode: result.mode || "unknown",
+                        nextUrl: result.nextUrl || "",
+                        nextLabel: result.nextLabel || "",
+                        submittedAt: result.submittedAt || payload.createdAt
+                    }));
+
+                    if (waitlistNote) {
+                        waitlistNote.classList.remove("is-error");
+                        waitlistNote.classList.add("is-success");
+                    }
+
+                    renderWaitlistState();
+                } catch (error) {
+                    if (waitlistNote) {
+                        waitlistNote.classList.remove("is-success");
+                        waitlistNote.classList.add("is-error");
+                        waitlistNote.textContent = error instanceof Error
+                            ? error.message
+                            : "Waitlist gönderimi başarısız oldu. Lütfen daha sonra tekrar deneyin.";
+                    }
+                } finally {
+                    if (waitlistSubmitButton) {
+                        waitlistSubmitButton.disabled = false;
+                        waitlistSubmitButton.textContent = "Erken Erişim İste";
+                    }
+                }
+            });
+
+            waitlistReset?.addEventListener("click", () => {
+                localStorage.removeItem(waitlistKey);
+                waitlistForm.reset();
+                renderWaitlistState();
+            });
+
+            renderWaitlistState();
+
         });
     </script>
+    <script src="mobile-nav.js"></script>
 </body>
 </html>

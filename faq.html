@@ -3,7 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSS - Fridgely</title>
+    <title>SSS | Fridgely</title>
+    <meta name="description" content="Fridgely hakkında en sık sorulan soruları, lansman planını ve ürünün nasıl çalışacağını tek sayfada görün.">
+    <link rel="canonical" href="https://fridgely.app/faq.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SSS | Fridgely">
+    <meta property="og:description" content="Fridgely hakkında en sık sorulan sorular, ürün durumu ve nasıl çalıştığına dair kısa yanıtlar.">
+    <meta property="og:url" content="https://fridgely.app/faq.html">
+    <meta property="og:image" content="https://fridgely.app/og-home.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SSS | Fridgely">
+    <meta name="twitter:description" content="Fridgely hakkında en sık sorulan sorular, ürün durumu ve nasıl çalıştığına dair kısa yanıtlar.">
+    <meta name="twitter:image" content="https://fridgely.app/og-home.svg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Fridgely ücretsiz mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fridgely'nin temel deneyiminin ücretsiz olması planlanıyor. Aile paylaşımı gibi gelişmiş özellikler için ayrı planlar sunulabilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hangi platformlarda mevcut?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fridgely'nin ilk sürümü için lansman hazırlığı devam ediyor. Ürün yayına açıldıkça platform planını blog ve destek sayfalarında netleştireceğiz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ürünleri nasıl ekliyorum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ürünleri, telefonunuzun kamerasını kullanarak barkodlarını okutarak, faturanızı tarayarak veya manuel olarak hızlıca ekleyebilirsiniz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Waitlist veya TestFlight ne zaman açılacak?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Şu anda kesin bir tarih paylaşmıyoruz. Erken erişim akışı netleştiğinde ilk güncellemeler landing sayfasındaki lansman alanında, blogda ve destek yüzeyinde yer alacak."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Şu an bıraktığım erken erişim talebi gerçek kayıt mı?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Web sitesindeki erken erişim formu /api/waitlist endpoint'ine gönderim yapar. Cloudflare tarafında webhook veya KV konfigüre edildiğinde kayıtlar kalıcı olarak saklanır; yapılandırma eksikse form bunu açıkça hata mesajı olarak gösterir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Fridgely önce hangi problemi çözüyor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Öncelik, evde ne olduğunu ve önce hangi ürünü değerlendirmeniz gerektiğini görünür kılmak. Tarif önerileri ve alışveriş desteği bu temel görünürlüğün üzerine eklenir."
+          }
+        }
+      ]
+    }
+    </script>
     <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -19,7 +87,7 @@
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn btn-primary">İndir</a>
+            <a href="index.html" class="btn btn-primary">Ana Sayfa</a>
         </div>
     </header>
 
@@ -31,17 +99,32 @@
         
         <div class="faq-item">
             <h4>Fridgely ücretsiz mi?</h4>
-            <p>Fridgely'nin temel envanter takibi ve tarif bulma özellikleri tamamen ücretsizdir. Aile paylaşımı gibi gelişmiş özellikler için Premium abonelik sunuyoruz.</p>
+            <p>Fridgely'nin temel deneyiminin ücretsiz olması planlanıyor. Aile paylaşımı gibi gelişmiş özellikler için ayrı planlar sunulabilir.</p>
         </div>
 
         <div class="faq-item">
             <h4>Hangi platformlarda mevcut?</h4>
-            <p>Fridgely hem iOS (App Store) hem de Android (Google Play) platformlarında mevcuttur.</p>
+            <p>Fridgely'nin ilk sürümü için lansman hazırlığı devam ediyor. Ürün yayına açıldıkça platform planını blog ve destek sayfalarında netleştireceğiz.</p>
         </div>
 
         <div class="faq-item">
             <h4>Ürünleri nasıl ekliyorum?</h4>
             <p>Ürünleri, telefonunuzun kamerasını kullanarak barkodlarını okutarak, faturanızı tarayarak veya manuel olarak hızlıca ekleyebilirsiniz.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Waitlist veya TestFlight ne zaman açılacak?</h4>
+            <p>Şu anda kesin bir tarih paylaşmıyoruz. Erken erişim akışı netleştiğinde ilk güncellemeler landing sayfasındaki lansman alanında, blogda ve destek yüzeyinde yer alacak.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Şu an bıraktığım erken erişim talebi gerçek kayıt mı?</h4>
+            <p>Web sitesindeki erken erişim formu <code>/api/waitlist</code> endpoint'ine gönderim yapar. Cloudflare tarafında webhook veya KV konfigüre edildiğinde kayıtlar kalıcı olarak saklanır; yapılandırma eksikse form bunu açıkça hata mesajı olarak gösterir.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Fridgely önce hangi problemi çözüyor?</h4>
+            <p>Öncelik, evde ne olduğunu ve önce hangi ürünü değerlendirmeniz gerektiğini görünür kılmak. Tarif önerileri ve alışveriş desteği bu temel görünürlüğün üzerine eklenir.</p>
         </div>
 
     </main>

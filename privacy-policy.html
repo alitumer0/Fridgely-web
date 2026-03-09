@@ -1,33 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <script>
-    (function () {
-      var parts = location.pathname.split('/').filter(Boolean);
-      var isGithubPages = location.hostname.endsWith('github.io') && parts.length;
-      var baseHref = isGithubPages ? '/' + parts[0] + '/' : '/';
-      var base = document.createElement('base');
-      base.href = baseHref;
-      document.head.appendChild(base);
-      window.__FRIDGELY_SITE_BASE__ = baseHref;
-      window.__FRIDGELY_SITE_ORIGIN__ = isGithubPages
-        ? location.origin + baseHref.replace(/\/$/, '')
-        : 'https://fridgely.app';
-    })();
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fridgely Privacy</title>
-  <meta id="meta-description" name="description" content="Fridgely gizlilik politikası." />
-  <link id="canonical-link" rel="canonical" href="https://fridgely.app/privacy" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="site.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizlilik Politikası | Fridgely</title>
+    <meta name="description" content="Fridgely gizlilik politikası: web sitesi, waitlist formu ve yayın öncesi veri akışları için güncel taslak çerçeve.">
+    <link rel="canonical" href="https://fridgely.app/privacy-policy.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gizlilik Politikası | Fridgely">
+    <meta property="og:description" content="Fridgely web sitesi, waitlist formu ve yayın öncesi veri akışları için güncel gizlilik taslağı.">
+    <meta property="og:url" content="https://fridgely.app/privacy-policy.html">
+    <meta property="og:image" content="https://fridgely.app/og-legal.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gizlilik Politikası | Fridgely">
+    <meta name="twitter:description" content="Fridgely web sitesi, waitlist formu ve yayın öncesi veri akışları için güncel gizlilik taslağı.">
+    <meta name="twitter:image" content="https://fridgely.app/og-legal.svg">
+    <link rel="stylesheet" href="site.css">
 </head>
 <body>
-  <div class="site-noise" aria-hidden="true"></div>
-  <div id="app"></div>
-  <script defer src="site.js"></script>
+
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">Fridgely.</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#how-it-works">Nasıl Çalışır?</a></li>
+                    <li><a href="index.html#features">Özellikler</a></li>
+                    <li><a href="faq.html">SSS</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#launch-cta" class="btn btn-primary">Lansmanı Takip Et</a>
+        </div>
+    </header>
+
+    <main class="container article-shell">
+        <div class="page-hero article-hero">
+            <h1 class="display-title">Gizlilik Politikası</h1>
+            <p class="lead-text">Bu sayfa Fridgely web sitesi ve erken erişim akışı için hazırlanmış daha kapsamlı yayın öncesi taslaktır. Nihai sürüm, kullanılan servisler ve yargı alanı netleştirildikten sonra hukuki incelemeyle güncellenmelidir.</p>
+            <p class="article-meta">Son güncelleme: 9 Mart 2026 · Durum: Taslak / legal review gerekli</p>
+        </div>
+
+        <article class="article-content">
+            <div class="draft-notice">
+                <strong>Önemli not:</strong> Bu metin yayın öncesi çalışma taslağıdır; hukuki tavsiye yerine geçmez ve ürün resmen yayına alınmadan önce güncellenmelidir.
+            </div>
+
+            <h2>1. Bu politika neyi kapsar?</h2>
+            <p>Bu politika, Fridgely'nin pazarlama sitesi, destek sayfaları, blog içeriği ve web üzerinden sunulan erken erişim / waitlist akışı için hazırlanmıştır. Mobil uygulama herkese açık olarak yayınlandığında, uygulama içi veri akışları için bu metin genişletilecek veya ayrı başlıklarla güncellenecektir.</p>
+
+            <h2>2. Bugün hangi verileri toplayabiliriz?</h2>
+            <p>Mevcut site yapısında özellikle şu veri kategorileri işlenebilir:</p>
+            <p>1. Waitlist formuna girilen e-posta adresi, seçilen platform ve ilgi alanı.</p>
+            <p>2. Sunucu düzeyinde güvenlik, kötüye kullanım önleme ve temel operasyon için oluşan teknik kayıtlar.</p>
+            <p>3. Bize doğrudan iletilen destek veya geri bildirim talepleri varsa, bu iletişimin içeriği.</p>
+            <p>4. Yayına geçildiğinde eklenecek analitik, hesap, ödeme veya kimlik doğrulama akışlarına ait veriler. Bu kategoriler aktif hale gelirse politika ayrıca güncellenecektir.</p>
+
+            <h2>3. Verileri hangi amaçlarla kullanırız?</h2>
+            <p>Toplanan veya işlenen bilgiler; erken erişim talebini kaydetmek, ürün güncellemelerini doğru kullanıcı grubuna iletmek, siteyi güvenli biçimde çalıştırmak, performans ve hata takibini yapmak, kötüye kullanımı önlemek ve Fridgely'nin ilk sürümünü daha doğru yönlendirmek amacıyla kullanılabilir.</p>
+
+            <h2>4. Waitlist formu nasıl çalışır?</h2>
+            <p>Ana sayfadaki erken erişim formu, Cloudflare Pages üzerinde çalışan bir endpoint'e gönderim yapacak şekilde tasarlanmıştır. Bu endpoint, proje konfigürasyonuna göre veriyi bir webhook servisine iletebilir veya bir depolama katmanına yazabilir. Kalıcı kayıt altyapısı değişirse bu bölüm de güncellenir.</p>
+
+            <h2>5. Verileri kimlerle paylaşabiliriz?</h2>
+            <p>Fridgely verileri satmaz. Ancak hizmeti çalıştırmak için sınırlı ölçüde altyapı ve servis sağlayıcı kullanabiliriz. Bugünkü teknik yapı dikkate alındığında bunlar şu kategorilere girebilir:</p>
+            <p>1. Hosting, CDN ve edge çalışma ortamı sağlayan Cloudflare.</p>
+            <p>2. Waitlist kayıtlarını iletmek veya saklamak için yapılandırılan webhook, otomasyon veya veri depolama sağlayıcısı.</p>
+            <p>3. İleride etkinleştirilirse analitik, e-posta gönderimi, hata izleme veya müşteri desteği araçları.</p>
+            <p>Bu servisler kullanıldığında, nihai sürümde mümkün olduğunca isim bazında listelenmelidir.</p>
+
+            <h2>6. Çerezler, analitik ve takip teknolojileri</h2>
+            <p>Bugünkü site sürümü reklam amaçlı izleme teknolojilerine göre tasarlanmamıştır. Bununla birlikte barındırma sağlayıcısı seviyesinde zorunlu teknik günlükler oluşabilir. Üçüncü taraf analitik veya pazarlama çerezleri eklenecek olursa, bu politika ve gerekli onay akışları ayrıca güncellenmelidir.</p>
+
+            <h2>7. Verileri ne kadar süre tutarız?</h2>
+            <p>Waitlist verileri, erken erişim duyurularını yönetmek, ilgili ürün grubuna lansman bilgisi göndermek ve talep hacmini anlamak için makul bir süre saklanabilir. Kullanıcı talebi, ürün kapanışı veya hukuki zorunluluk bulunması halinde bu süre kısaltılabilir veya veri silinebilir. Nihai sürümde daha net saklama süreleri eklenmelidir.</p>
+
+            <h2>8. Haklarınız ve talepleriniz</h2>
+            <p>Uygulanabilir mevzuata bağlı olarak, hakkınızda tuttuğumuz verilere erişim, düzeltme, silme veya işlemeye itiraz talebinde bulunabilirsiniz. Fridgely henüz yayın öncesi aşamada olduğu için özel bir gizlilik iletişim adresi ilan edilmemiştir; bu talepler için şimdilik <a class="inline-link" href="support.html">destek sayfası</a> temel yönlendirme noktasıdır.</p>
+
+            <h2>9. Cocuklara yonelik degildir</h2>
+            <p>Fridgely genel mutfak ve hane organizasyonu kullanım senaryoları için tasarlanmıştır ve bilerek çocuklardan veri toplamayı hedeflemez. Uygulama veya site kapsamı değişirse yaş sınırı ve ebeveyn onayı başlıkları ayrıca netleştirilmelidir.</p>
+
+            <h2>10. Bu metin degisebilir</h2>
+            <p>Fridgely pre-launch aşamasında olduğu için ürün akışı, servis sağlayıcılar ve veri kategorileri değişebilir. Bu politika her önemli ürün veya altyapı değişikliğinde güncellenmeli ve canlıya çıkmadan önce hukuki olarak son kez gözden geçirilmelidir.</p>
+
+            <p>Ürün yönü, lansman durumu ve yeni sayfalar için <a class="inline-link" href="blog.html">blog</a> ve <a class="inline-link" href="faq.html">SSS</a> sayfalarını takip edebilirsiniz.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="index.html" class="logo">Fridgely.</a>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Gizlilik Politikası</a>
+                <a href="terms.html">Kullanım Şartları</a>
+                <a href="support.html">Destek</a>
+            </div>
+            <p class="copyright">&copy; 2026 Fridgely. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
