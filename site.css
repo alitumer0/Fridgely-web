@@ -2250,6 +2250,140 @@ body.nav-open {
   }
 }
 
+/* ============================================
+   NEOBRUTALISM LAYER 2 — Texture & Depth
+   ============================================ */
+
+/* --- 1. Noise/grain texture overlay --- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* --- 2. Zigzag / wave section separators --- */
+.neo-zigzag {
+  display: block;
+  width: 100%;
+  height: 24px;
+  background: var(--text-primary);
+  clip-path: polygon(
+    0% 0%, 4% 100%, 8% 0%, 12% 100%, 16% 0%, 20% 100%,
+    24% 0%, 28% 100%, 32% 0%, 36% 100%, 40% 0%, 44% 100%,
+    48% 0%, 52% 100%, 56% 0%, 60% 100%, 64% 0%, 68% 100%,
+    72% 0%, 76% 100%, 80% 0%, 84% 100%, 88% 0%, 92% 100%,
+    96% 0%, 100% 100%, 100% 100%, 0% 100%
+  );
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.neo-zigzag-flip {
+  clip-path: polygon(
+    0% 100%, 4% 0%, 8% 100%, 12% 0%, 16% 100%, 20% 0%,
+    24% 100%, 28% 0%, 32% 100%, 36% 0%, 40% 100%, 44% 0%,
+    48% 100%, 52% 0%, 56% 100%, 60% 0%, 64% 100%, 68% 0%,
+    72% 100%, 76% 0%, 80% 100%, 84% 0%, 88% 100%, 92% 0%,
+    96% 100%, 100% 0%, 100% 0%, 0% 0%
+  );
+}
+
+/* --- 3. Dot grid pattern backgrounds --- */
+.neo-dots-bg {
+  background-image: radial-gradient(var(--border) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+  background-position: 0 0;
+}
+
+.neo-lines-bg {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(26, 26, 46, 0.04) 8px,
+    rgba(26, 26, 46, 0.04) 9px
+  );
+}
+
+/* Apply dot pattern to how-it-works section */
+#how-it-works {
+  position: relative;
+}
+
+#how-it-works::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(26, 26, 46, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#how-it-works > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Apply diagonal lines to results section */
+.results-section {
+  position: relative;
+}
+
+.results-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(26, 26, 46, 0.03) 10px,
+    rgba(26, 26, 46, 0.03) 11px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.results-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- 4. Text stroke / outlined headings --- */
+.display-title {
+  -webkit-text-stroke: 2px var(--text-primary);
+  color: transparent;
+  text-shadow: 4px 4px 0 var(--accent-glow);
+  paint-order: stroke fill;
+}
+
+/* Section titles: filled but with subtle stroke presence */
+.section-title {
+  -webkit-text-stroke: 0.5px var(--text-primary);
+}
+
+/* Step numbers: big outlined */
+.step-number {
+  -webkit-text-stroke: 2px var(--border);
+  color: transparent;
+  text-shadow: 3px 3px 0 var(--accent-glow);
+}
+
+/* Result index: outlined accent */
+.result-index {
+  -webkit-text-stroke: 1px var(--accent-primary);
+  color: transparent;
+  font-size: 1.2rem;
+}
+
 /* --- Reduced motion: disable all playful transforms --- */
 @media (prefers-reduced-motion: reduce) {
   .neo-marquee-inner { animation: none; }
