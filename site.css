@@ -2156,36 +2156,44 @@ body.nav-open {
   transform: translateX(8px);
 }
 
-/* --- Humaaans character illustrations --- */
-.neo-human {
-  pointer-events: none;
-  user-select: none;
+/* --- CSS Peeps character illustrations --- */
+.neo-peep .css-peeps {
+  width: 200px;
+  height: 220px;
 }
 
-/* Hero character — peeking beside the surface mockup */
-.neo-human-hero {
+/* Hero character — floating beside hero content */
+.neo-peep-hero {
   position: absolute;
   bottom: -2rem;
-  right: -3rem;
-  width: 160px;
-  transform: rotate(5deg);
-  z-index: 5;
+  left: -6rem;
+  transform: rotate(8deg);
+  z-index: 3;
   filter: drop-shadow(3px 3px 0 var(--border));
 }
 
+.neo-peep-hero .css-peeps {
+  width: 160px;
+  height: 180px;
+}
+
 /* Step card characters */
-.neo-human-step {
-  display: block;
-  margin: 0 auto 1rem;
-  width: 120px;
-  height: auto;
+.neo-peep-step {
   position: relative;
   z-index: 2;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.neo-peep-step .css-peeps {
+  width: 140px;
+  height: 160px;
   filter: drop-shadow(2px 2px 0 var(--border));
   transition: transform 0.15s ease;
 }
 
-.step-card:hover .neo-human-step {
+.step-card:hover .neo-peep-step .css-peeps {
   transform: scale(1.08) rotate(-3deg);
 }
 
@@ -2193,22 +2201,29 @@ body.nav-open {
 .neo-faq-companion {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-.neo-human-faq {
+.neo-peep-faq {
   flex-shrink: 0;
-  width: 140px;
-  height: auto;
+}
+
+.neo-peep-faq .css-peeps {
+  width: 120px;
+  height: 140px;
   filter: drop-shadow(2px 2px 0 var(--border));
 }
 
 /* Launch band character */
-.neo-human-launch {
-  display: block;
-  margin: 1.5rem auto 0;
-  width: 160px;
-  height: auto;
+.neo-peep-launch {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.neo-peep-launch .css-peeps {
+  width: 180px;
+  height: 200px;
   filter: drop-shadow(3px 3px 0 rgba(255, 255, 255, 0.3));
   animation: neo-float 3s ease-in-out infinite;
 }
@@ -2220,16 +2235,23 @@ body.nav-open {
 
 /* --- Mobile adjustments for characters --- */
 @media (max-width: 968px) {
-  .neo-human-hero {
-    display: none;
+  .neo-peep-hero {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    transform: rotate(0deg);
   }
 
   .neo-faq-companion {
     flex-direction: column;
   }
 
-  .neo-human-step {
-    width: 100px;
+  .neo-peep-step .css-peeps {
+    width: 120px;
+    height: 140px;
   }
 }
 
@@ -2248,7 +2270,7 @@ body.nav-open {
   .display-title {
     text-shadow: none;
   }
-  .neo-human-launch {
+  .neo-peep-launch .css-peeps {
     animation: none;
   }
 }
