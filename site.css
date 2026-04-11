@@ -117,6 +117,14 @@ section {
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
 }
 
 .nav-links {
