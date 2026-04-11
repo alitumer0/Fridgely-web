@@ -2162,19 +2162,20 @@ body.nav-open {
   height: 220px;
 }
 
-/* Hero character — floating beside hero content */
+/* Hero character — beside the surface mockup */
 .neo-peep-hero {
   position: absolute;
-  bottom: -2rem;
-  left: -6rem;
-  transform: rotate(8deg);
-  z-index: 3;
+  bottom: -3rem;
+  right: -2rem;
+  transform: rotate(6deg);
+  z-index: 5;
   filter: drop-shadow(3px 3px 0 var(--border));
+  pointer-events: none;
 }
 
 .neo-peep-hero .css-peeps {
-  width: 160px;
-  height: 180px;
+  width: 140px;
+  height: 160px;
 }
 
 /* Step card characters */
@@ -2236,13 +2237,7 @@ body.nav-open {
 /* --- Mobile adjustments for characters --- */
 @media (max-width: 968px) {
   .neo-peep-hero {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    transform: rotate(0deg);
+    display: none;
   }
 
   .neo-faq-companion {
