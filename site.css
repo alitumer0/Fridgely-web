@@ -244,10 +244,7 @@ section {
 }
 
 .hero-orb {
-  position: absolute;
-  border-radius: var(--neo-radius);
-  filter: none;
-  opacity: 0.12;
+  display: none;
 }
 
 .hero-orb-1 {
