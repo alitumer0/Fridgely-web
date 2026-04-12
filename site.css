@@ -2239,8 +2239,9 @@ body.nav-open {
   50% { transform: translateY(-10px); }
 }
 
-/* --- Mobile adjustments for characters --- */
+/* --- Mobile adjustments for neobrutalism --- */
 @media (max-width: 968px) {
+  /* Characters */
   .neo-peep-hero {
     display: none;
   }
@@ -2252,6 +2253,132 @@ body.nav-open {
   .neo-peep-step .css-peeps {
     width: 120px;
     height: 140px;
+  }
+
+  /* Smaller shadows on mobile */
+  :root {
+    --shadow-md: 3px 3px 0 var(--border);
+    --shadow-lg: 5px 5px 0 var(--border);
+    --shadow-hover: 4px 4px 0 var(--border);
+  }
+
+  /* Tilt cards: flatten on mobile */
+  .step-card:nth-child(1),
+  .step-card:nth-child(2),
+  .step-card:nth-child(3),
+  .story-card:nth-child(1),
+  .story-card:nth-child(2),
+  .story-card:nth-child(3) {
+    transform: none !important;
+  }
+
+  /* Display title: smaller shadow offset */
+  .display-title {
+    text-shadow: 3px 3px 0 var(--accent-glow);
+    font-size: clamp(2.2rem, 8vw, 4rem);
+  }
+
+  /* Section title underline */
+  .section-title::after {
+    height: 0.14em;
+    transform: none;
+  }
+
+  /* Marquee: smaller text */
+  .neo-marquee {
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+  }
+
+  /* Buttons: thinner border */
+  .btn {
+    --neo-border-width: 2px;
+    padding: 0.85rem 1.5rem;
+  }
+
+  /* Cards: less padding, thinner border */
+  .step-card {
+    padding: 2rem 1.5rem;
+    border-width: 2px;
+  }
+
+  .result-card,
+  .story-card,
+  .blog-card,
+  .utility-card {
+    border-width: 2px;
+  }
+
+  /* Section kicker pill */
+  .section-kicker {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.7rem;
+  }
+
+  /* Features section: no border on mobile, full width */
+  .features {
+    border-radius: 0;
+    margin-inline: -1.5rem;
+    border-left: none;
+    border-right: none;
+  }
+
+  /* Launch band: less radius */
+  .launch-band {
+    border-radius: var(--neo-radius);
+  }
+
+  /* FAQ: gentler hover */
+  .faq-item:hover {
+    padding-inline: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Very small screens */
+  .display-title {
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
+    text-shadow: 2px 2px 0 var(--accent-glow);
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .hero-signals {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-signal {
+    font-size: 0.78rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .neo-peep-step .css-peeps {
+    width: 100px;
+    height: 120px;
+  }
+
+  .step-number {
+    font-size: 3rem;
+  }
+
+  /* Marquee ticker */
+  .neo-marquee {
+    font-size: 0.75rem;
+  }
+
+  /* Surface mockup */
+  .surface-window {
+    border-width: 2px;
+  }
+
+  .surface-chip {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.55rem;
+    border-width: 1.5px;
   }
 }
 
