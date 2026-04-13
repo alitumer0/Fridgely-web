@@ -58,15 +58,19 @@
             <nav class="site-nav">
                 <div class="nav-container">
                     <ul class="nav-links">
-                        <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
-                        <li><a href="#features">Özellikler</a></li>
-                        <li><a href="#faq">SSS</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#how-it-works" data-i18n="nav.how">Nasıl Çalışır?</a></li>
+                        <li><a href="#features" data-i18n="nav.features">Özellikler</a></li>
+                        <li><a href="#faq" data-i18n="nav.faq">SSS</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
                     </ul>
                 </div>
             </nav>
             <div class="nav-actions">
-                <a href="#launch-cta" class="btn btn-primary btn-desktop-only">Lansmanı Takip Et</a>
+                <div class="lang-switch">
+                    <button class="lang-btn lang-btn-active" data-lang="tr" onclick="setLang('tr')">TR</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+                </div>
+                <a href="#launch-cta" class="btn btn-primary btn-desktop-only" data-i18n="nav.cta">Lansmanı Takip Et</a>
                 <button type="button" class="btn-mobile-nav" id="mobile-nav-toggle" aria-label="Menüyü aç">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -85,18 +89,18 @@
                 <span class="hero-orb hero-orb-3"></span>
             </div>
             <div class="hero-content">
-                <span class="badge animate-on-scroll" style="--reveal-delay: 80ms">Yakında App Store'da</span>
-                <h1 class="display-title animate-on-scroll" style="--reveal-delay: 180ms" data-reveal="left">Evdeki gıdaları<br>takip et, israfı azalt.</h1>
-                <p class="lead-text animate-on-scroll" style="--reveal-delay: 280ms" data-reveal="left">Fridgely, neyin kaldığını, neyin biteceğini ve elinizdekilerle ne pişirebileceğinizi tek yerde gösteren akıllı mutfak asistanıdır.</p>
+                <span class="badge animate-on-scroll" style="--reveal-delay: 80ms" data-i18n="hero.badge">Yakında App Store'da</span>
+                <h1 class="display-title animate-on-scroll" style="--reveal-delay: 180ms" data-reveal="left" data-i18n="hero.title">Evdeki gıdaları<br>takip et, israfı azalt.</h1>
+                <p class="lead-text animate-on-scroll" style="--reveal-delay: 280ms" data-reveal="left" data-i18n="hero.lead">Fridgely, neyin kaldığını, neyin biteceğini ve elinizdekilerle ne pişirebileceğinizi tek yerde gösteren akıllı mutfak asistanıdır.</p>
                 <div class="hero-actions animate-on-scroll" style="--reveal-delay: 380ms" data-reveal="left">
-                    <a href="#how-it-works" class="btn btn-primary">Nasıl Çalışır</a>
-                    <a href="#launch-cta" class="btn btn-secondary">Lansmanı Takip Et</a>
+                    <a href="#how-it-works" class="btn btn-primary" data-i18n="hero.btn1">Nasıl Çalışır</a>
+                    <a href="#launch-cta" class="btn btn-secondary" data-i18n="hero.btn2">Lansmanı Takip Et</a>
                 </div>
-                <p class="hero-note animate-on-scroll" style="--reveal-delay: 460ms" data-reveal="left">Lansman yaklaşırken ürün notlarını, mutfak ipuçlarını ve güncellemeleri blog'da paylaşıyoruz.</p>
+                <p class="hero-note animate-on-scroll" style="--reveal-delay: 460ms" data-reveal="left" data-i18n="hero.note">Lansman yaklaşırken ürün notlarını, mutfak ipuçlarını ve güncellemeleri blog'da paylaşıyoruz.</p>
                 <div class="hero-signals animate-on-scroll" style="--reveal-delay: 520ms" data-reveal="left">
-                    <span class="hero-signal">Neyin kaldığını gör</span>
-                    <span class="hero-signal">Önce neyi tüketmen gerektiğini fark et</span>
-                    <span class="hero-signal">Elindekilerle ne pişeceğini daha hızlı bul</span>
+                    <span class="hero-signal" data-i18n="hero.signal1">Neyin kaldığını gör</span>
+                    <span class="hero-signal" data-i18n="hero.signal2">Önce neyi tüketmen gerektiğini fark et</span>
+                    <span class="hero-signal" data-i18n="hero.signal3">Elindekilerle ne pişeceğini daha hızlı bul</span>
                 </div>
             </div>
             <div class="hero-phone animate-on-scroll" style="--reveal-delay: 240ms" data-reveal="scale">
@@ -112,66 +116,66 @@
                         </div>
                         <div class="surface-toolbar">
                             <div class="surface-chip-row">
-                                <button type="button" class="surface-chip surface-tab-button" data-surface-tab="priority">Öncelik</button>
-                                <button type="button" class="surface-chip surface-tab-button" data-surface-tab="dinner">Akşam</button>
-                                <button type="button" class="surface-chip surface-tab-button" data-surface-tab="shopping">Liste</button>
+                                <button type="button" class="surface-chip surface-tab-button" data-surface-tab="priority" data-i18n="surface.tab1">Öncelik</button>
+                                <button type="button" class="surface-chip surface-tab-button" data-surface-tab="dinner" data-i18n="surface.tab2">Akşam</button>
+                                <button type="button" class="surface-chip surface-tab-button" data-surface-tab="shopping" data-i18n="surface.tab3">Liste</button>
                             </div>
-                            <span class="surface-chip surface-chip-muted">Senkron açık</span>
+                            <span class="surface-chip surface-chip-muted" data-i18n="surface.sync">Senkron açık</span>
                         </div>
                         <div class="surface-header">
                             <div>
-                                <span class="surface-eyebrow" id="surface-eyebrow-text">Mutfak görünümü</span>
-                                <h3 class="surface-title" id="surface-title-text">Bu hafta ne öncelikli?</h3>
+                                <span class="surface-eyebrow" id="surface-eyebrow-text" data-i18n="surface.eyebrow">Mutfak görünümü</span>
+                                <h3 class="surface-title" id="surface-title-text" data-i18n="surface.title">Bu hafta ne öncelikli?</h3>
                             </div>
-                            <span class="surface-badge" id="surface-badge-text">5 ürün riskte</span>
+                            <span class="surface-badge" id="surface-badge-text" data-i18n="surface.badge">5 ürün riskte</span>
                         </div>
                         <div class="surface-summary">
                             <div class="surface-metric" data-surface-focus="priority">
-                                <strong>2</strong>
-                                <span>hemen kullan</span>
+                                <strong data-i18n="surface.metric1.val">2</strong>
+                                <span data-i18n="surface.metric1.label">hemen kullan</span>
                             </div>
                             <div class="surface-metric" data-surface-focus="dinner">
-                                <strong>4/5</strong>
-                                <span>akşam yemeği hazır</span>
+                                <strong data-i18n="surface.metric2.val">4/5</strong>
+                                <span data-i18n="surface.metric2.label">akşam yemeği hazır</span>
                             </div>
                             <div class="surface-metric" data-surface-focus="shopping">
-                                <strong>3</strong>
-                                <span>eksik ürün</span>
+                                <strong data-i18n="surface.metric3.val">3</strong>
+                                <span data-i18n="surface.metric3.label">eksik ürün</span>
                             </div>
                         </div>
                         <div class="surface-columns">
                             <div class="surface-panel" data-surface-focus="priority">
                                 <div class="screen-header">
-                                    <span class="screen-title">Öncelik listesi</span>
-                                    <span class="screen-count">yaklaşan tarih</span>
+                                    <span class="screen-title" data-i18n="surface.list.title">Öncelik listesi</span>
+                                    <span class="screen-count" data-i18n="surface.list.subtitle">yaklaşan tarih</span>
                                 </div>
                                 <div class="surface-status-list">
                                     <div class="surface-status-row">
                                         <div class="surface-status-copy">
-                                            <span class="surface-status-title">Domates</span>
-                                            <span class="surface-status-meta">Bugün tüket</span>
+                                            <span class="surface-status-title" data-i18n="surface.item1.name">Domates</span>
+                                            <span class="surface-status-meta" data-i18n="surface.item1.meta">Bugün tüket</span>
                                         </div>
-                                        <span class="inv-badge inv-danger">Yüksek</span>
+                                        <span class="inv-badge inv-danger" data-i18n="surface.item1.badge">Yüksek</span>
                                     </div>
                                     <div class="surface-status-track"><span class="surface-status-fill surface-status-fill-danger" style="width:92%"></span></div>
                                 </div>
                                 <div class="surface-status-list">
                                     <div class="surface-status-row">
                                         <div class="surface-status-copy">
-                                            <span class="surface-status-title">Yumurta</span>
-                                            <span class="surface-status-meta">Yarın kontrol et</span>
+                                            <span class="surface-status-title" data-i18n="surface.item2.name">Yumurta</span>
+                                            <span class="surface-status-meta" data-i18n="surface.item2.meta">Yarın kontrol et</span>
                                         </div>
-                                        <span class="inv-badge inv-warn">Orta</span>
+                                        <span class="inv-badge inv-warn" data-i18n="surface.item2.badge">Orta</span>
                                     </div>
                                     <div class="surface-status-track"><span class="surface-status-fill surface-status-fill-warn" style="width:71%"></span></div>
                                 </div>
                                 <div class="surface-status-list">
                                     <div class="surface-status-row">
                                         <div class="surface-status-copy">
-                                            <span class="surface-status-title">Süt</span>
-                                            <span class="surface-status-meta">3 gün kaldı</span>
+                                            <span class="surface-status-title" data-i18n="surface.item3.name">Süt</span>
+                                            <span class="surface-status-meta" data-i18n="surface.item3.meta">3 gün kaldı</span>
                                         </div>
-                                        <span class="inv-badge inv-ok">Rahat</span>
+                                        <span class="inv-badge inv-ok" data-i18n="surface.item3.badge">Rahat</span>
                                     </div>
                                     <div class="surface-status-track"><span class="surface-status-fill surface-status-fill-ok" style="width:42%"></span></div>
                                 </div>
@@ -179,28 +183,28 @@
                             <div class="surface-stack">
                                 <div class="surface-panel surface-panel-soft" data-surface-focus="dinner">
                                     <div class="screen-header">
-                                        <span class="screen-title">Bu akşam</span>
-                                        <span class="screen-count">önerilen tarif</span>
+                                        <span class="screen-title" data-i18n="surface.tonight.title">Bu akşam</span>
+                                        <span class="screen-count" data-i18n="surface.tonight.subtitle">önerilen tarif</span>
                                     </div>
                                     <div class="recipe-card">
-                                        <strong>Menemen</strong>
-                                        <small>4/5 malzeme hazır, 15 dk</small>
+                                        <strong data-i18n="surface.recipe.name">Menemen</strong>
+                                        <small data-i18n="surface.recipe.info">4/5 malzeme hazır, 15 dk</small>
                                         <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
                                     </div>
                                     <div class="surface-note">
-                                        <span class="surface-note-label">Eksik</span>
-                                        <p>Biber ve ekmek eklenirse alışveriş listesi tamamlanır.</p>
+                                        <span class="surface-note-label" data-i18n="surface.missing.label">Eksik</span>
+                                        <p data-i18n="surface.missing.text">Biber ve ekmek eklenirse alışveriş listesi tamamlanır.</p>
                                     </div>
                                 </div>
                                 <div class="surface-panel surface-panel-muted" data-surface-focus="shopping">
                                     <div class="screen-header">
-                                        <span class="screen-title">Kısa not</span>
-                                        <span class="screen-count">bugün</span>
+                                        <span class="screen-title" data-i18n="surface.note.title">Kısa not</span>
+                                        <span class="screen-count" data-i18n="surface.note.subtitle">bugün</span>
                                     </div>
-                                    <p class="surface-caption">Haftalık reset için önce sebzeliği temizle, sonra eksikleri tek listede topla.</p>
+                                    <p class="surface-caption" data-i18n="surface.note.text">Haftalık reset için önce sebzeliği temizle, sonra eksikleri tek listede topla.</p>
                                     <div class="surface-footer">
-                                        <span class="surface-inline-stat">1 liste hazır</span>
-                                        <span class="surface-inline-stat">2 tarif uygun</span>
+                                        <span class="surface-inline-stat" data-i18n="surface.note.stat1">1 liste hazır</span>
+                                        <span class="surface-inline-stat" data-i18n="surface.note.stat2">2 tarif uygun</span>
                                     </div>
                                 </div>
                             </div>
@@ -214,16 +218,16 @@
         <!-- Marquee Ticker -->
         <div class="neo-marquee" aria-hidden="true">
             <div class="neo-marquee-inner">
-                <span>Daha az israf</span><span class="neo-marquee-dot">&#9679;</span>
-                <span>Daha akıllı mutfak</span><span class="neo-marquee-dot">&#9679;</span>
-                <span>Daha hızlı karar</span><span class="neo-marquee-dot">&#9679;</span>
-                <span>Daha az stres</span><span class="neo-marquee-dot">&#9679;</span>
-                <span>Daha çok lezzet</span><span class="neo-marquee-dot">&#9679;</span>
-                <span>Daha az israf</span><span class="neo-marquee-dot">&#9679;</span>
-                <span>Daha akıllı mutfak</span><span class="neo-marquee-dot">&#9679;</span>
-                <span>Daha hızlı karar</span><span class="neo-marquee-dot">&#9679;</span>
-                <span>Daha az stres</span><span class="neo-marquee-dot">&#9679;</span>
-                <span>Daha çok lezzet</span><span class="neo-marquee-dot">&#9679;</span>
+                <span data-i18n="marquee.1">Daha az israf</span><span class="neo-marquee-dot">&#9679;</span>
+                <span data-i18n="marquee.2">Daha akıllı mutfak</span><span class="neo-marquee-dot">&#9679;</span>
+                <span data-i18n="marquee.3">Daha hızlı karar</span><span class="neo-marquee-dot">&#9679;</span>
+                <span data-i18n="marquee.4">Daha az stres</span><span class="neo-marquee-dot">&#9679;</span>
+                <span data-i18n="marquee.5">Daha çok lezzet</span><span class="neo-marquee-dot">&#9679;</span>
+                <span data-i18n="marquee.1">Daha az israf</span><span class="neo-marquee-dot">&#9679;</span>
+                <span data-i18n="marquee.2">Daha akıllı mutfak</span><span class="neo-marquee-dot">&#9679;</span>
+                <span data-i18n="marquee.3">Daha hızlı karar</span><span class="neo-marquee-dot">&#9679;</span>
+                <span data-i18n="marquee.4">Daha az stres</span><span class="neo-marquee-dot">&#9679;</span>
+                <span data-i18n="marquee.5">Daha çok lezzet</span><span class="neo-marquee-dot">&#9679;</span>
             </div>
         </div>
 
@@ -231,10 +235,10 @@
         <section id="how-it-works" class="container">
             <div class="section-intro animate-on-scroll" data-reveal="left">
                 <div>
-                    <span class="section-kicker">Nasıl çalışır</span>
-                    <h2 class="section-title">Akıllı. Basit.<br>Lezzetli.</h2>
+                    <span class="section-kicker" data-i18n="how.kicker">Nasıl çalışır</span>
+                    <h2 class="section-title" data-i18n="how.title">Akıllı. Basit.<br>Lezzetli.</h2>
                 </div>
-                <p class="section-copy">Fridgely'nin değeri karmaşık bir kurulumdan değil, mutfaktaki belirsizliği azaltan net bir akıştan gelir. Ürünleri ekler, önceliği görür, kararı hızlandırırsınız.</p>
+                <p class="section-copy" data-i18n="how.copy">Fridgely'nin değeri karmaşık bir kurulumdan değil, mutfaktaki belirsizliği azaltan net bir akıştan gelir. Ürünleri ekler, önceliği görür, kararı hızlandırırsınız.</p>
             </div>
             
             <div class="steps-grid">
@@ -243,8 +247,8 @@
                     <div class="neo-peep neo-peep-step" aria-hidden="true">
                         <div class="css-peeps" style="--peep-head: short4; --peep-face: smile; --peep-body: phone; --peep-hair-color: #1a1a2e; --peep-skin-color: #c68642; --peep-clothes-color: #ff5277; --peep-object-color: #1a1a2e;"></div>
                     </div>
-                    <h3>Ürünleri Ekle</h3>
-                    <p>Buzdolabınızdaki ve kilerinizdeki ürünleri kolayca tarayarak veya manuel olarak envanterinize ekleyin.</p>
+                    <h3 data-i18n="step1.title">Ürünleri Ekle</h3>
+                    <p data-i18n="step1.text">Buzdolabınızdaki ve kilerinizdeki ürünleri kolayca tarayarak veya manuel olarak envanterinize ekleyin.</p>
                 </div>
 
                 <div class="step-card animate-on-scroll" style="--reveal-delay: 180ms">
@@ -252,8 +256,8 @@
                     <div class="neo-peep neo-peep-step" aria-hidden="true">
                         <div class="css-peeps" style="--peep-head: long-curly; --peep-face: serious; --peep-body: laptop; --peep-hair-color: #7300E6; --peep-skin-color: #ffd4b8; --peep-clothes-color: #3d5af1; --peep-object-color: #1a1a2e;"></div>
                     </div>
-                    <h3>Ne Biteceğini Gör</h3>
-                    <p>Son kullanma tarihleri yaklaşan ürünleri görün ve önce hangi malzemeleri değerlendirmeniz gerektiğini kaçırmayın.</p>
+                    <h3 data-i18n="step2.title">Ne Biteceğini Gör</h3>
+                    <p data-i18n="step2.text">Son kullanma tarihleri yaklaşan ürünleri görün ve önce hangi malzemeleri değerlendirmeniz gerektiğini kaçırmayın.</p>
                 </div>
 
                 <div class="step-card animate-on-scroll" style="--reveal-delay: 320ms">
@@ -261,8 +265,8 @@
                     <div class="neo-peep neo-peep-step" aria-hidden="true">
                         <div class="css-peeps" style="--peep-head: bangs2; --peep-face: smile-big; --peep-body: explaining; --peep-hair-color: #ff5277; --peep-skin-color: #8d5524; --peep-clothes-color: #b8f035; --peep-accessory: glasses2; --peep-accessory-color: #1a1a2e;"></div>
                     </div>
-                    <h3>Ne Pişireceğini Bul</h3>
-                    <p>Elinizdeki malzemelere göre pratik tarif önerilerini görün ve akşam yemeği kararını daha hızlı verin.</p>
+                    <h3 data-i18n="step3.title">Ne Pişireceğini Bul</h3>
+                    <p data-i18n="step3.text">Elinizdeki malzemelere göre pratik tarif önerilerini görün ve akşam yemeği kararını daha hızlı verin.</p>
                 </div>
             </div>
         </section>
@@ -270,25 +274,25 @@
         <section class="container results-section">
             <div class="results-layout">
                 <div class="results-copy animate-on-scroll" data-reveal="left">
-                    <span class="section-kicker">Neden önemli</span>
-                    <h2 class="section-title">Fridgely tarif göstermeden önce mutfaktaki stresi azaltır.</h2>
-                    <p class="section-copy">Asıl değer, dolabın içinde ne olduğunu hatırlamaya çalışmamak. Fridgely önce görünürlük sağlar; tarif, liste ve planlama bunun üzerine gelir.</p>
+                    <span class="section-kicker" data-i18n="results.kicker">Neden önemli</span>
+                    <h2 class="section-title" data-i18n="results.title">Fridgely tarif göstermeden önce mutfaktaki stresi azaltır.</h2>
+                    <p class="section-copy" data-i18n="results.copy">Asıl değer, dolabın içinde ne olduğunu hatırlamaya çalışmamak. Fridgely önce görünürlük sağlar; tarif, liste ve planlama bunun üzerine gelir.</p>
                 </div>
                 <div class="results-stack">
                     <article class="result-card animate-on-scroll" style="--reveal-delay: 60ms" data-reveal="right">
                         <span class="result-index">01</span>
-                        <h3>Daha az unutulan ürün</h3>
-                        <p>Evde ne olduğunu tek bakışta görmek, aynı ürünü tekrar alma ve elindekini unutma problemini azaltır.</p>
+                        <h3 data-i18n="result1.title">Daha az unutulan ürün</h3>
+                        <p data-i18n="result1.text">Evde ne olduğunu tek bakışta görmek, aynı ürünü tekrar alma ve elindekini unutma problemini azaltır.</p>
                     </article>
                     <article class="result-card animate-on-scroll" style="--reveal-delay: 150ms" data-reveal="right">
                         <span class="result-index">02</span>
-                        <h3>Daha az israf</h3>
-                        <p>Son kullanma yaklaşan ürünler görünür olduğunda karar daha erken verilir ve tüketim önceliği netleşir.</p>
+                        <h3 data-i18n="result2.title">Daha az israf</h3>
+                        <p data-i18n="result2.text">Son kullanma yaklaşan ürünler görünür olduğunda karar daha erken verilir ve tüketim önceliği netleşir.</p>
                     </article>
                     <article class="result-card animate-on-scroll" style="--reveal-delay: 240ms" data-reveal="right">
                         <span class="result-index">03</span>
-                        <h3>Daha hızlı akşam yemeği kararı</h3>
-                        <p>Elindekilerle ne yapabileceğini görmek, “bugün ne pişirsem?” yükünü azaltır.</p>
+                        <h3 data-i18n="result3.title">Daha hızlı akşam yemeği kararı</h3>
+                        <p data-i18n="result3.text">Elindekilerle ne yapabileceğini görmek, “bugün ne pişirsem?” yükünü azaltır.</p>
                     </article>
                 </div>
             </div>
@@ -300,18 +304,18 @@
             <div class="container">
                 <div class="section-intro section-intro-light animate-on-scroll" data-reveal="scale">
                     <div>
-                        <span class="section-kicker section-kicker-light">Temel yüzeyler</span>
-                        <h2 class="section-title">Mutfağı yönetmek için gereken ana yüzeyler.</h2>
+                        <span class="section-kicker section-kicker-light" data-i18n="features.kicker">Temel yüzeyler</span>
+                        <h2 class="section-title" data-i18n="features.title">Mutfağı yönetmek için gereken ana yüzeyler.</h2>
                     </div>
-                    <p class="section-copy">Her ekran ayrı bir “feature” gibi davranmıyor. Hepsi aynı probleme hizmet ediyor: evde ne var, önce neyi kullanmalı ve buna göre ne pişirilebilir.</p>
+                    <p class="section-copy" data-i18n="features.copy">Her ekran ayrı bir “feature” gibi davranmıyor. Hepsi aynı probleme hizmet ediyor: evde ne var, önce neyi kullanmalı ve buna göre ne pişirilebilir.</p>
                 </div>
                 
                 <div class="feature-grid">
                     <div class="feature-item animate-on-scroll" data-reveal="right">
                         <div class="feature-text">
-                            <span class="feature-kicker">Görünürlük</span>
-                            <h3>Akıllı Envanter Takibi</h3>
-                            <p>Evde ne olduğunu, neyin azaldığını ve önce hangi ürünü değerlendirmeniz gerektiğini tek bakışta görün.</p>
+                            <span class="feature-kicker" data-i18n="feat1.kicker">Görünürlük</span>
+                            <h3 data-i18n="feat1.title">Akıllı Envanter Takibi</h3>
+                            <p data-i18n="feat1.text">Evde ne olduğunu, neyin azaldığını ve önce hangi ürünü değerlendirmeniz gerektiğini tek bakışta görün.</p>
                         </div>
                         <div class="feature-visual">
                             <div class="app-surface app-surface-mini">
@@ -360,9 +364,9 @@
 
                     <div class="feature-item animate-on-scroll" data-reveal="left" style="--reveal-delay: 120ms">
                         <div class="feature-text">
-                            <span class="feature-kicker">Karar desteği</span>
-                            <h3>Size Özel Tarifler</h3>
-                            <p>Elinizdeki malzemelere göre pratik önerileri görün ve akşam yemeği kararını daha az eforla verin.</p>
+                            <span class="feature-kicker" data-i18n="feat2.kicker">Karar desteği</span>
+                            <h3 data-i18n="feat2.title">Size Özel Tarifler</h3>
+                            <p data-i18n="feat2.text">Elinizdeki malzemelere göre pratik önerileri görün ve akşam yemeği kararını daha az eforla verin.</p>
                         </div>
                         <div class="feature-visual">
                             <div class="app-surface app-surface-mini">
@@ -392,9 +396,9 @@
 
                     <div class="feature-item animate-on-scroll" data-reveal="right" style="--reveal-delay: 240ms">
                         <div class="feature-text">
-                            <span class="feature-kicker">Tek akış</span>
-                            <h3>Otomatik Alışveriş Listesi</h3>
-                            <p>Eksilen ürünleri ve tarif için gereken malzemeleri tek akışta toplayarak alışverişi sadeleştirin.</p>
+                            <span class="feature-kicker" data-i18n="feat3.kicker">Tek akış</span>
+                            <h3 data-i18n="feat3.title">Otomatik Alışveriş Listesi</h3>
+                            <p data-i18n="feat3.text">Eksilen ürünleri ve tarif için gereken malzemeleri tek akışta toplayarak alışverişi sadeleştirin.</p>
                         </div>
                         <div class="feature-visual">
                             <div class="app-surface app-surface-mini">
@@ -433,29 +437,29 @@
         <section class="container story-section">
             <div class="section-intro animate-on-scroll" data-reveal="left">
                 <div>
-                    <span class="section-kicker">Daha fazlası</span>
-                    <h2 class="section-title">Landing'den sonra nereye gitmeli?</h2>
+                    <span class="section-kicker" data-i18n="stories.kicker">Daha fazlası</span>
+                    <h2 class="section-title" data-i18n="stories.title">Landing'den sonra nereye gitmeli?</h2>
                 </div>
-                <p class="section-copy">Blog, SSS ve destek sayfaları aynı hikayenin devamı olmalı. Kullanıcıyı belirsizliğe bırakmak yerine, bir sonraki doğru cevaba taşımalı.</p>
+                <p class="section-copy" data-i18n="stories.copy">Blog, SSS ve destek sayfaları aynı hikayenin devamı olmalı. Kullanıcıyı belirsizliğe bırakmak yerine, bir sonraki doğru cevaba taşımalı.</p>
             </div>
             <div class="story-grid">
                 <a class="story-card animate-on-scroll" style="--reveal-delay: 40ms" data-reveal="left" href="blog.html">
-                    <span class="story-label">Blog</span>
-                    <h3>Ürün notları ve mutfak ipuçları</h3>
-                    <p>Lansman yolculuğunu ve gıda israfını azaltmaya yönelik yazıları takip edin.</p>
-                    <span class="story-cta">Yazıları aç <span aria-hidden="true">→</span></span>
+                    <span class="story-label" data-i18n="story1.label">Blog</span>
+                    <h3 data-i18n="story1.title">Ürün notları ve mutfak ipuçları</h3>
+                    <p data-i18n="story1.text">Lansman yolculuğunu ve gıda israfını azaltmaya yönelik yazıları takip edin.</p>
+                    <span class="story-cta" data-i18n="story1.cta">Yazıları aç <span aria-hidden="true">→</span></span>
                 </a>
                 <a class="story-card animate-on-scroll" style="--reveal-delay: 140ms" data-reveal="scale" href="faq.html">
-                    <span class="story-label">SSS</span>
-                    <h3>Platform, fiyat ve ürün durumu</h3>
-                    <p>En sık gelen sorulara kısa ve net cevapları tek sayfada görün.</p>
-                    <span class="story-cta">Cevapları gör <span aria-hidden="true">→</span></span>
+                    <span class="story-label" data-i18n="story2.label">SSS</span>
+                    <h3 data-i18n="story2.title">Platform, fiyat ve ürün durumu</h3>
+                    <p data-i18n="story2.text">En sık gelen sorulara kısa ve net cevapları tek sayfada görün.</p>
+                    <span class="story-cta" data-i18n="story2.cta">Cevapları gör <span aria-hidden="true">→</span></span>
                 </a>
                 <a class="story-card animate-on-scroll" style="--reveal-delay: 240ms" data-reveal="right" href="support.html">
-                    <span class="story-label">Destek</span>
-                    <h3>Yardım ve ürün durumu</h3>
-                    <p>Waitlist, yayın hazırlığı ve yardımcı bağlantılar için destek yüzeyine gidin.</p>
-                    <span class="story-cta">Destek sayfası <span aria-hidden="true">→</span></span>
+                    <span class="story-label" data-i18n="story3.label">Destek</span>
+                    <h3 data-i18n="story3.title">Yardım ve ürün durumu</h3>
+                    <p data-i18n="story3.text">Waitlist, yayın hazırlığı ve yardımcı bağlantılar için destek yüzeyine gidin.</p>
+                    <span class="story-cta" data-i18n="story3.cta">Destek sayfası <span aria-hidden="true">→</span></span>
                 </a>
             </div>
         </section>
@@ -464,11 +468,11 @@
         <section id="faq" class="container faq-section">
             <div class="section-intro faq-intro animate-on-scroll" data-reveal="left">
                 <div>
-                    <span class="section-kicker">Merak edilenler</span>
-                    <h2 class="section-title">Karar vermeden önce en çok sorulanlar.</h2>
+                    <span class="section-kicker" data-i18n="faq.kicker">Merak edilenler</span>
+                    <h2 class="section-title" data-i18n="faq.title">Karar vermeden önce en çok sorulanlar.</h2>
                 </div>
                 <div class="neo-faq-companion">
-                    <p class="section-copy">Pre-launch bir ürün için güven, çoğu zaman tasarımdan değil açıklıktan gelir. Fiyat, platform ve aile kullanımı gibi soruları kısa ve dürüst cevaplarla önden temizliyoruz.</p>
+                    <p class="section-copy" data-i18n="faq.copy">Pre-launch bir ürün için güven, çoğu zaman tasarımdan değil açıklıktan gelir. Fiyat, platform ve aile kullanımı gibi soruları kısa ve dürüst cevaplarla önden temizliyoruz.</p>
                     <div class="neo-peep neo-peep-faq" aria-hidden="true">
                         <div class="css-peeps" style="--peep-head: bun1; --peep-face: calm; --peep-body: tee-crossed; --peep-hair-color: #ffd23f; --peep-skin-color: #ffd4b8; --peep-clothes-color: #ff5277; --peep-accessory: glasses3; --peep-accessory-color: #1a1a2e;"></div>
                     </div>
@@ -476,31 +480,31 @@
             </div>
             
             <div class="faq-item animate-on-scroll" style="--reveal-delay: 40ms">
-                <h4>Fridgely ücretsiz mi?</h4>
-                <p>Fridgely'nin temel deneyiminin ücretsiz olması planlanıyor. Aile paylaşımı gibi gelişmiş özellikler için ayrı planlar sunulabilir.</p>
+                <h4 data-i18n="faq1.q">Fridgely ücretsiz mi?</h4>
+                <p data-i18n="faq1.a">Fridgely'nin temel deneyiminin ücretsiz olması planlanıyor. Aile paylaşımı gibi gelişmiş özellikler için ayrı planlar sunulabilir.</p>
             </div>
             
             <div class="faq-item animate-on-scroll" style="--reveal-delay: 140ms">
-                <h4>Aile üyelerimle ortak liste kullanabilir miyim?</h4>
-                <p>Aile üyeleriyle ortak kullanım ve paylaşım özellikleri yol haritasında yer alıyor. Lansman ve yeni özellik duyurularını blog üzerinden paylaşacağız.</p>
+                <h4 data-i18n="faq2.q">Aile üyelerimle ortak liste kullanabilir miyim?</h4>
+                <p data-i18n="faq2.a">Aile üyeleriyle ortak kullanım ve paylaşım özellikleri yol haritasında yer alıyor. Lansman ve yeni özellik duyurularını blog üzerinden paylaşacağız.</p>
             </div>
 
             <div class="faq-item animate-on-scroll" style="--reveal-delay: 220ms">
-                <h4>Waitlist veya TestFlight açılınca nasıl haberim olacak?</h4>
-                    <p>Lansman alanındaki form artık <code>/api/waitlist</code> endpoint'ine gider. Kayıt depolama Cloudflare tarafında webhook veya KV ile bağlandığında ilk duyuruları blog ve destek yüzeyinde netleştireceğiz.</p>
+                <h4 data-i18n="faq3.q">Waitlist veya TestFlight açılınca nasıl haberim olacak?</h4>
+                    <p data-i18n="faq3.a">Lansman alanındaki form artık <code>/api/waitlist</code> endpoint'ine gider. Kayıt depolama Cloudflare tarafında webhook veya KV ile bağlandığında ilk duyuruları blog ve destek yüzeyinde netleştireceğiz.</p>
             </div>
             
             <div style="text-align: center; --reveal-delay: 300ms" class="animate-on-scroll" data-reveal="scale">
-                <a href="faq.html" class="faq-link">Tüm soruları gör &rarr;</a>
+                <a href="faq.html" class="faq-link" data-i18n="faq.link">Tüm soruları gör &rarr;</a>
             </div>
         </section>
 
         <section id="launch-cta" class="container launch-section">
             <div class="launch-band animate-on-scroll" data-reveal="scale">
                 <div class="launch-intro">
-                    <span class="badge">Lansman Takibi</span>
-                    <h2 class="section-title">Fridgely yayına yaklaştıkça ilk burada paylaşacağız.</h2>
-                    <p class="lead-text">Erken erişim talebini şimdi bırakabilir, resmi waitlist ya da TestFlight açıldığında aynı akışı gerçek gönderime çevirebiliriz.</p>
+                    <span class="badge" data-i18n="launch.badge">Lansman Takibi</span>
+                    <h2 class="section-title" data-i18n="launch.title">Fridgely yayına yaklaştıkça ilk burada paylaşacağız.</h2>
+                    <p class="lead-text" data-i18n="launch.lead">Erken erişim talebini şimdi bırakabilir, resmi waitlist ya da TestFlight açıldığında aynı akışı gerçek gönderime çevirebiliriz.</p>
                     <div class="neo-peep neo-peep-launch" aria-hidden="true">
                         <div class="css-peeps" style="--peep-head: afro; --peep-face: laughing; --peep-body: pointing-up; --peep-hair-color: #1a1a2e; --peep-skin-color: #c68642; --peep-clothes-color: #ffd23f;"></div>
                     </div>
@@ -509,32 +513,32 @@
                     <form class="waitlist-form" id="waitlist-form">
                         <div class="waitlist-grid">
                             <label class="waitlist-field">
-                                <span>E-posta</span>
+                                <span data-i18n="launch.email">E-posta</span>
                                 <input id="waitlist-email" name="email" type="email" autocomplete="email" placeholder="ornek@mail.com" required />
                             </label>
                             <label class="waitlist-field">
-                                <span>Platform</span>
+                                <span data-i18n="launch.platform">Platform</span>
                                 <select id="waitlist-platform" name="platform" required>
-                                    <option value="">Seçin</option>
-                                    <option value="ios">iPhone / iOS</option>
-                                    <option value="android">Android</option>
-                                    <option value="both">Her ikisi</option>
+                                    <option value="" data-i18n="launch.platform.placeholder">Seçin</option>
+                                    <option value="ios" data-i18n="launch.platform.ios">iPhone / iOS</option>
+                                    <option value="android" data-i18n="launch.platform.android">Android</option>
+                                    <option value="both" data-i18n="launch.platform.both">Her ikisi</option>
                                 </select>
                             </label>
                             <label class="waitlist-field waitlist-field-wide">
-                                <span>En çok ne ilgini çekiyor?</span>
+                                <span data-i18n="launch.interest">En çok ne ilgini çekiyor?</span>
                                 <select id="waitlist-interest" name="interest" required>
-                                    <option value="">Seçin</option>
-                                    <option value="inventory">Envanter takibi</option>
-                                    <option value="expiry">Son kullanma takibi</option>
-                                    <option value="recipes">Tarif önerileri</option>
-                                    <option value="family">Aile paylaşımı</option>
+                                    <option value="" data-i18n="launch.interest.placeholder">Seçin</option>
+                                    <option value="inventory" data-i18n="launch.interest.inventory">Envanter takibi</option>
+                                    <option value="expiry" data-i18n="launch.interest.expiry">Son kullanma takibi</option>
+                                    <option value="recipes" data-i18n="launch.interest.recipes">Tarif önerileri</option>
+                                    <option value="family" data-i18n="launch.interest.family">Aile paylaşımı</option>
                                 </select>
                             </label>
                         </div>
                         <div class="launch-actions">
-                            <button type="submit" class="btn btn-primary">Erken Erişim İste</button>
-                            <a href="blog.html" class="btn btn-outline">Blog'u Keşfet</a>
+                            <button type="submit" class="btn btn-primary" data-i18n="launch.btn">Erken Erişim İste</button>
+                            <a href="blog.html" class="btn btn-outline" data-i18n="launch.blog">Blog'u Keşfet</a>
                         </div>
                         <p class="waitlist-note" id="waitlist-note">Bu form <code>/api/waitlist</code> endpoint'ine gönderim yapar. Cloudflare tarafında depolama bağlandığında kayıtlar kalıcı olarak saklanır.</p>
                     </form>
@@ -551,16 +555,16 @@
                 </div>
                 <div class="launch-status" aria-label="Ürün durumu">
                     <article class="launch-chip">
-                        <strong>Landing hazır</strong>
-                        <span>Mesaj ve yön netleşti.</span>
+                        <strong data-i18n="launch.chip1.title">Landing hazır</strong>
+                        <span data-i18n="launch.chip1.text">Mesaj ve yön netleşti.</span>
                     </article>
                     <article class="launch-chip">
-                        <strong>Blog aktif</strong>
-                        <span>İlk içerik katmanı yayında.</span>
+                        <strong data-i18n="launch.chip2.title">Blog aktif</strong>
+                        <span data-i18n="launch.chip2.text">İlk içerik katmanı yayında.</span>
                     </article>
                     <article class="launch-chip">
-                        <strong>İlk sürüm hazırlanıyor</strong>
-                        <span>Waitlist ve uygulama akışı sırada.</span>
+                        <strong data-i18n="launch.chip3.title">İlk sürüm hazırlanıyor</strong>
+                        <span data-i18n="launch.chip3.text">Waitlist ve uygulama akışı sırada.</span>
                     </article>
                 </div>
             </div>
@@ -571,11 +575,11 @@
         <div class="container footer-inner">
             <a href="index.html" class="logo"><img src="img/logo.svg" alt="" class="logo-icon">Fridgely.</a>
             <div class="footer-links">
-                <a href="privacy-policy.html">Gizlilik Politikası</a>
-                <a href="terms.html">Kullanım Şartları</a>
-                <a href="support.html">Destek</a>
+                <a href="privacy-policy.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
+                <a href="terms.html" data-i18n="footer.terms">Kullanım Şartları</a>
+                <a href="support.html" data-i18n="footer.support">Destek</a>
             </div>
-            <p class="copyright">&copy; 2026 Fridgely. Tüm hakları saklıdır.</p>
+            <p class="copyright" data-i18n="footer.copyright">&copy; 2026 Fridgely. Tüm hakları saklıdır.</p>
         </div>
     </footer>
 
@@ -803,5 +807,6 @@
         });
     </script>
     <script src="mobile-nav.js"></script>
+    <script src="i18n.js"></script>
 </body>
 </html>

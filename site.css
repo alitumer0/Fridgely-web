@@ -127,6 +127,36 @@ section {
   height: 32px;
 }
 
+/* Language toggle */
+.lang-switch {
+  display: inline-flex;
+  border: 2px solid var(--border);
+  border-radius: var(--neo-radius-sm);
+  overflow: hidden;
+}
+
+.lang-btn {
+  padding: 0.35rem 0.65rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  transition: all 0.15s ease;
+}
+
+.lang-btn-active {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.lang-btn:hover:not(.lang-btn-active) {
+  background: var(--accent-glow);
+  color: var(--text-primary);
+}
+
 .nav-links {
   display: flex;
   gap: 2.5rem;
