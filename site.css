@@ -2711,6 +2711,14 @@ main {
   .lead-form .btn {
     min-height: 44px;
   }
+
+  /* Mobile: never let the [data-reveal] entrance offsets push cards off the
+     viewport. Keep the vertical pop, drop the horizontal/scale variants. */
+  .animate-on-scroll[data-reveal="left"],
+  .animate-on-scroll[data-reveal="right"],
+  .animate-on-scroll[data-reveal="scale"] {
+    transform: translateY(30px);
+  }
 }
 
 @media (max-width: 480px) {
