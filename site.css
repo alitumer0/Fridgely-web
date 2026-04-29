@@ -1627,14 +1627,15 @@ section {
       display: none;
   }
 
-  .btn-mobile-nav {
+  .site-header .btn-mobile-nav {
       display: block;
   }
 
   .app-surface-hero {
     width: 100%;
-    max-width: 28rem;
+    max-width: 100%;
     transform: none;
+    box-sizing: border-box;
   }
 
   .surface-header,
@@ -2585,5 +2586,126 @@ body::before {
   }
   .neo-peep-launch .css-peeps {
     animation: none;
+  }
+}
+
+/* ============================================================
+   Mobile responsive sweep (audited at 375px)
+   ============================================================ */
+
+/* Prevent any descendant from causing horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+main {
+  overflow-x: clip;
+}
+
+@media (max-width: 768px) {
+  /* Touch targets — WCAG/Apple HIG minimum 44px (we go 40px to keep density) */
+  .lang-btn {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .surface-tab,
+  .neo-tab {
+    min-height: 40px;
+    padding-block: 0.5rem;
+  }
+
+  .footer-links a {
+    padding-block: 0.6rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Section kickers / labels: inset from edge so they aren't clipped
+     when the parent section uses negative inline margins */
+  .section-kicker,
+  .features .section-kicker,
+  .story-section .section-kicker,
+  .faq-section .section-kicker,
+  .launch-section .section-kicker {
+    margin-inline-start: 1.5rem;
+  }
+
+  /* Section intro text: ensure horizontal padding so headings don't
+     touch the viewport edge inside full-bleed sections (features, faq) */
+  .features .section-intro,
+  .story-section .section-intro,
+  .faq-section .section-intro,
+  .launch-section .section-intro,
+  .features .lead-text,
+  .story-section .lead-text,
+  .faq-section .lead-text,
+  .launch-section .lead-text {
+    padding-inline: 1.5rem;
+  }
+
+  /* FAQ items inset */
+  .faq-list,
+  .faq-cta {
+    padding-inline: 1.5rem;
+  }
+
+  /* App surface mockup must never exceed the viewport */
+  .app-surface,
+  .app-surface-hero,
+  .surface-window {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Tighten heavy text-shadow on the hero title at small sizes — the
+     4px offset reads as duplicated text on a narrow column */
+  .display-title {
+    text-shadow: 2px 2px 0 var(--accent-glow);
+  }
+
+  /* Section title decorative underline: don't rotate (looks broken
+     on a narrow viewport) and constrain to the text */
+  .section-title::after {
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Launch band can have a subtle inset so the rounded blue card
+     doesn't bleed past the viewport */
+  .launch-band {
+    margin-inline: 0.5rem;
+  }
+
+  /* Mockup tiny labels: bring up to a readable floor */
+  .surface-sync-label,
+  .surface-eyebrow,
+  .surface-meta,
+  .surface-list-meta {
+    font-size: 0.78rem;
+  }
+
+  /* Form fields full width with comfortable touch height */
+  .lead-form input[type="email"],
+  .lead-form select,
+  .lead-form textarea {
+    min-height: 44px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .lead-form .btn {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* On the smallest screens the marquee text is still legible at
+     0.85rem; leave alone. Just tighten the hero pill button. */
+  .hero-badge,
+  .article-cta-kicker {
+    font-size: 0.7rem;
   }
 }
