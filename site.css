@@ -1760,6 +1760,16 @@ section {
 
 .article-hero {
   padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+.article-hero .display-title {
+  max-width: none;
+  margin-inline: auto;
+}
+
+.article-hero .lead-text {
+  margin-inline: auto;
 }
 
 .article-backlink {
