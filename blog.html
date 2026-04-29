@@ -30,42 +30,48 @@
             <a href="index.html" class="logo">Sage.</a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html#how-it-works">Nasıl Çalışır?</a></li>
-                    <li><a href="index.html#features">Özellikler</a></li>
-                    <li><a href="faq.html">SSS</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#how-it-works" data-i18n="nav.how">Nasıl Çalışır?</a></li>
+                    <li><a href="index.html#features" data-i18n="nav.features">Özellikler</a></li>
+                    <li><a href="faq.html" data-i18n="nav.faq">SSS</a></li>
+                    <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
                 </ul>
             </nav>
-            <a href="index.html" class="btn btn-primary">Ana Sayfa</a>
+            <div class="nav-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn lang-btn-active" data-lang="tr" onclick="setLang('tr')">TR</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+                </div>
+                <a href="index.html" class="btn btn-primary" data-i18n="nav.home">Ana Sayfa</a>
+            </div>
         </div>
     </header>
 
     <main class="container">
         <div class="page-hero">
-            <h1 class="display-title">Sage Blog</h1>
-            <p class="lead-text">Gıda israfını azaltma yolları, mutfak düzeni önerileri ve Sage'nin lansman yolculuğuna dair güncellemeler burada.</p>
+            <h1 class="display-title" data-i18n="blog.hero.title">Sage Blog</h1>
+            <p class="lead-text" data-i18n="blog.hero.lead">Gıda israfını azaltma yolları, mutfak düzeni önerileri ve Sage'nin lansman yolculuğuna dair güncellemeler burada.</p>
         </div>
         
         <div class="blog-list">
             <article class="blog-card">
-                <span class="blog-date">8 Mart 2026</span>
-                <h3>Gıda İsrafını Önlemenin 5 Yolu</h3>
-                <p>Evinizdeki gıda israfını azaltmak için günlük rutininize entegre edebileceğiniz basit ama son derece etkili 5 yöntemi keşfedin.</p>
-                <a href="blog/ilk-yazi.html" class="blog-read-more">Devamını Oku</a>
+                <span class="blog-date" data-i18n="blog.post1.date">8 Mart 2026</span>
+                <h3 data-i18n="blog.post1.title">Gıda İsrafını Önlemenin 5 Yolu</h3>
+                <p data-i18n="blog.post1.desc">Evinizdeki gıda israfını azaltmak için günlük rutininize entegre edebileceğiniz basit ama son derece etkili 5 yöntemi keşfedin.</p>
+                <a href="blog/ilk-yazi.html" class="blog-read-more" data-i18n="blog.read-more">Devamını Oku</a>
             </article>
 
             <article class="blog-card">
-                <span class="blog-date">9 Mart 2026</span>
-                <h3>Son Kullanma Tarihini Kaçırmamak İçin 7 Basit Rutin</h3>
-                <p>Buzdolabındaki ürünleri son gün fark etmek yerine, küçük haftalık rutinlerle hangi malzemenin önce tüketilmesi gerektiğini daha erken görün.</p>
-                <a href="blog/son-kullanma-tarihini-kacirmamak-icin-7-rutin.html" class="blog-read-more">Devamını Oku</a>
+                <span class="blog-date" data-i18n="blog.post2.date">9 Mart 2026</span>
+                <h3 data-i18n="blog.post2.title">Son Kullanma Tarihini Kaçırmamak İçin 7 Basit Rutin</h3>
+                <p data-i18n="blog.post2.desc">Buzdolabındaki ürünleri son gün fark etmek yerine, küçük haftalık rutinlerle hangi malzemenin önce tüketilmesi gerektiğini daha erken görün.</p>
+                <a href="blog/son-kullanma-tarihini-kacirmamak-icin-7-rutin.html" class="blog-read-more" data-i18n="blog.read-more">Devamını Oku</a>
             </article>
 
             <article class="blog-card">
-                <span class="blog-date">9 Mart 2026</span>
-                <h3>Haftalık Mutfak Reset'i Nasıl Yapılır?</h3>
-                <p>10 dakikalık bir haftalık reset ile dolapta ne olduğunu görün, alışverişi netleştirin ve haftaya daha sakin başlayın.</p>
-                <a href="blog/haftalik-mutfak-reseti-nasil-yapilir.html" class="blog-read-more">Devamını Oku</a>
+                <span class="blog-date" data-i18n="blog.post3.date">9 Mart 2026</span>
+                <h3 data-i18n="blog.post3.title">Haftalık Mutfak Reset'i Nasıl Yapılır?</h3>
+                <p data-i18n="blog.post3.desc">10 dakikalık bir haftalık reset ile dolapta ne olduğunu görün, alışverişi netleştirin ve haftaya daha sakin başlayın.</p>
+                <a href="blog/haftalik-mutfak-reseti-nasil-yapilir.html" class="blog-read-more" data-i18n="blog.read-more">Devamını Oku</a>
             </article>
         </div>
 
@@ -75,13 +81,15 @@
         <div class="container footer-inner">
             <a href="index.html" class="logo">Sage.</a>
             <div class="footer-links">
-                <a href="privacy-policy.html">Gizlilik Politikası</a>
-                <a href="terms.html">Kullanım Şartları</a>
-                <a href="support.html">Destek</a>
+                <a href="privacy-policy.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
+                <a href="terms.html" data-i18n="footer.terms">Kullanım Şartları</a>
+                <a href="support.html" data-i18n="footer.support">Destek</a>
             </div>
-            <p class="copyright">&copy; 2026 Sage. Tüm hakları saklıdır.</p>
+            <p class="copyright" data-i18n="footer.copyright">&copy; 2026 Sage. Tüm hakları saklıdır.</p>
         </div>
     </footer>
 
+    <script src="i18n.js"></script>
+    <script src="mobile-nav.js"></script>
 </body>
 </html>

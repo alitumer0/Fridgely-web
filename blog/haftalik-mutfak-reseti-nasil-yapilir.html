@@ -50,24 +50,31 @@
             <a href="../index.html" class="logo">Sage.</a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="../index.html#how-it-works">Nasıl Çalışır?</a></li>
-                    <li><a href="../index.html#features">Özellikler</a></li>
-                    <li><a href="../faq.html">SSS</a></li>
-                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../index.html#how-it-works" data-i18n="nav.how">Nasıl Çalışır?</a></li>
+                    <li><a href="../index.html#features" data-i18n="nav.features">Özellikler</a></li>
+                    <li><a href="../faq.html" data-i18n="nav.faq">SSS</a></li>
+                    <li><a href="../blog.html" data-i18n="nav.blog">Blog</a></li>
                 </ul>
             </nav>
-            <a href="../index.html#launch-cta" class="btn btn-primary">Lansmanı Takip Et</a>
+            <div class="nav-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn lang-btn-active" data-lang="tr" onclick="setLang('tr')">TR</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+                </div>
+                <a href="../index.html#launch-cta" class="btn btn-primary" data-i18n="nav.cta">Lansmanı Takip Et</a>
+            </div>
         </div>
     </header>
 
     <main class="container article-shell">
         <div class="page-hero article-hero">
-            <a class="article-backlink" href="../blog.html">Blog'a geri dön</a>
-            <h1 class="display-title">Haftalık Mutfak Reset'i Nasıl Yapılır?</h1>
-            <p class="lead-text">Dolaptaki ürünleri görmek, haftalık yemek kararını kolaylaştırmak ve alışverişi sadeleştirmek için 10 dakikalık bir reset yeterli olabilir.</p>
-            <p class="article-meta">Yayınlanma Tarihi: 9 Mart 2026</p>
+            <a class="article-backlink" href="../blog.html" data-i18n="blog.backlink">Blog'a geri dön</a>
+            <h1 class="display-title" data-i18n="blog.post3.title">Haftalık Mutfak Reset'i Nasıl Yapılır?</h1>
+            <p class="lead-text" data-i18n="blog.post3.lead">Dolaptaki ürünleri görmek, haftalık yemek kararını kolaylaştırmak ve alışverişi sadeleştirmek için 10 dakikalık bir reset yeterli olabilir.</p>
+            <p class="article-meta"><span data-i18n="blog.published-on">Yayınlanma Tarihi:</span> <span data-i18n="blog.post3.date">9 Mart 2026</span></p>
         </div>
 
+        <p class="tr-only-notice" data-i18n="blog.tr-only-notice" style="background:#F5EFE6;border-left:3px solid #5C7A4F;padding:0.75rem 1rem;margin:0 auto 2rem;max-width:720px;font-size:0.92rem;color:#5C7A4F;font-style:italic;">Bu yazı şu an yalnızca Türkçe olarak yayınlanmıştır.</p>
         <article class="article-content">
             <p>Haftalık mutfak reset'i, büyük bir temizlik veya uzun bir hazırlık değildir. Amaç sadece görünürlüğü geri kazanmak ve haftaya daha net başlamak.</p>
 
@@ -129,5 +136,7 @@
         </div>
     </footer>
 
+    <script src="../i18n.js"></script>
+    <script src="../mobile-nav.js"></script>
 </body>
 </html>
