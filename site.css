@@ -1227,7 +1227,10 @@ section {
 }
 
 .faq-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.5rem 0.25rem;
   margin-top: 2rem;
   font-weight: 700;
   color: var(--accent-primary);
@@ -1637,7 +1640,7 @@ section {
       display: block;
   }
 
-  .app-surface-hero {
+  .app-surface-hero.app-surface-hero {
     width: 100%;
     max-width: 100%;
     transform: none;
@@ -1792,6 +1795,8 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 0.25rem;
   color: var(--accent-primary);
   font-weight: 700;
   margin-bottom: 1.5rem;
