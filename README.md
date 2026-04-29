@@ -2,7 +2,7 @@
 
 Static multi-page marketing site for Sage — AI Kitchen Assistant.
 
-> **Rebrand in progress (Fridgely → Sage).** Domain not finalized yet — `sage.kitchen` is used as a placeholder across the codebase. Before deploy, replace all `sage.kitchen`, `sage.pages.dev`, and `alitumer0/Sage-web` strings with the final domain / repo name (single find-and-replace pass). The GitHub repo and Cloudflare project still carry the old `Fridgely-web` / `fridgely.pages.dev` names until renamed on those platforms.
+Live at **[sage.kitchen](https://sage.kitchen)** — deployed via GitHub Pages from this repo's `main` branch (custom domain configured via `CNAME`). The repo name is still `Fridgely-web` for legacy reasons; rename to `sage-web` does not affect the deployment.
 
 ## Current Site Mode
 
@@ -30,8 +30,8 @@ This repo is the website layer around the mobile product. Its job is to explain 
 - No build step
 - Static HTML pages with shared CSS
 - Small inline JavaScript only where needed
-- Cloudflare Pages Functions for the waitlist endpoint
-- Cloudflare Pages deploy target
+- Cloudflare Pages Functions retained for the waitlist endpoint (legacy; not active under GitHub Pages)
+- GitHub Pages deploy target (custom domain: sage.kitchen)
 
 ## Design Direction
 
