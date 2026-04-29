@@ -2401,17 +2401,26 @@ body.nav-open {
     padding: 0.25rem 0.7rem;
   }
 
-  /* Features section: no border on mobile, full width */
+  /* Features section: full-bleed background, content stays inset.
+     `min(1200px, 100% - 3rem)` makes the container 48px narrower than
+     the viewport, so we widen to 100vw and re-pad inside. */
   .features {
+    width: 100vw;
+    max-width: 100vw;
+    margin-inline: calc(50% - 50vw);
+    padding-inline: 1.5rem;
     border-radius: 0;
-    margin-inline: -1.5rem;
     border-left: none;
     border-right: none;
   }
 
-  /* Launch band: less radius */
+  /* Launch band: shrink padding so the form panel isn't crushed */
   .launch-band {
     border-radius: var(--neo-radius);
+    padding: 1.75rem 1rem;
+  }
+  .launch-panel {
+    padding: 1rem;
   }
 
   /* FAQ: gentler hover */

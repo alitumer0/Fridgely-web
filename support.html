@@ -27,16 +27,29 @@
 
     <header class="site-header">
         <div class="container nav-inner">
-            <a href="index.html" class="logo">Sage.</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html#how-it-works">Nasıl Çalışır?</a></li>
-                    <li><a href="index.html#features">Özellikler</a></li>
-                    <li><a href="faq.html">SSS</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
+            <a href="index.html" class="logo"><img src="img/logo.svg" alt="" class="logo-icon">Sage.</a>
+            <nav class="site-nav">
+                <div class="nav-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html#how-it-works" data-i18n="nav.how">Nasıl Çalışır?</a></li>
+                        <li><a href="index.html#features" data-i18n="nav.features">Özellikler</a></li>
+                        <li><a href="faq.html" data-i18n="nav.faq">SSS</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+                    </ul>
+                </div>
             </nav>
-            <a href="index.html#launch-cta" class="btn btn-primary">Lansmanı Takip Et</a>
+            <div class="nav-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn lang-btn-active" data-lang="tr" onclick="setLang('tr')">TR</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+                </div>
+                <a href="index.html#launch-cta" class="btn btn-primary btn-desktop-only" data-i18n="nav.cta">Lansmanı Takip Et</a>
+                <button type="button" class="btn-mobile-nav" id="mobile-nav-toggle" aria-label="Menüyü aç">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -82,5 +95,7 @@
         </div>
     </footer>
 
+    <script src="i18n.js"></script>
+    <script src="mobile-nav.js"></script>
 </body>
 </html>
