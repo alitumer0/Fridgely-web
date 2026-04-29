@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Fridgely sosyal onizleme gorseli</title>
-  <desc id="desc">Fridgely ana sayfa icin sosyal medya onizleme gorseli.</desc>
+  <title id="title">Sage sosyal onizleme gorseli</title>
+  <desc id="desc">Sage ana sayfa icin sosyal medya onizleme gorseli.</desc>
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#fffaf3"/>
@@ -19,7 +19,7 @@
   <rect width="1200" height="630" fill="url(#glowA)"/>
   <rect width="1200" height="630" fill="url(#glowB)"/>
   <g transform="translate(72 74)">
-    <text x="0" y="0" fill="#214f38" font-size="28" font-family="Georgia, serif" font-weight="700">Fridgely.</text>
+    <text x="0" y="0" fill="#214f38" font-size="28" font-family="Georgia, serif" font-weight="700">Sage.</text>
     <text x="0" y="94" fill="#214f38" font-size="72" font-family="Georgia, serif" font-weight="700">Evde ne var,</text>
     <text x="0" y="176" fill="#214f38" font-size="72" font-family="Georgia, serif" font-weight="700">ne bitiyor,</text>
     <text x="0" y="258" fill="#214f38" font-size="72" font-family="Georgia, serif" font-weight="700">ne pisebilir?</text>

@@ -1,6 +1,8 @@
-# Fridgely Web
+# Sage Web
 
-Static multi-page marketing site for Fridgely.
+Static multi-page marketing site for Sage — AI Kitchen Assistant.
+
+> **Rebrand in progress (Fridgely → Sage).** Domain not finalized yet — `sage.kitchen` is used as a placeholder across the codebase. Before deploy, replace all `sage.kitchen`, `sage.pages.dev`, and `alitumer0/Sage-web` strings with the final domain / repo name (single find-and-replace pass). The GitHub repo and Cloudflare project still carry the old `Fridgely-web` / `fridgely.pages.dev` names until renamed on those platforms.
 
 ## Current Site Mode
 
@@ -9,7 +11,7 @@ Static multi-page marketing site for Fridgely.
 - Utility-backed
 - Current product state: pre-launch
 
-This repo is the website layer around the mobile product. Its job is to explain Fridgely clearly, build trust, and route users to the right next step.
+This repo is the website layer around the mobile product. Its job is to explain Sage clearly, build trust, and route users to the right next step.
 
 ## Active Pages
 
@@ -66,7 +68,7 @@ See:
 
 ## Deployment
 
-- Source repo: `https://github.com/alitumer0/Fridgely-web`
-- Live site: `https://fridgely.pages.dev`
-- Production deployment snapshot: `https://bd7fcbdd.fridgely.pages.dev`
-- `fridgely.app` custom domain is not active yet, so app-side hardcoded production links will not resolve until DNS is configured
+- Source repo: `https://github.com/alitumer0/Sage-web`
+- Live site: `https://sage.pages.dev`
+- Production deployment snapshot: `https://bd7fcbdd.sage.pages.dev`
+- `sage.kitchen` custom domain is not active yet, so app-side hardcoded production links will not resolve until DNS is configured

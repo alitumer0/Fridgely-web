@@ -1,8 +1,8 @@
-# Fridgely Design Brief V1
+# Sage Design Brief V1
 
 ## Objective
 
-Create a clear, high-trust, pre-launch marketing site for Fridgely that:
+Create a clear, high-trust, pre-launch marketing site for Sage that:
 
 - explains the product in one screen
 - makes the product feel worth waiting for
@@ -15,11 +15,11 @@ This brief is the visual and UX companion to:
 
 ## Product Context
 
-Fridgely is not being presented as a generic recipe app or a generic grocery list app.
+Sage is not being presented as a generic recipe app or a generic grocery list app.
 
 Working product frame:
 
-`Fridgely, evdeki gıdaları takip edip israfı azaltmanı ve elindekilerle ne pişireceğini bulmanı sağlayan akıllı mutfak asistanıdır.`
+`Sage, evdeki gıdaları takip edip israfı azaltmanı ve elindekilerle ne pişireceğini bulmanı sağlayan akıllı mutfak asistanıdır.`
 
 Primary promise:
 
@@ -86,7 +86,7 @@ Design takeaway:
 
 - strong products usually sell one core use case first
 - weak products try to say grocery + recipe + AI + home + family + planning all at once
-- Fridgely should lead with inventory and waste reduction, then support with recipes
+- Sage should lead with inventory and waste reduction, then support with recipes
 
 ## Visual System
 
@@ -312,6 +312,6 @@ Deliverable:
 
 ## Working North Star
 
-Fridgely web should feel like:
+Sage web should feel like:
 
 `A calm, high-trust product site that makes the app feel useful before it is even installed.`

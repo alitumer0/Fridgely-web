@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fridgely.app/sitemap.xml
+Sitemap: https://sage.app/sitemap.xml

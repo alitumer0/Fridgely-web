@@ -55,7 +55,7 @@ export async function onRequestPost(context) {
     platform,
     interest,
     createdAt,
-    source: "fridgely-web",
+    source: "sage-web",
     userAgent: request.headers.get("user-agent") || "",
     ipCountry: request.cf?.country || "",
     submittedAt: new Date().toISOString()

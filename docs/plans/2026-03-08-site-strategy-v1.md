@@ -1,11 +1,11 @@
-# Fridgely Site Strategy V1
+# Sage Site Strategy V1
 
 ## Objective
 
-Define a coherent direction for the Fridgely website so design, copy, SEO, and app-directed actions stop conflicting with each other.
+Define a coherent direction for the Sage website so design, copy, SEO, and app-directed actions stop conflicting with each other.
 
 Primary goal:
-- Explain Fridgely clearly
+- Explain Sage clearly
 - Build trust
 - Drive the user to the correct next step
 
@@ -26,7 +26,7 @@ This means:
 
 Working one-line positioning:
 
-`Fridgely, evdeki gıdaları takip edip israfı azaltmanı ve elindekilerle ne pişireceğini bulmanı sağlayan akıllı mutfak asistanıdır.`
+`Sage, evdeki gıdaları takip edip israfı azaltmanı ve elindekilerle ne pişireceğini bulmanı sağlayan akıllı mutfak asistanıdır.`
 
 Working promise:
 - Know what you have
@@ -98,7 +98,7 @@ Recommended rule:
 ### Section 1: Hero
 
 Goal:
-- Explain what Fridgely is in one screen
+- Explain what Sage is in one screen
 - Give one primary CTA
 
 Structure:
@@ -121,7 +121,7 @@ Wireframe:
 +-------------------------------------------------------------+
 | Eyebrow: Akıllı mutfak asistanı                            |
 | H1: Evdeki gıdaları takip et, israfı azalt.                |
-| Body: Fridgely neyin kaldığını, neyin biteceğini ve        |
+| Body: Sage neyin kaldığını, neyin biteceğini ve        |
 | elindekilerle ne pişirebileceğini tek yerde gösterir.      |
 | [Primary CTA] [Secondary CTA]                              |
 |                                              [App mockup]  |
@@ -197,7 +197,7 @@ Headline:
 - `Evdeki gıdaları takip et, israfı azalt.`
 
 Body:
-- `Fridgely, neyin kaldığını, neyin biteceğini ve elindekilerle ne pişirebileceğini tek yerde gösterir.`
+- `Sage, neyin kaldığını, neyin biteceğini ve elindekilerle ne pişirebileceğini tek yerde gösterir.`
 
 Why this works:
 - Most understandable
@@ -213,7 +213,7 @@ Headline:
 - `Dolaptakileri unutma, ne pişireceğini daha hızlı bul.`
 
 Body:
-- `Fridgely, evdeki gıdaları düzenli tutmana ve elindekilerle en doğru yemeği seçmene yardımcı olur.`
+- `Sage, evdeki gıdaları düzenli tutmana ve elindekilerle en doğru yemeği seçmene yardımcı olur.`
 
 Why this works:
 - More human
@@ -229,7 +229,7 @@ Headline:
 - `Neyin var, ne bitiyor, ne pişer: hepsi tek yerde.`
 
 Body:
-- `Fridgely ile envanterini takip et, son kullanma tarihlerini kaçırma ve elindeki malzemelere göre tarif önerileri al.`
+- `Sage ile envanterini takip et, son kullanma tarihlerini kaçırma ve elindeki malzemelere göre tarif önerileri al.`
 
 Why this works:
 - Strong product summary
@@ -270,13 +270,13 @@ Do not mix them.
 
 Choose one of these now:
 
-1. If Fridgely is downloadable:
+1. If Sage is downloadable:
    Primary CTA: `Uygulamayı indir`
 
-2. If Fridgely is not yet public but can accept early users:
+2. If Sage is not yet public but can accept early users:
    Primary CTA: `TestFlight'a katıl`
 
-3. If Fridgely is still pre-launch:
+3. If Sage is still pre-launch:
    Primary CTA: `Yakında App Store'da`
    Secondary CTA: `Nasıl çalışır`
 
@@ -397,7 +397,7 @@ Update README to match actual architecture
 
 ## Final Recommendation
 
-Fridgely web should stop behaving like a hybrid experiment and become:
+Sage web should stop behaving like a hybrid experiment and become:
 
 `A calm, high-trust product marketing site with SEO support.`
 

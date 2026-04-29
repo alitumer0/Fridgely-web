@@ -147,7 +147,7 @@ python3 -c "..."
 
 **Step 2: Deploy**
 ```bash
-npx wrangler pages deploy . --project-name=fridgely --commit-dirty=true
+npx wrangler pages deploy . --project-name=sage --commit-dirty=true
 ```
 
 **Step 3: Commit**

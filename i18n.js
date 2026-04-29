@@ -10,7 +10,7 @@ const translations = {
     // Hero
     "hero.badge": "Yakında App Store'da",
     "hero.title": "Evdeki gıdaları<br>takip et, israfı azalt.",
-    "hero.lead": "Fridgely, neyin kaldığını, neyin biteceğini ve elinizdekilerle ne pişirebileceğinizi tek yerde gösteren akıllı mutfak asistanıdır.",
+    "hero.lead": "Sage, neyin kaldığını, neyin biteceğini ve elinizdekilerle ne pişirebileceğinizi tek yerde gösteren akıllı mutfak asistanıdır.",
     "hero.btn1": "Nasıl Çalışır",
     "hero.btn2": "Lansmanı Takip Et",
     "hero.note": "Lansman yaklaşırken ürün notlarını, mutfak ipuçlarını ve güncellemeleri blog'da paylaşıyoruz.",
@@ -65,7 +65,7 @@ const translations = {
     // How it works
     "how.kicker": "Nasıl çalışır",
     "how.title": "Akıllı. Basit.<br>Lezzetli.",
-    "how.copy": "Fridgely'nin değeri karmaşık bir kurulumdan değil, mutfaktaki belirsizliği azaltan net bir akıştan gelir. Ürünleri ekler, önceliği görür, kararı hızlandırırsınız.",
+    "how.copy": "Sage'nin değeri karmaşık bir kurulumdan değil, mutfaktaki belirsizliği azaltan net bir akıştan gelir. Ürünleri ekler, önceliği görür, kararı hızlandırırsınız.",
     "step1.title": "Ürünleri Ekle",
     "step1.text": "Buzdolabınızdaki ve kilerinizdeki ürünleri kolayca tarayarak veya manuel olarak envanterinize ekleyin.",
     "step2.title": "Ne Biteceğini Gör",
@@ -75,8 +75,8 @@ const translations = {
 
     // Results
     "results.kicker": "Neden önemli",
-    "results.title": "Fridgely tarif göstermeden önce mutfaktaki stresi azaltır.",
-    "results.copy": "Asıl değer, dolabın içinde ne olduğunu hatırlamaya çalışmamak. Fridgely önce görünürlük sağlar; tarif, liste ve planlama bunun üzerine gelir.",
+    "results.title": "Sage tarif göstermeden önce mutfaktaki stresi azaltır.",
+    "results.copy": "Asıl değer, dolabın içinde ne olduğunu hatırlamaya çalışmamak. Sage önce görünürlük sağlar; tarif, liste ve planlama bunun üzerine gelir.",
     "result1.title": "Daha az unutulan ürün",
     "result1.text": "Evde ne olduğunu tek bakışta görmek, aynı ürünü tekrar alma ve elindekini unutma problemini azaltır.",
     "result2.title": "Daha az israf",
@@ -119,8 +119,8 @@ const translations = {
     "faq.kicker": "Merak edilenler",
     "faq.title": "Karar vermeden önce en çok sorulanlar.",
     "faq.copy": "Pre-launch bir ürün için güven, çoğu zaman tasarımdan değil açıklıktan gelir. Fiyat, platform ve aile kullanımı gibi soruları kısa ve dürüst cevaplarla önden temizliyoruz.",
-    "faq1.q": "Fridgely ücretsiz mi?",
-    "faq1.a": "Fridgely'nin temel deneyiminin ücretsiz olması planlanıyor. Aile paylaşımı gibi gelişmiş özellikler için ayrı planlar sunulabilir.",
+    "faq1.q": "Sage ücretsiz mi?",
+    "faq1.a": "Sage'nin temel deneyiminin ücretsiz olması planlanıyor. Aile paylaşımı gibi gelişmiş özellikler için ayrı planlar sunulabilir.",
     "faq2.q": "Aile üyelerimle ortak liste kullanabilir miyim?",
     "faq2.a": "Aile üyeleriyle ortak kullanım ve paylaşım özellikleri yol haritasında yer alıyor. Lansman ve yeni özellik duyurularını blog üzerinden paylaşacağız.",
     "faq3.q": "Waitlist veya TestFlight açılınca nasıl haberim olacak?",
@@ -129,7 +129,7 @@ const translations = {
 
     // Launch
     "launch.badge": "Lansman Takibi",
-    "launch.title": "Fridgely yayına yaklaştıkça ilk burada paylaşacağız.",
+    "launch.title": "Sage yayına yaklaştıkça ilk burada paylaşacağız.",
     "launch.lead": "Erken erişim talebini şimdi bırakabilir, resmi waitlist ya da TestFlight açıldığında aynı akışı gerçek gönderime çevirebiliriz.",
     "launch.email": "E-posta",
     "launch.platform": "Platform",
@@ -156,7 +156,7 @@ const translations = {
     "footer.privacy": "Gizlilik Politikası",
     "footer.terms": "Kullanım Şartları",
     "footer.support": "Destek",
-    "footer.copyright": "© 2026 Fridgely. Tüm hakları saklıdır.",
+    "footer.copyright": "© 2026 Sage. Tüm hakları saklıdır.",
   },
 
   en: {
@@ -170,7 +170,7 @@ const translations = {
     // Hero
     "hero.badge": "Coming Soon to App Store",
     "hero.title": "Track your food,<br>reduce waste.",
-    "hero.lead": "Fridgely is a smart kitchen assistant that shows what you have, what's expiring, and what you can cook — all in one place.",
+    "hero.lead": "Sage is a smart kitchen assistant that shows what you have, what's expiring, and what you can cook — all in one place.",
     "hero.btn1": "How It Works",
     "hero.btn2": "Follow Launch",
     "hero.note": "As we approach launch, we share product notes, kitchen tips and updates on our blog.",
@@ -225,7 +225,7 @@ const translations = {
     // How it works
     "how.kicker": "How it works",
     "how.title": "Smart. Simple.<br>Delicious.",
-    "how.copy": "Fridgely's value comes not from a complex setup, but from a clear flow that reduces kitchen uncertainty. Add items, see priorities, make decisions faster.",
+    "how.copy": "Sage's value comes not from a complex setup, but from a clear flow that reduces kitchen uncertainty. Add items, see priorities, make decisions faster.",
     "step1.title": "Add Items",
     "step1.text": "Easily add items from your fridge and pantry to your inventory by scanning or entering them manually.",
     "step2.title": "See What's Expiring",
@@ -235,8 +235,8 @@ const translations = {
 
     // Results
     "results.kicker": "Why it matters",
-    "results.title": "Fridgely reduces kitchen stress before showing recipes.",
-    "results.copy": "The real value is not having to remember what's in the fridge. Fridgely provides visibility first; recipes, lists and planning come on top of that.",
+    "results.title": "Sage reduces kitchen stress before showing recipes.",
+    "results.copy": "The real value is not having to remember what's in the fridge. Sage provides visibility first; recipes, lists and planning come on top of that.",
     "result1.title": "Fewer forgotten items",
     "result1.text": "Seeing what you have at a glance reduces the problem of buying duplicates and forgetting what you already have.",
     "result2.title": "Less waste",
@@ -279,8 +279,8 @@ const translations = {
     "faq.kicker": "Common questions",
     "faq.title": "Most asked questions before deciding.",
     "faq.copy": "For a pre-launch product, trust often comes from transparency, not design. We address pricing, platform and family use with short, honest answers upfront.",
-    "faq1.q": "Is Fridgely free?",
-    "faq1.a": "Fridgely's core experience is planned to be free. Separate plans may be offered for advanced features like family sharing.",
+    "faq1.q": "Is Sage free?",
+    "faq1.a": "Sage's core experience is planned to be free. Separate plans may be offered for advanced features like family sharing.",
     "faq2.q": "Can I share lists with family members?",
     "faq2.a": "Shared usage and family features are on the roadmap. We'll share launch and feature updates via the blog.",
     "faq3.q": "How will I know when the waitlist or TestFlight opens?",
@@ -289,7 +289,7 @@ const translations = {
 
     // Launch
     "launch.badge": "Launch Tracker",
-    "launch.title": "We'll share here first as Fridgely approaches launch.",
+    "launch.title": "We'll share here first as Sage approaches launch.",
     "launch.lead": "You can leave an early access request now, and when the official waitlist or TestFlight opens, we'll convert it to a real submission.",
     "launch.email": "Email",
     "launch.platform": "Platform",
@@ -316,7 +316,7 @@ const translations = {
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Use",
     "footer.support": "Support",
-    "footer.copyright": "© 2026 Fridgely. All rights reserved.",
+    "footer.copyright": "© 2026 Sage. All rights reserved.",
   }
 };
 
@@ -338,7 +338,7 @@ function setLang(lang) {
   });
 
   document.documentElement.lang = lang;
-  localStorage.setItem("fridgely-lang", lang);
+  localStorage.setItem("sage-lang", lang);
 
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("lang-btn-active", btn.dataset.lang === lang);
@@ -346,6 +346,6 @@ function setLang(lang) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const saved = localStorage.getItem("fridgely-lang") || "tr";
+  const saved = localStorage.getItem("sage-lang") || "tr";
   setLang(saved);
 });
