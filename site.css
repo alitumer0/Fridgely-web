@@ -1506,8 +1506,17 @@ section {
     gap: 3rem;
   }
 
+  .hero-split .display-title {
+    max-width: none;
+    margin-inline: auto;
+  }
+
   .hero-split .lead-text {
     margin: 0 auto 2.5rem;
+  }
+
+  .lang-switch {
+    margin-inline: auto;
   }
 
   .hero-note {
