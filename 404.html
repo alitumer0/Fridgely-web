@@ -23,20 +23,29 @@
     <style>
         html[lang="en"] [data-lang-section="tr"] { display: none; }
         html[lang="tr"] [data-lang-section="en"] { display: none; }
-        .notfound-hero { padding-bottom: 2rem; }
-        .notfound-code {
+        .notfound-hero { padding-bottom: 2.5rem; max-width: 640px; }
+        .notfound-eyebrow {
+            display: inline-block;
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(3.5rem, 11vw, 6rem);
-            font-weight: 700;
-            line-height: 1;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
             color: #5C7A4F;
-            letter-spacing: -0.04em;
-            margin: 0 0 0.75rem;
-            text-shadow: none;
+            background: rgba(92, 122, 79, 0.1);
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            margin-bottom: 1.25rem;
         }
         .notfound-hero .display-title {
-            font-size: clamp(2rem, 5.5vw, 3.25rem);
+            font-size: clamp(1.75rem, 4.5vw, 2.5rem);
             text-shadow: none;
+            margin: 0 0 1rem;
+        }
+        .notfound-hero .lead-text {
+            font-size: 1rem;
+            margin: 0 auto;
+            max-width: 480px;
         }
     </style>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -78,7 +87,7 @@
     <main class="container article-shell">
         <div data-lang-section="tr">
             <div class="page-hero notfound-hero">
-                <p class="notfound-code">404</p>
+                <span class="notfound-eyebrow">Hata 404</span>
                 <h1 class="display-title">Sayfa bulunamadı</h1>
                 <p class="lead-text">Aradığınız sayfa taşınmış, kaldırılmış ya da hiç var olmamış olabilir. Aşağıdaki bağlantılardan devam edebilirsiniz.</p>
             </div>
@@ -105,7 +114,7 @@
 
         <div data-lang-section="en">
             <div class="page-hero notfound-hero">
-                <p class="notfound-code">404</p>
+                <span class="notfound-eyebrow">Error 404</span>
                 <h1 class="display-title">Page not found</h1>
                 <p class="lead-text">The page you were looking for may have moved, been removed, or never existed. You can continue from one of the links below.</p>
             </div>
