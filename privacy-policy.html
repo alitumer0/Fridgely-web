@@ -4,19 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gizlilik Politikası | Sage</title>
-    <meta name="description" content="Sage gizlilik politikası: web sitesi, waitlist formu ve yayın öncesi veri akışları için güncel taslak çerçeve.">
+    <meta name="description" content="Sage mobil uygulaması ve web sitesi gizlilik politikası: hangi verileri topluyor, nasıl koruyoruz, KVKK ve GDPR haklarınız.">
     <link rel="canonical" href="https://sage.kitchen/privacy-policy.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Gizlilik Politikası | Sage">
-    <meta property="og:description" content="Sage web sitesi, waitlist formu ve yayın öncesi veri akışları için güncel gizlilik taslağı.">
+    <meta property="og:description" content="Sage mobil uygulaması ve web sitesi gizlilik politikası: KVKK + GDPR uyumlu, mobil app veri akışları detaylı.">
     <meta property="og:url" content="https://sage.kitchen/privacy-policy.html">
     <meta property="og:image" content="https://sage.kitchen/og-legal.svg">
     <meta property="og:image:type" content="image/svg+xml">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Gizlilik Politikası | Sage">
-    <meta name="twitter:description" content="Sage web sitesi, waitlist formu ve yayın öncesi veri akışları için güncel gizlilik taslağı.">
+    <meta name="twitter:description" content="Sage mobil uygulaması ve web sitesi gizlilik politikası: KVKK + GDPR uyumlu, mobil app veri akışları detaylı.">
     <meta name="twitter:image" content="https://sage.kitchen/og-legal.svg">
     <link rel="stylesheet" href="site.css">
+    <style>
+        html[lang="en"] [data-lang-section="tr"] { display: none; }
+        html[lang="tr"] [data-lang-section="en"] { display: none; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.25rem 0;
+            font-size: 0.95rem;
+        }
+        .article-content th,
+        .article-content td {
+            text-align: left;
+            padding: 0.6rem 0.8rem;
+            border-bottom: 1px solid rgba(0,0,0,.08);
+            vertical-align: top;
+        }
+        .article-content th {
+            font-weight: 600;
+            background: rgba(0,0,0,.03);
+        }
+    </style>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -54,68 +75,274 @@
     </header>
 
     <main class="container article-shell">
-        <div class="page-hero article-hero">
-            <h1 class="display-title">Gizlilik Politikası</h1>
-            <p class="lead-text">Bu sayfa Sage web sitesi ve erken erişim akışı için hazırlanmış daha kapsamlı yayın öncesi taslaktır. Nihai sürüm, kullanılan servisler ve yargı alanı netleştirildikten sonra hukuki incelemeyle güncellenmelidir.</p>
-            <p class="article-meta">Son güncelleme: 9 Mart 2026 · Durum: Taslak / legal review gerekli</p>
-        </div>
 
-        <article class="article-content">
-            <div class="draft-notice">
-                <strong>Önemli not:</strong> Bu metin yayın öncesi çalışma taslağıdır; hukuki tavsiye yerine geçmez ve ürün resmen yayına alınmadan önce güncellenmelidir.
+        <!-- ====================================================================
+             TURKISH VERSION
+             ==================================================================== -->
+        <div data-lang-section="tr">
+            <div class="page-hero article-hero">
+                <h1 class="display-title">Gizlilik Politikası</h1>
+                <p class="lead-text">Sage mobil uygulaması ve sage.kitchen web sitesi için kişisel verilerin nasıl toplandığını, kullanıldığını, korunduğunu ve haklarınızı açıklar.</p>
+                <p class="article-meta">Son güncelleme: 2 Mayıs 2026 · Yürürlük tarihi: 2 Mayıs 2026</p>
             </div>
 
-            <h2>1. Bu politika neyi kapsar?</h2>
-            <p>Bu politika, Sage'nin pazarlama sitesi, destek sayfaları, blog içeriği ve web üzerinden sunulan erken erişim / waitlist akışı için hazırlanmıştır. Mobil uygulama herkese açık olarak yayınlandığında, uygulama içi veri akışları için bu metin genişletilecek veya ayrı başlıklarla güncellenecektir.</p>
+            <article class="article-content">
 
-            <h2>2. Bugün hangi verileri toplayabiliriz?</h2>
-            <p>Mevcut site yapısında özellikle şu veri kategorileri işlenebilir:</p>
-            <p>1. Waitlist formuna girilen e-posta adresi, seçilen platform ve ilgi alanı.</p>
-            <p>2. Sunucu düzeyinde güvenlik, kötüye kullanım önleme ve temel operasyon için oluşan teknik kayıtlar.</p>
-            <p>3. Bize doğrudan iletilen destek veya geri bildirim talepleri varsa, bu iletişimin içeriği.</p>
-            <p>4. Yayına geçildiğinde eklenecek analitik, hesap, ödeme veya kimlik doğrulama akışlarına ait veriler. Bu kategoriler aktif hale gelirse politika ayrıca güncellenecektir.</p>
+                <h2>1. Veri Sorumlusu</h2>
+                <p>Bu Gizlilik Politikası, Sage mobil uygulamasını ("Uygulama") ve <a class="inline-link" href="https://sage.kitchen">sage.kitchen</a> web sitesini ("Site") işleten Sage Kitchen ("biz", "Sage") tarafından, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") ve Avrupa Birliği Genel Veri Koruma Tüzüğü ("GDPR") kapsamında veri sorumlusu sıfatıyla yayımlanmıştır.</p>
+                <p>Gizlilik ile ilgili her türlü talep, soru veya başvurunuz için <a class="inline-link" href="mailto:privacy@sage.kitchen">privacy@sage.kitchen</a> adresinden bize ulaşabilirsiniz.</p>
 
-            <h2>3. Verileri hangi amaçlarla kullanırız?</h2>
-            <p>Toplanan veya işlenen bilgiler; erken erişim talebini kaydetmek, ürün güncellemelerini doğru kullanıcı grubuna iletmek, siteyi güvenli biçimde çalıştırmak, performans ve hata takibini yapmak, kötüye kullanımı önlemek ve Sage'nin ilk sürümünü daha doğru yönlendirmek amacıyla kullanılabilir.</p>
+                <h2>2. Bu politikanın kapsamı</h2>
+                <p>Bu politika hem mobil uygulamayı hem web sitesini kapsar. Aşağıdaki bölümlerde, mobil uygulamanın işlediği veri kategorileri ayrı başlıklarla detaylandırılmıştır. Üçüncü taraf web sitelerine veya bağlantılı dış servislere gittiğinizde, ilgili tarafların kendi gizlilik politikaları geçerlidir.</p>
 
-            <h2>4. Waitlist formu nasıl çalışır?</h2>
-            <p>Ana sayfadaki erken erişim formu, Cloudflare Pages üzerinde çalışan bir endpoint'e gönderim yapacak şekilde tasarlanmıştır. Bu endpoint, proje konfigürasyonuna göre veriyi bir webhook servisine iletebilir veya bir depolama katmanına yazabilir. Kalıcı kayıt altyapısı değişirse bu bölüm de güncellenir.</p>
+                <h2>3. Topladığımız kişisel veriler</h2>
+                <p>Sage'i kullandığınızda aşağıdaki kategorilerde kişisel veri işliyoruz:</p>
 
-            <h2>5. Verileri kimlerle paylaşabiliriz?</h2>
-            <p>Sage verileri satmaz. Ancak hizmeti çalıştırmak için sınırlı ölçüde altyapı ve servis sağlayıcı kullanabiliriz. Bugünkü teknik yapı dikkate alındığında bunlar şu kategorilere girebilir:</p>
-            <p>1. Hosting, CDN ve edge çalışma ortamı sağlayan Cloudflare.</p>
-            <p>2. Waitlist kayıtlarını iletmek veya saklamak için yapılandırılan webhook, otomasyon veya veri depolama sağlayıcısı.</p>
-            <p>3. İleride etkinleştirilirse analitik, e-posta gönderimi, hata izleme veya müşteri desteği araçları.</p>
-            <p>Bu servisler kullanıldığında, nihai sürümde mümkün olduğunca isim bazında listelenmelidir.</p>
+                <h3>3.1 Hesap ve kimlik bilgileri</h3>
+                <p>Google ile Giriş veya Apple ile Giriş kullandığınızda Firebase Authentication üzerinden adınız, e-posta adresiniz ve profil fotoğrafınız bize iletilir. Anonim oturum tercih ederseniz yalnızca Firebase tarafından üretilen rastgele bir kullanıcı kimliği saklanır.</p>
 
-            <h2>6. Çerezler, analitik ve takip teknolojileri</h2>
-            <p>Bugünkü site sürümü reklam amaçlı izleme teknolojilerine göre tasarlanmamıştır. Bununla birlikte barındırma sağlayıcısı seviyesinde zorunlu teknik günlükler oluşabilir. Üçüncü taraf analitik veya pazarlama çerezleri eklenecek olursa, bu politika ve gerekli onay akışları ayrıca güncellenmelidir.</p>
+                <h3>3.2 Uygulama içeriği</h3>
+                <p>Uygulama içinde oluşturduğunuz veya yüklediğiniz içerikleri işleriz: malzeme listesi, alışveriş listesi kalemleri, paylaştığınız tarifler, yorumlar, beğeni ve kayıt etkileşimleri, yüklediğiniz fotoğraflar (buzdolabı görüntüleri ve tarif görselleri).</p>
 
-            <h2>7. Verileri ne kadar süre tutarız?</h2>
-            <p>Waitlist verileri, erken erişim duyurularını yönetmek, ilgili ürün grubuna lansman bilgisi göndermek ve talep hacmini anlamak için makul bir süre saklanabilir. Kullanıcı talebi, ürün kapanışı veya hukuki zorunluluk bulunması halinde bu süre kısaltılabilir veya veri silinebilir. Nihai sürümde daha net saklama süreleri eklenmelidir.</p>
+                <h3>3.3 Beslenme verileri (özel nitelikli)</h3>
+                <p>Beslenme takibini etkinleştirirseniz günlük kalori, makro besin tüketimi, diyet tercihleri ve alerjiler gibi sağlıkla ilişkili bilgileri saklarız. Bu veriler KVKK madde 6 kapsamında <strong>özel nitelikli kişisel veri</strong> olarak değerlendirilir ve yalnızca açık rızanız doğrultusunda işlenir.</p>
 
-            <h2>8. Haklarınız ve talepleriniz</h2>
-            <p>Uygulanabilir mevzuata bağlı olarak, hakkınızda tuttuğumuz verilere erişim, düzeltme, silme veya işlemeye itiraz talebinde bulunabilirsiniz. Sage henüz yayın öncesi aşamada olduğu için özel bir gizlilik iletişim adresi ilan edilmemiştir; bu talepler için şimdilik <a class="inline-link" href="support.html">destek sayfası</a> temel yönlendirme noktasıdır.</p>
+                <h3>3.4 Satın alma ve abonelik bilgileri</h3>
+                <p>Apple In-App Purchase üzerinden gerçekleştirdiğiniz Sage Premium aboneliklerinin durumu, başlangıç ve yenileme tarihleri uygulamada saklanır. Apple, ödeme bilgilerinizi (kart numarası vb.) doğrudan kendi tarafında işler; <strong>bizler ödeme bilgilerinize erişemeyiz</strong>.</p>
 
-            <h2>9. Cocuklara yonelik degildir</h2>
-            <p>Sage genel mutfak ve hane organizasyonu kullanım senaryoları için tasarlanmıştır ve bilerek çocuklardan veri toplamayı hedeflemez. Uygulama veya site kapsamı değişirse yaş sınırı ve ebeveyn onayı başlıkları ayrıca netleştirilmelidir.</p>
+                <h3>3.5 Cihaz ve teknik bilgiler</h3>
+                <p>Firebase Crashlytics aracılığıyla uygulama çökmelerini, performans olaylarını ve cihaz tipi (iPhone/iPad), işletim sistemi sürümü, dil tercihi ve yaklaşık IP coğrafyası gibi tanı bilgilerini topluyoruz. Bu kapsamda Apple'ın IDFV (Identifier for Vendor) tanımlayıcısı kullanılabilir; reklam tanımlayıcısı (IDFA) toplamıyoruz.</p>
 
-            <h2>10. Bu metin degisebilir</h2>
-            <p>Sage pre-launch aşamasında olduğu için ürün akışı, servis sağlayıcılar ve veri kategorileri değişebilir. Bu politika her önemli ürün veya altyapı değişikliğinde güncellenmeli ve canlıya çıkmadan önce hukuki olarak son kez gözden geçirilmelidir.</p>
+                <h3>3.6 Kullanım istatistikleri</h3>
+                <p>Hangi özellikleri ne sıklıkta kullandığınızı, AI tarif önerisi gibi paid feature'ların kullanım sayısını (kota yönetimi için) ve oturum sürelerini ölçüyoruz. Bu veri, kullanıcı kimliğine bağlı olarak işlenir.</p>
 
-            <p>Ürün yönü, lansman durumu ve yeni sayfalar için <a class="inline-link" href="blog.html">blog</a> ve <a class="inline-link" href="faq.html">SSS</a> sayfalarını takip edebilirsiniz.</p>
-        </article>
+                <h3>3.7 Bildirim tokeni</h3>
+                <p>Bildirim izni verdiğinizde Firebase Cloud Messaging cihazınıza özgü bir push token üretir. Bu token yalnızca size bildirim göndermek için kullanılır.</p>
+
+                <h3>3.8 Sesli komutlar</h3>
+                <p>Uygulamadaki sesli arama özelliği iOS Speech Framework / Android Speech Recognizer üzerinden <strong>cihazınızda</strong> çalışır. Ses kaydı sunucularımıza gönderilmez. Yalnızca tanınan metin (örn. "domates ekle") uygulamanın komut akışına aktarılır.</p>
+
+                <h3>3.9 Web sitesi ziyaretleri</h3>
+                <p>sage.kitchen web sitesi Cloudflare üzerinden barındırılır. Cloudflare temel teknik günlükler (IP, user-agent, talep zamanı) tutar. Üçüncü taraf reklam veya pazarlama çerezleri kullanmıyoruz.</p>
+
+                <h2>4. İşleme amaçları ve hukuki dayanak</h2>
+                <table>
+                    <tr><th>Amaç</th><th>Veri kategorisi</th><th>Hukuki dayanak (GDPR / KVKK)</th></tr>
+                    <tr><td>Hesabınızı oluşturmak ve kimlik doğrulamak</td><td>3.1</td><td>Sözleşmenin ifası</td></tr>
+                    <tr><td>Uygulamanın temel işlevini sunmak (envanter, tarif, alışveriş listesi)</td><td>3.2</td><td>Sözleşmenin ifası</td></tr>
+                    <tr><td>Beslenme takibi ve kişiselleştirilmiş AI tarif önerileri</td><td>3.2, 3.3</td><td>Açık rıza (özel nitelikli veri için açık rıza zorunlu)</td></tr>
+                    <tr><td>Premium abonelik durumunu yönetmek</td><td>3.4</td><td>Sözleşmenin ifası</td></tr>
+                    <tr><td>Çökme tanılaması, güvenlik ve kötüye kullanım önleme</td><td>3.5</td><td>Meşru menfaat</td></tr>
+                    <tr><td>Kullanım kotalarını uygulamak ve ürünü iyileştirmek</td><td>3.6</td><td>Meşru menfaat</td></tr>
+                    <tr><td>Bildirim göndermek</td><td>3.7</td><td>Açık rıza</td></tr>
+                </table>
+
+                <h2>5. Üçüncü taraf hizmet sağlayıcılar</h2>
+                <p>Sage'i çalıştırabilmek için aşağıdaki hizmet sağlayıcılarla işleyici (data processor) ilişkisi içindeyiz. Bu kuruluşlar verilerinizi yalnızca bizim adımıza ve verdiğimiz talimatlar çerçevesinde işler:</p>
+                <table>
+                    <tr><th>Sağlayıcı</th><th>Hizmet</th><th>Veri yeri</th></tr>
+                    <tr><td>Google LLC (Firebase)</td><td>Authentication, Firestore, Storage, Crashlytics, Cloud Messaging, Cloud Functions</td><td>ABD / AB</td></tr>
+                    <tr><td>Google LLC (Gemini API)</td><td>AI tarif üretimi (sunucu tarafından çağrılır)</td><td>ABD</td></tr>
+                    <tr><td>OpenAI, L.L.C.</td><td>AI tarif üretimi alternatifi</td><td>ABD</td></tr>
+                    <tr><td>Groq, Inc.</td><td>AI tarif üretimi alternatifi</td><td>ABD</td></tr>
+                    <tr><td>Apple Inc.</td><td>Push Notifications, In-App Purchase, App Store dağıtımı</td><td>ABD / AB</td></tr>
+                    <tr><td>Cloudflare, Inc.</td><td>Web sitesi barındırma ve CDN</td><td>Küresel edge</td></tr>
+                </table>
+                <p>Sage <strong>kişisel verilerinizi satmaz</strong>, reklam ağlarına paylaşmaz, kullanıcı verisi üzerinden gelir elde etmez.</p>
+
+                <h2>6. Yurt dışına veri aktarımı</h2>
+                <p>Yukarıdaki sağlayıcıların bir kısmı verilerinizi Türkiye dışında, başta Amerika Birleşik Devletleri olmak üzere üçüncü ülkelerde işleyebilir. Bu aktarımlar:</p>
+                <ul>
+                    <li>KVKK madde 9 kapsamında <strong>açık rızanız</strong> alınarak gerçekleştirilir,</li>
+                    <li>GDPR kapsamında <strong>Standart Sözleşme Maddeleri (SCC)</strong> ve uygun teknik/idari önlemler ile korunur,</li>
+                    <li>Hizmet sağlayıcının yeterli koruma sağladığı (örn. AB-ABD Veri Gizliliği Çerçevesi) durumlarda bu çerçeveye dayanır.</li>
+                </ul>
+
+                <h2>7. Veri saklama süresi</h2>
+                <ul>
+                    <li>Hesap bilgileri ve uygulama içeriğiniz: hesabınız aktif olduğu sürece.</li>
+                    <li>Hesap silme talebi sonrası: 30 gün içinde tamamen anonimleştirilir veya silinir.</li>
+                    <li>Çökme raporları (Crashlytics): 90 gün sonra otomatik silinir.</li>
+                    <li>Hukuki yükümlülük (örn. fatura, denetim): yasanın gerektirdiği süre kadar.</li>
+                </ul>
+
+                <h2>8. Veri güvenliği</h2>
+                <p>Verilerinizin güvenliği için şu önlemleri alıyoruz: tüm istemci-sunucu trafiği TLS 1.2+ ile şifrelenir; Firestore erişimi rol bazlı güvenlik kuralları ile kısıtlanır; AI sağlayıcı API anahtarları yalnızca sunucuda (Cloud Functions) tutulur ve istemci uygulamasına gömülmez; cihazınızdaki yerel veri saklama katmanı (Hive) işletim sistemi kum havuzunda izole edilir; düzenli güvenlik gözden geçirmesi yapılır.</p>
+
+                <h2>9. Kullanıcı haklarınız</h2>
+                <p>KVKK madde 11 ve GDPR Madde 15-22 kapsamında aşağıdaki haklara sahipsiniz:</p>
+                <ul>
+                    <li><strong>Erişim hakkı:</strong> Hangi verilerin işlendiğini öğrenme.</li>
+                    <li><strong>Düzeltme hakkı:</strong> Yanlış veya eksik verilerin düzeltilmesini talep etme.</li>
+                    <li><strong>Silme / unutulma hakkı:</strong> Verilerinizin silinmesini isteme.</li>
+                    <li><strong>İşlemeyi sınırlama hakkı:</strong> Verilerin yalnızca depolanmasını, başka şekilde işlenmemesini isteme.</li>
+                    <li><strong>Veri taşınabilirliği hakkı:</strong> Verilerinizi yapılandırılmış bir formatta alma.</li>
+                    <li><strong>İtiraz hakkı:</strong> Meşru menfaat dayanağıyla yapılan işlemeye itiraz etme.</li>
+                    <li><strong>Açık rızayı geri alma hakkı:</strong> Beslenme verileri ve bildirimler gibi açık rıza kapsamındaki işlemeyi durdurma.</li>
+                    <li><strong>Otomatik karar vermeye itiraz:</strong> Kişisel etkisi olan otomatik kararlara itiraz etme.</li>
+                </ul>
+                <p><strong>Veri silme talebi:</strong> Uygulama içinde Ayarlar → Hesabımı Sil seçeneğini kullanabilir veya <a class="inline-link" href="mailto:privacy@sage.kitchen">privacy@sage.kitchen</a> adresine yazabilirsiniz. Hesap silme işlemi tüm yerel ve sunucu verilerinizi 30 gün içinde kalıcı olarak siler.</p>
+                <p>Türkiye'deki kullanıcılar başvurularını Veri Sorumluları Sicili (VERBİS) tebliğindeki şekil şartlarına uygun yapabilir; AB'deki kullanıcılar ulusal denetim makamına şikayette bulunma hakkına sahiptir.</p>
+
+                <h2>10. Çocukların gizliliği</h2>
+                <p>Sage 13 yaşın altındaki çocuklara yönelik tasarlanmamıştır ve bilerek bu yaş grubundan veri toplamayız. 13 yaşın altındaki bir çocuğa ait veri işlediğimizi öğrenirsek bu veriyi makul süre içinde sileriz. Ebeveyn veya vasilerin <a class="inline-link" href="mailto:privacy@sage.kitchen">privacy@sage.kitchen</a> üzerinden bize ulaşması durumunda derhal aksiyon alırız.</p>
+
+                <h2>11. Çerezler ve takip teknolojileri</h2>
+                <p><strong>Mobil uygulama:</strong> Çerez kullanmaz. Reklam tanımlayıcısı (IDFA / GAID) toplamayız ve <strong>kullanıcıyı uygulamalar arası takip etmiyoruz</strong>. Apple App Tracking Transparency çerçevesinde uygulamamız "tracking" olarak kabul edilen hiçbir aktivite gerçekleştirmez.</p>
+                <p><strong>Web sitesi:</strong> sage.kitchen yalnızca tercih (dil seçimi) ve oturum çerezleri kullanır. Üçüncü taraf reklam veya analitik çerezi yoktur.</p>
+
+                <h2>12. Politika değişiklikleri</h2>
+                <p>Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişikliklerde uygulama içi bildirim ile veya hesap e-postanıza ileti göndererek bilgi vereceğiz. Önemli olmayan dil veya format düzeltmelerini yalnızca güncelleme tarihini değiştirerek yansıtırız.</p>
+
+                <h2>13. İletişim</h2>
+                <p>Gizlilik veya veri koruması ile ilgili her konuda:</p>
+                <ul>
+                    <li><strong>E-posta:</strong> <a class="inline-link" href="mailto:privacy@sage.kitchen">privacy@sage.kitchen</a></li>
+                    <li><strong>Uygulama içi:</strong> Ayarlar → Gizlilik → Bize Ulaşın</li>
+                    <li><strong>Web:</strong> <a class="inline-link" href="support.html">Destek sayfası</a></li>
+                </ul>
+            </article>
+        </div>
+
+        <!-- ====================================================================
+             ENGLISH VERSION
+             ==================================================================== -->
+        <div data-lang-section="en">
+            <div class="page-hero article-hero">
+                <h1 class="display-title">Privacy Policy</h1>
+                <p class="lead-text">How the Sage mobile app and sage.kitchen website collect, use, protect your personal data — and the rights you have over it.</p>
+                <p class="article-meta">Last updated: 2 May 2026 · Effective: 2 May 2026</p>
+            </div>
+
+            <article class="article-content">
+
+                <h2>1. Data Controller</h2>
+                <p>This Privacy Policy is published by Sage Kitchen ("we", "Sage"), the operator of the Sage mobile application ("App") and the <a class="inline-link" href="https://sage.kitchen">sage.kitchen</a> website ("Site"), acting as data controller under the Turkish Personal Data Protection Law ("KVKK") and the EU General Data Protection Regulation ("GDPR").</p>
+                <p>For any privacy-related question, request, or rights claim, contact <a class="inline-link" href="mailto:privacy@sage.kitchen">privacy@sage.kitchen</a>.</p>
+
+                <h2>2. Scope</h2>
+                <p>This policy covers both the mobile app and the website. Sections below describe each data category processed by the mobile app in detail. When you visit third-party sites or external services we link to, those parties' own privacy policies apply.</p>
+
+                <h2>3. Personal data we collect</h2>
+                <p>When you use Sage we process the following categories of personal data:</p>
+
+                <h3>3.1 Account & identity</h3>
+                <p>When you sign in with Google or Apple, Firebase Authentication passes us your name, email address, and profile photo. If you choose anonymous mode, only a randomly generated Firebase user ID is stored.</p>
+
+                <h3>3.2 In-app content</h3>
+                <p>We process content you create or upload inside the app: ingredient lists, shopping list items, recipes you share, comments, like and save interactions, and uploaded photos (fridge images and recipe pictures).</p>
+
+                <h3>3.3 Nutrition data (sensitive category)</h3>
+                <p>If you enable nutrition tracking, we store health-adjacent information such as daily calories, macronutrient intake, dietary preferences, and allergens. Under KVKK Article 6, this is treated as a <strong>special category of personal data</strong> and is only processed with your <strong>explicit consent</strong>.</p>
+
+                <h3>3.4 Purchase & subscription data</h3>
+                <p>For Sage Premium subscriptions purchased through Apple In-App Purchase, we store the subscription state, start, and renewal dates inside the app. Apple processes the payment information (card number, etc.) directly on its end; <strong>we never receive payment details</strong>.</p>
+
+                <h3>3.5 Device & technical data</h3>
+                <p>Firebase Crashlytics collects crash reports, performance events, and diagnostic data such as device model (iPhone/iPad), OS version, language, and approximate IP geography. Apple's IDFV (Identifier for Vendor) may be used in this context; we do <strong>not</strong> collect the advertising identifier (IDFA).</p>
+
+                <h3>3.6 Usage data</h3>
+                <p>We measure which features you use and how often, paid feature usage counts (for quota enforcement, e.g. AI recipe generation), and session duration. This data is processed linked to your user identity.</p>
+
+                <h3>3.7 Push notification token</h3>
+                <p>If you grant notification permission, Firebase Cloud Messaging generates a device-specific push token. This token is used solely to deliver notifications to you.</p>
+
+                <h3>3.8 Voice commands</h3>
+                <p>The voice search feature runs through the iOS Speech Framework / Android Speech Recognizer <strong>on-device</strong>. Audio recordings never leave your device. Only the recognized text (e.g. "add tomato") is passed to the app's command pipeline.</p>
+
+                <h3>3.9 Website visits</h3>
+                <p>The sage.kitchen website is hosted on Cloudflare. Cloudflare retains basic technical logs (IP, user agent, request time). We do <strong>not</strong> use third-party advertising or marketing cookies.</p>
+
+                <h2>4. Purposes & legal basis</h2>
+                <table>
+                    <tr><th>Purpose</th><th>Categories</th><th>Legal basis (GDPR / KVKK)</th></tr>
+                    <tr><td>Account creation and authentication</td><td>3.1</td><td>Performance of contract</td></tr>
+                    <tr><td>Core app functionality (inventory, recipes, shopping list)</td><td>3.2</td><td>Performance of contract</td></tr>
+                    <tr><td>Nutrition tracking & personalized AI recipes</td><td>3.2, 3.3</td><td>Explicit consent (required for sensitive data)</td></tr>
+                    <tr><td>Premium subscription management</td><td>3.4</td><td>Performance of contract</td></tr>
+                    <tr><td>Crash diagnostics, security, and abuse prevention</td><td>3.5</td><td>Legitimate interest</td></tr>
+                    <tr><td>Quota enforcement and product improvement</td><td>3.6</td><td>Legitimate interest</td></tr>
+                    <tr><td>Push notifications</td><td>3.7</td><td>Explicit consent</td></tr>
+                </table>
+
+                <h2>5. Third-party service providers</h2>
+                <p>To run Sage we work with the following service providers as data processors. They process your data only on our behalf and only as instructed:</p>
+                <table>
+                    <tr><th>Provider</th><th>Service</th><th>Region</th></tr>
+                    <tr><td>Google LLC (Firebase)</td><td>Authentication, Firestore, Storage, Crashlytics, Cloud Messaging, Cloud Functions</td><td>USA / EU</td></tr>
+                    <tr><td>Google LLC (Gemini API)</td><td>AI recipe generation (called server-side)</td><td>USA</td></tr>
+                    <tr><td>OpenAI, L.L.C.</td><td>AI recipe generation alternative</td><td>USA</td></tr>
+                    <tr><td>Groq, Inc.</td><td>AI recipe generation alternative</td><td>USA</td></tr>
+                    <tr><td>Apple Inc.</td><td>Push Notifications, In-App Purchase, App Store distribution</td><td>USA / EU</td></tr>
+                    <tr><td>Cloudflare, Inc.</td><td>Website hosting and CDN</td><td>Global edge</td></tr>
+                </table>
+                <p>Sage <strong>does not sell your personal data</strong>, does not share with advertising networks, and does not monetize user data.</p>
+
+                <h2>6. International data transfers</h2>
+                <p>Some of the providers above may process your data outside Türkiye, primarily in the United States. These transfers are:</p>
+                <ul>
+                    <li>Made on the basis of your <strong>explicit consent</strong> under KVKK Article 9,</li>
+                    <li>Protected under the <strong>EU Standard Contractual Clauses (SCCs)</strong> and appropriate technical and organizational measures under GDPR,</li>
+                    <li>Or — where the provider qualifies — relying on the EU-US Data Privacy Framework adequacy decision.</li>
+                </ul>
+
+                <h2>7. Data retention</h2>
+                <ul>
+                    <li>Account information and in-app content: while your account is active.</li>
+                    <li>After an account deletion request: anonymized or deleted within 30 days.</li>
+                    <li>Crash reports (Crashlytics): auto-purged after 90 days.</li>
+                    <li>Legal obligations (e.g. invoicing, audit): for the period required by law.</li>
+                </ul>
+
+                <h2>8. Data security</h2>
+                <p>To protect your data we apply: TLS 1.2+ for all client-server traffic; role-based Firestore security rules; AI provider API keys held server-side only (Cloud Functions) and never embedded in the client app; the on-device storage layer (Hive) isolated within the OS sandbox; and regular security reviews.</p>
+
+                <h2>9. Your rights</h2>
+                <p>Under KVKK Article 11 and GDPR Articles 15-22 you have the following rights:</p>
+                <ul>
+                    <li><strong>Right of access</strong> — to know what data is being processed.</li>
+                    <li><strong>Right to rectification</strong> — to have inaccurate or incomplete data corrected.</li>
+                    <li><strong>Right to erasure / "to be forgotten"</strong> — to request deletion of your data.</li>
+                    <li><strong>Right to restriction of processing</strong> — to have data only stored, not further processed.</li>
+                    <li><strong>Right to data portability</strong> — to receive your data in a structured format.</li>
+                    <li><strong>Right to object</strong> — to processing based on legitimate interest.</li>
+                    <li><strong>Right to withdraw consent</strong> — for processing based on explicit consent (nutrition data, notifications).</li>
+                    <li><strong>Right to object to automated decisions</strong> — that have a personal effect on you.</li>
+                </ul>
+                <p><strong>Account deletion:</strong> use Settings → Delete My Account inside the app, or email <a class="inline-link" href="mailto:privacy@sage.kitchen">privacy@sage.kitchen</a>. Account deletion permanently removes your local and server data within 30 days.</p>
+                <p>Users in Türkiye may submit requests in line with the formal requirements of the VERBİS (Data Controllers Registry) communiqué; users in the EU have the right to lodge a complaint with their national supervisory authority.</p>
+
+                <h2>10. Children's privacy</h2>
+                <p>Sage is not designed for children under 13 and we do not knowingly collect data from this age group. If we learn that we have processed data of a child under 13, we will delete it within a reasonable period. Parents or guardians may contact us at <a class="inline-link" href="mailto:privacy@sage.kitchen">privacy@sage.kitchen</a> for immediate action.</p>
+
+                <h2>11. Cookies and tracking technologies</h2>
+                <p><strong>Mobile app:</strong> uses no cookies. We do not collect the advertising identifier (IDFA / GAID) and we <strong>do not track users across apps</strong>. Under Apple App Tracking Transparency, our app performs no activity that qualifies as "tracking".</p>
+                <p><strong>Website:</strong> sage.kitchen uses only preference (language) and session cookies. There are no third-party advertising or analytics cookies.</p>
+
+                <h2>12. Policy changes</h2>
+                <p>We may update this policy from time to time. For material changes we will notify you via in-app notice or by email to the address on your account. Non-material editorial fixes may be reflected by simply updating the "Last updated" date.</p>
+
+                <h2>13. Contact</h2>
+                <p>For any privacy or data protection matter:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a class="inline-link" href="mailto:privacy@sage.kitchen">privacy@sage.kitchen</a></li>
+                    <li><strong>In-app:</strong> Settings → Privacy → Contact Us</li>
+                    <li><strong>Web:</strong> <a class="inline-link" href="support.html">Support page</a></li>
+                </ul>
+            </article>
+        </div>
+
     </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
             <a href="index.html" class="logo">Sage.</a>
             <div class="footer-links">
-                <a href="privacy-policy.html">Gizlilik Politikası</a>
-                <a href="terms.html">Kullanım Şartları</a>
-                <a href="support.html">Destek</a>
+                <a href="privacy-policy.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
+                <a href="terms.html" data-i18n="footer.terms">Kullanım Şartları</a>
+                <a href="support.html" data-i18n="footer.support">Destek</a>
             </div>
-            <p class="copyright">&copy; 2026 Sage. Tüm hakları saklıdır.</p>
+            <p class="copyright" data-i18n="footer.copyright">&copy; 2026 Sage. Tüm hakları saklıdır.</p>
         </div>
     </footer>
 
