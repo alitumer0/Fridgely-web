@@ -1,39 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <script>
-    (function () {
-      var parts = location.pathname.split('/').filter(Boolean);
-      var isGithubPages = location.hostname.endsWith('github.io') && parts.length;
-      var baseHref = isGithubPages ? '/' + parts[0] + '/' : '/';
-      var base = document.createElement('base');
-      base.href = baseHref;
-      document.head.appendChild(base);
-      window.__SAGE_SITE_BASE__ = baseHref;
-      window.__SAGE_SITE_ORIGIN__ = isGithubPages
-        ? location.origin + baseHref.replace(/\/$/, '')
-        : 'https://sage.kitchen';
-    })();
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sayfa Bulunamadı | Sage</title>
-  <meta id="meta-description" name="description" content="Sage route fallback sayfası." />
-  <link id="canonical-link" rel="canonical" href="https://sage.kitchen/" />
-  <meta property="og:image" content="https://sage.kitchen/og-home.png" />
-  <meta property="og:image:type" content="image/svg+xml" />
-  <meta name="twitter:image" content="https://sage.kitchen/og-home.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Sage" />
-  <meta property="og:description" content="Sage route fallback sayfası." />
-  <meta property="og:url" content="https://sage.kitchen/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sage" />
-  <meta name="twitter:description" content="Sage route fallback sayfası." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="site.css?v=4" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfa Bulunamadı | Sage</title>
+    <meta name="description" content="Aradığınız sayfa bulunamadı. Sage ana sayfasına dönebilir veya menüden devam edebilirsiniz.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://sage.kitchen/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sayfa Bulunamadı | Sage">
+    <meta property="og:description" content="Aradığınız sayfa bulunamadı.">
+    <meta property="og:url" content="https://sage.kitchen/">
+    <meta property="og:image" content="https://sage.kitchen/og-home.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sayfa Bulunamadı | Sage">
+    <meta name="twitter:description" content="Aradığınız sayfa bulunamadı.">
+    <meta name="twitter:image" content="https://sage.kitchen/og-home.png">
+    <link rel="stylesheet" href="site.css">
+    <style>
+        html[lang="en"] [data-lang-section="tr"] { display: none; }
+        html[lang="tr"] [data-lang-section="en"] { display: none; }
+        .notfound-hero {
+            text-align: center;
+            padding: 4rem 0 2rem;
+        }
+        .notfound-code {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(5rem, 18vw, 9rem);
+            font-weight: 700;
+            line-height: 1;
+            color: #5C7A4F;
+            letter-spacing: -0.04em;
+            margin: 0 0 1rem;
+        }
+    </style>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -41,8 +44,104 @@
   <meta name="theme-color" content="#5C7A4F">
 </head>
 <body>
-  <div class="site-noise" aria-hidden="true"></div>
-  <div id="app"></div>
-  <script defer src="site.js?v=4"></script>
+
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo"><img src="img/logo.svg" alt="" class="logo-icon">Sage.</a>
+            <nav class="site-nav">
+                <div class="nav-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html#how-it-works" data-i18n="nav.how">Nasıl Çalışır?</a></li>
+                        <li><a href="index.html#features" data-i18n="nav.features">Özellikler</a></li>
+                        <li><a href="faq.html" data-i18n="nav.faq">SSS</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn lang-btn-active" data-lang="tr" onclick="setLang('tr')">TR</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+                </div>
+                <a href="index.html#launch-cta" class="btn btn-primary btn-desktop-only" data-i18n="nav.cta">Lansmanı Takip Et</a>
+                <button type="button" class="btn-mobile-nav" id="mobile-nav-toggle" aria-label="Menüyü aç">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container article-shell">
+        <div data-lang-section="tr">
+            <div class="page-hero notfound-hero">
+                <p class="notfound-code">404</p>
+                <h1 class="display-title">Sayfa bulunamadı</h1>
+                <p class="lead-text">Aradığınız sayfa taşınmış, kaldırılmış ya da hiç var olmamış olabilir. Aşağıdaki bağlantılardan devam edebilirsiniz.</p>
+            </div>
+
+            <section class="utility-grid">
+                <a class="utility-card" href="index.html">
+                    <h2>Ana Sayfa</h2>
+                    <p>Sage'nin ne yaptığını ve lansman planını gösteren ana sayfaya dönün.</p>
+                </a>
+                <a class="utility-card" href="faq.html">
+                    <h2>SSS</h2>
+                    <p>Ürün, ücretlendirme ve lansman durumuna dair sık sorulan sorular.</p>
+                </a>
+                <a class="utility-card" href="blog.html">
+                    <h2>Blog</h2>
+                    <p>Mutfak düzeni ve gıda israfı üzerine yazılar burada.</p>
+                </a>
+                <a class="utility-card" href="support.html">
+                    <h2>Destek</h2>
+                    <p>İletişim, durum ve yardım merkezine ulaşmak için.</p>
+                </a>
+            </section>
+        </div>
+
+        <div data-lang-section="en">
+            <div class="page-hero notfound-hero">
+                <p class="notfound-code">404</p>
+                <h1 class="display-title">Page not found</h1>
+                <p class="lead-text">The page you were looking for may have moved, been removed, or never existed. You can continue from one of the links below.</p>
+            </div>
+
+            <section class="utility-grid">
+                <a class="utility-card" href="index.html">
+                    <h2>Home</h2>
+                    <p>Return to the main page that explains what Sage does and our launch plan.</p>
+                </a>
+                <a class="utility-card" href="faq.html">
+                    <h2>FAQ</h2>
+                    <p>Common questions about the product, pricing and launch status.</p>
+                </a>
+                <a class="utility-card" href="blog.html">
+                    <h2>Blog</h2>
+                    <p>Notes on kitchen organization and reducing food waste.</p>
+                </a>
+                <a class="utility-card" href="support.html">
+                    <h2>Support</h2>
+                    <p>Contact, status and the help center.</p>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="index.html" class="logo">Sage.</a>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Gizlilik Politikası</a>
+                <a href="terms.html">Kullanım Şartları</a>
+                <a href="support.html">Destek</a>
+            </div>
+            <p class="copyright">&copy; 2026 Sage. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="mobile-nav.js"></script>
 </body>
 </html>
