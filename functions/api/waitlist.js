@@ -61,56 +61,113 @@ export async function onRequestPost(context) {
     submittedAt: new Date().toISOString()
   };
 
-  if (env.WAITLIST_WEBHOOK_URL) {
-    const webhookResponse = await fetch(env.WAITLIST_WEBHOOK_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        ...(env.WAITLIST_WEBHOOK_BEARER_TOKEN
-          ? { Authorization: "Bearer " + env.WAITLIST_WEBHOOK_BEARER_TOKEN }
-          : {})
-      },
-      body: JSON.stringify(entry)
-    });
+  const platformLabel = { ios: "iPhone / iOS", android: "Android", both: "Her ikisi" }[platform] || platform;
+  const interestLabel = {
+    inventory: "Akilli envanter",
+    expiry: "Son kullanma takibi",
+    recipes: "AI tarif uretimi",
+    family: "Aile listesi"
+  }[interest] || interest;
 
-    if (!webhookResponse.ok) {
-      return json(
-        {
-          ok: false,
-          message: "Waitlist servisi simdilik gonderimi kabul etmedi. Lutfen daha sonra tekrar deneyin."
+  const results = { mail: false, kv: false, webhook: false };
+  const errors = [];
+
+  if (env.RESEND_API_KEY && env.NOTIFY_EMAIL) {
+    try {
+      const fromAddress = env.NOTIFY_FROM || "Sage Waitlist <waitlist@sage.kitchen>";
+      const subject = `Sage waitlist: ${email} (${platformLabel})`;
+      const text = [
+        `Yeni waitlist kaydi alindi.`,
+        ``,
+        `E-posta:   ${email}`,
+        `Platform:  ${platformLabel}`,
+        `Ilgi alani: ${interestLabel}`,
+        `Ulke:      ${entry.ipCountry || "-"}`,
+        `Tarih:     ${entry.submittedAt}`,
+        `Kayit ID:  ${entry.id}`,
+        ``,
+        `User-Agent: ${entry.userAgent || "-"}`
+      ].join("\n");
+
+      const mailResponse = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: "Bearer " + env.RESEND_API_KEY,
+          "Content-Type": "application/json"
         },
-        502
-      );
-    }
+        body: JSON.stringify({
+          from: fromAddress,
+          to: [env.NOTIFY_EMAIL],
+          reply_to: email,
+          subject,
+          text
+        })
+      });
 
-    return json({
-      ok: true,
-      mode: "webhook",
-      submittedAt: entry.submittedAt,
-      nextUrl: env.TESTFLIGHT_URL || "",
-      nextLabel: env.TESTFLIGHT_URL ? "TestFlight baglantisini ac" : ""
-    });
+      if (mailResponse.ok) {
+        results.mail = true;
+      } else {
+        errors.push("resend:" + mailResponse.status);
+      }
+    } catch (err) {
+      errors.push("resend:throw");
+    }
   }
 
   if (env.WAITLIST_KV && typeof env.WAITLIST_KV.put === "function") {
-    await env.WAITLIST_KV.put("waitlist:" + entry.id, JSON.stringify(entry));
-
-    return json({
-      ok: true,
-      mode: "kv",
-      submittedAt: entry.submittedAt,
-      nextUrl: env.TESTFLIGHT_URL || "",
-      nextLabel: env.TESTFLIGHT_URL ? "TestFlight baglantisini ac" : ""
-    });
+    try {
+      await env.WAITLIST_KV.put("waitlist:" + entry.id, JSON.stringify(entry));
+      results.kv = true;
+    } catch (err) {
+      errors.push("kv:throw");
+    }
   }
 
-  return json(
-    {
-      ok: false,
-      message: "Waitlist endpoint'i henuz konfigure edilmedi. Cloudflare Pages'te WAITLIST_WEBHOOK_URL veya WAITLIST_KV baglantisi eklenmeli."
-    },
-    503
-  );
+  if (env.WAITLIST_WEBHOOK_URL) {
+    try {
+      const webhookResponse = await fetch(env.WAITLIST_WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          ...(env.WAITLIST_WEBHOOK_BEARER_TOKEN
+            ? { Authorization: "Bearer " + env.WAITLIST_WEBHOOK_BEARER_TOKEN }
+            : {})
+        },
+        body: JSON.stringify(entry)
+      });
+
+      if (webhookResponse.ok) {
+        results.webhook = true;
+      } else {
+        errors.push("webhook:" + webhookResponse.status);
+      }
+    } catch (err) {
+      errors.push("webhook:throw");
+    }
+  }
+
+  const anyOk = results.mail || results.kv || results.webhook;
+  if (!anyOk) {
+    return json(
+      {
+        ok: false,
+        message: "Waitlist endpoint'i henuz konfigure edilmedi. Cloudflare Pages'te RESEND_API_KEY+NOTIFY_EMAIL, WAITLIST_KV veya WAITLIST_WEBHOOK_URL eklenmeli.",
+        errors
+      },
+      503
+    );
+  }
+
+  const mode = results.mail ? "mail" : results.kv ? "kv" : "webhook";
+
+  return json({
+    ok: true,
+    mode,
+    delivered: results,
+    submittedAt: entry.submittedAt,
+    nextUrl: env.TESTFLIGHT_URL || "",
+    nextLabel: env.TESTFLIGHT_URL ? "TestFlight baglantisini ac" : ""
+  });
 }
 
 function json(data, status = 200) {
